@@ -3,11 +3,7 @@ import { useUnit } from 'effector-react'
 import { Toaster } from 'react-hot-toast'
 import { EarthoOneProvider } from '@eartho/one-client-react'
 import { Next13ProgressBar } from 'next13-progressbar'
-import {
-  $showQuickViewModal,
-  $showSizeTable,
-  closeQuickViewModal,
-} from '@/context/modals'
+import { $showQuickViewModal, closeQuickViewModal } from '@/context/modals'
 import Layout from './Layout'
 import {
   closeSizeTableByCheck,
@@ -23,7 +19,6 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   const [isClient, setIsClient] = useState(false)
   const [cookieAlertOpen, setCookieAlertOpen] = useState(false)
   const showQuickViewModal = useUnit($showQuickViewModal)
-  const showSizeTable = useUnit($showSizeTable)
   const openAuthPopup = useUnit($openAuthPopup)
 
   useEffect(() => setIsClient(true), [])
@@ -57,9 +52,7 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
             onClick={handleCloseQuickViewModal}
           />
           <div
-            className={`size-table-overlay ${
-              showSizeTable ? 'overlay-active' : ''
-            }`}
+            className={`size-table-overlay`}
             onClick={handleCloseSizeTable}
           />
           <div

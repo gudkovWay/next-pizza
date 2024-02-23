@@ -23,7 +23,6 @@ export interface IQuickViewModalSliderArrowProps extends CustomArrowProps {
 }
 
 export interface IHeadingWithCountProps {
-  count: number
   title: string
   spinner?: boolean
 }

@@ -1,19 +1,13 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { showCountMessage } from '@/lib/utils/common'
 import { IHeadingWithCountProps } from '@/types/elements'
 import styles from '@/styles/heading-with-count/index.module.scss'
 
-const HeadingWithCount = ({
-  count,
-  title,
-  spinner,
-}: IHeadingWithCountProps) => (
+const HeadingWithCount = ({ title, spinner }: IHeadingWithCountProps) => (
   <h1 className={`site-title ${styles.title}`}>
     <span>{title}</span>
     <span className={styles.title__count}>
-      {spinner ? <FontAwesomeIcon icon={faSpinner} spin /> : count}{' '}
-      {showCountMessage(`${count}`, `шт.`)}
+      {spinner && <FontAwesomeIcon icon={faSpinner} spin />}
     </span>
   </h1>
 )

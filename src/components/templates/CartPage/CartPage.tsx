@@ -11,16 +11,13 @@ import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageCon
 import OrderInfoBlock from '@/components/modules/OrderInfoBlock/OrderInfoBlock'
 import { basePropsForMotion } from '@/constants/motion'
 import { useBreadcrumbs } from '@/hooks/useBreadcrumbs'
-import { useCartByAuth } from '@/hooks/useCartByAuth'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { countWholeCartItemsAmount } from '@/lib/utils/cart'
 import { $shouldShowEmpty } from '@/context/cart'
 import styles from '@/styles/cart-page/index.module.scss'
 import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
 
 const CartPage = () => {
   const cartSpinner = useUnit(getCartItemsFx.pending)
-  const currentCartByAuth = useCartByAuth()
   const { getDefaultTextGenerator, getTextGenerator } = useBreadcrumbs('cart')
   const isMedia930 = useMediaQuery(930)
   const [isCorrectPromotionalCode, setIsCorrectPromotionalCode] =
@@ -36,11 +33,7 @@ const CartPage = () => {
       {!shouldShowEmpty ? (
         <section className={styles.cart}>
           <div className='container'>
-            <HeadingWithCount
-              count={countWholeCartItemsAmount(currentCartByAuth)}
-              title={`Корзина`}
-              spinner={cartSpinner}
-            />
+            <HeadingWithCount title={`Корзина`} spinner={cartSpinner} />
             <div className={styles.cart__inner}>
               <div className={styles.cart__left}>
                 {cartSpinner && (

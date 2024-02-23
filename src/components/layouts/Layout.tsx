@@ -17,7 +17,6 @@ import {
 } from '@/lib/utils/common'
 import Footer from '../modules/Footer/Footer'
 import QuickViewModal from '../modules/QuickViewModal/QuickViewModal'
-import SizeTable from '../modules/SizeTable/SizeTable'
 import { $openAuthPopup } from '@/context/auth'
 import AuthPopup from '../modules/AuthPopup/AuthPopup'
 
@@ -65,15 +64,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             exit={{ opacity: 0 }}
           >
             <SearchModal />
-          </motion.div>
-        )}
-        {showSizeTable && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <SizeTable />
           </motion.div>
         )}
       </AnimatePresence>

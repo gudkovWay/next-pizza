@@ -3,7 +3,7 @@ import { MutableRefObject, useRef, useState } from 'react'
 import { useCartByAuth } from '@/hooks/useCartByAuth'
 import { useTotalPrice } from '@/hooks/useTotalPrice'
 import { countWholeCartItemsAmount } from '@/lib/utils/cart'
-import { formatPrice, showCountMessage } from '@/lib/utils/common'
+import { formatPrice } from '@/lib/utils/common'
 import { OrderInfoBlock } from '@/types/modules'
 import styles from '@/styles/order-block/index.module.scss'
 
@@ -33,25 +33,26 @@ const OrderInfoBlock = ({
     <div className={styles.order_block}>
       <div className={styles.order_block__inner}>
         <p className={styles.order_block__info}>
-          {countWholeCartItemsAmount(currentCartByAuth)}{' '}
-          {showCountMessage(
-            `${countWholeCartItemsAmount(currentCartByAuth)}`,
-            `showCountMessage`
-          )}
-          {`order worth`}
+          Всего товаров:
+          <span className={styles.order_block__info__text}>
+            {countWholeCartItemsAmount(currentCartByAuth)} шт.
+          </span>
+        </p>
+        <p className={styles.order_block__info}>
+          Сумма всех товаров:
           <span className={styles.order_block__info__text}>
             {formatPrice(animatedPrice)} ₽
           </span>
         </p>
         <p className={styles.order_block__info}>
-          {`order.amount_with_discounts`}:
+          Сумма с учётом скидок:
           <span className={styles.order_block__info__text}>
             {priceWithDiscount} ₽
           </span>
         </p>
         {isOrderPage && <></>}
         <p className={styles.order_block__total}>
-          <span>{`order.total`}:</span>
+          <span>Итоговая сумма заказа:</span>
           <span className={styles.order_block__total__price}>
             {priceWithDiscount} ₽
           </span>
@@ -65,7 +66,7 @@ const OrderInfoBlock = ({
               !isUserAgree || !currentCartByAuth.length ? styles.disabled : ''
             }`}
           >
-            {`order.make_order`}
+            {`Перейти к оплате  -> `}
           </Link>
         )}
         <label className={styles.order_block__agreement}>
@@ -84,12 +85,12 @@ const OrderInfoBlock = ({
             onKeyDown={handleTabCheckbox}
           />
           <span className={styles.order_block__agreement__text}>
-            {`order.agreement_text`}
+            {`Согласен с правилами магазина DoodlePizza. `}
             <Link
-              href='/privacy'
+              href='/privacy-policy'
               className={styles.order_block__agreement__link}
             >
-              {`order.agreement_link`}
+              {`Политика конфиденциальности и обработка персональных данных`}
             </Link>
           </span>
         </label>
