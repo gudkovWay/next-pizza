@@ -3,7 +3,7 @@ import { IMainPageSectionProps } from '@/types/main-page'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import styles from '@/styles/main-page/index.module.scss'
 import { motion } from 'framer-motion'
-import { basePropsForMotion } from '@/constants/motion'
+import { basePropsForMotion } from '@/shared/constants/motion'
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
 
 const MainPageSection = ({ title, goods, spinner }: IMainPageSectionProps) => (

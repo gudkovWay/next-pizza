@@ -1,4 +1,4 @@
-import { singInFx, singUpFx } from '@/api/auth'
+import { singInFx, singUpFx } from '@/shared/api/auth'
 import { ISignUpFx } from '@/types/authPopup'
 import { createDomain, sample } from 'effector'
 import toast from 'react-hot-toast'

@@ -16,7 +16,7 @@ import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvai
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { showQuickViewModal } from '@/context/modals'
 import { setCurrentProduct } from '@/context/goods'
-import { productsWithoutSizes } from '@/constants/product'
+import { productsWithoutSizes } from '@/shared/constants/product'
 import { useCartAction } from '@/hooks/useCartAction'
 import { addProductToCartBySizeTable } from '@/lib/utils/cart'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'

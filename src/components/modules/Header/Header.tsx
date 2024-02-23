@@ -14,7 +14,7 @@ import Logo from '@/components/elements/Logo/Logo'
 import CartPopup from './CartPopup/CartPopup'
 import HeaderProfile from './HeaderProfile'
 import { $isAuth } from '@/context/auth'
-import { loginCheckFx } from '@/api/auth'
+import { loginCheckFx } from '@/shared/api/auth'
 import { useEffect } from 'react'
 import {
   addProductsFromLSToCart,

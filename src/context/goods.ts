@@ -1,9 +1,12 @@
 'use client'
 import { Effect, createDomain, sample } from 'effector'
 import { Gate, createGate } from 'effector-react'
-import { getBestsellerProductsFx, getNewProductsFx } from '@/api/main-page'
+import {
+  getBestsellerProductsFx,
+  getNewProductsFx,
+} from '@/shared/api/main-page'
 import { IProduct } from '@/types/common'
-import { loadOneProductFx } from '@/api/goods'
+import { loadOneProductFx } from '@/shared/api/goods'
 import { ILoadOneProductFx } from '@/types/goods'
 
 const goods = createDomain()

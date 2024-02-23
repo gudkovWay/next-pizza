@@ -8,7 +8,7 @@ import { removeOverflowHiddenFromBody } from '@/lib/utils/common'
 import { usePathname } from 'next/navigation'
 import MenuLinkItem from './MenuLinkItem'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { menuLinks } from '@/constants/menu'
+import { menuLinks } from '@/shared/constants/menu'
 import Slider from 'react-slick'
 
 export interface MenuLinksProps {

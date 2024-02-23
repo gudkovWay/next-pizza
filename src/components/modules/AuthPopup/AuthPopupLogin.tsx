@@ -1,4 +1,4 @@
-import { singInFx } from '@/api/auth'
+import { singInFx } from '@/shared/api/auth'
 import { handleSignIn } from '@/context/auth'
 import { useAuthForm } from '@/hooks/useAuthForm'
 import { IAuthSideProps, IInputs } from '@/types/authPopup'

@@ -5,8 +5,8 @@ import {
   deleteCartItemFx,
   getCartItemsFx,
   updateCartItemCountFx,
-} from '@/api/cart'
-import { handleJWTError } from '@/lib/utils/errors'
+} from '@/shared/api/cart'
+import { handleJWTError } from '@/shared/api/lib/utils/errors'
 import {
   IAddProductToCartFx,
   IAddProductsFromLSToCartFx,
@@ -14,7 +14,7 @@ import {
   IDeleteCartItemsFx,
   IUpdateCartItemCountFx,
 } from '@/types/cart'
-import api from '../api/apiInstance'
+import api from '@/shared/api/apiInstance'
 
 export const addProductsFromLSToCartFx = createEffect(
   async ({ jwt, cartItems }: IAddProductsFromLSToCartFx) => {

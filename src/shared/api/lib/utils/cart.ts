@@ -8,7 +8,7 @@ import {
   setCartFromLS,
   setShouldShowEmpty,
 } from '@/context/cart'
-import { productsWithoutSizes } from '@/constants/product'
+import { productsWithoutSizes } from '@/shared/constants/product'
 
 export const addItemToCart = (
   product: IProduct,
@@ -62,11 +62,11 @@ export const addCartItemToLS = (
     const updatedCart = cartFromLS.map((item) =>
       item.productId === existingItem.productId && item.size === selectedSize
         ? {
-            ...existingItem,
-            count: selectedSize.length
-              ? updatedCountWithSize
-              : +existingItem.count + 1,
-          }
+          ...existingItem,
+          count: selectedSize.length
+            ? updatedCountWithSize
+            : +existingItem.count + 1,
+        }
         : item
     )
 
