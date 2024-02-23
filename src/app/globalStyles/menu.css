@@ -165,6 +165,11 @@
   position: relative;
 }
 
+.nav-menu__accordion-mobile {
+  position: relative !important;
+  margin-top: 18px;
+}
+
 .nav-menu__list__item__btn {
   color: #777C85;
   font-size: 28px;
@@ -205,6 +210,10 @@
   font-size: 16px;
   font-weight: 400;
   transition: .2s ease-in-out color;
+}
+
+.nav-menu__list__item__btn-active {
+  color: #9466FF
 }
 
 .nav-menu__accordion__item:first-child .nav-menu__accordion__item__title::before {

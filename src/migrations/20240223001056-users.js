@@ -7,4 +7,3 @@ module.exports = {
     db.collection('users').drop()
   },
 }
-

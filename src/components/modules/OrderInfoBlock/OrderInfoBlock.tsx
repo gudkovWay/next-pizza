@@ -61,8 +61,9 @@ const OrderInfoBlock = ({
         ) : (
           <Link
             href='/order'
-            className={`${styles.order_block__btn} ${!isUserAgree || !currentCartByAuth.length ? styles.disabled : ''
-              }`}
+            className={`${styles.order_block__btn} ${
+              !isUserAgree || !currentCartByAuth.length ? styles.disabled : ''
+            }`}
           >
             {`order.make_order`}
           </Link>

@@ -5,13 +5,11 @@ import { useState } from 'react'
 import Logo from '@/components/elements/Logo/Logo'
 import { $menuIsOpen, closeMenu } from '@/context/modals'
 import { removeOverflowHiddenFromBody } from '@/lib/utils/common'
-import Accordion from '../Accordion/Accordion'
 import { usePathname } from 'next/navigation'
 import MenuLinkItem from './MenuLinkItem'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import BuyersListItems from './BuyersListItems'
-import ContactsListItems from './ContactsListItems'
 import { menuLinks } from '@/constants/menu'
+import Slider from 'react-slick'
 
 export interface MenuLinksProps {
   id: number
@@ -19,14 +17,21 @@ export interface MenuLinksProps {
   href: string
   children?: MenuLinksProps[]
 }
-
+const settings = {
+  className: 'center',
+  infinite: true,
+  centerPadding: '60px',
+  slidesToShow: 1,
+  speed: 777,
+  dots: false,
+  arrows: false,
+}
 const Menu = () => {
   const [showCatalogList, setShowCatalogList] = useState(-1)
   const [showAccordion, setShowAccordion] = useState(-1)
   const menuIsOpen = useUnit($menuIsOpen)
   const pathname = usePathname()
   const isMedia800 = useMediaQuery(800)
-  const isMedia640 = useMediaQuery(640)
 
   const handleShowCatalogList = (id: number) => setShowCatalogList(id)
   const handleShowAccordion = (id: number) => setShowAccordion(id)
@@ -65,7 +70,8 @@ const Menu = () => {
             menuLinks.map((link) => (
               <li className='nav-menu__list__item' key={link.id}>
                 <button
-                  className='btn-reset nav-menu__list__item__btn'
+                  className={`btn-reset nav-menu__list__item__btn
+${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                   onMouseEnter={() => handleShowCatalogList(link.id)}
                 >
                   {link.text}
@@ -128,29 +134,84 @@ const Menu = () => {
               </li>
             ))}
           <li className='nav-menu__list__item'>
-            {isMedia640 && (
-              <Accordion
-                id={0}
-                title={`Заказчики`}
-                titleClass='btn-reset nav-menu__list__item__btn'
-              >
-                <ul className='list-reset nav-menu__accordion__item__list'>
-                  <BuyersListItems />
-                </ul>
-              </Accordion>
-            )}
-          </li>
-          <li className='nav-menu__list__item'>
-            {isMedia640 && (
-              <Accordion
-                id={0}
-                title='contacts'
-                titleClass='btn-reset nav-menu__list__item__btn'
-              >
-                <ul className='list-reset nav-menu__accordion__item__list'>
-                  <ContactsListItems />
-                </ul>
-              </Accordion>
+            {isMedia800 && (
+              <Slider {...settings}>
+                {menuLinks.map((link) => (
+                  <li
+                    className='nav-menu__list__item nav-menu__list__item-mobile'
+                    key={link.id}
+                  >
+                    <button
+                      className={`btn-reset nav-menu__list__item__btn
+${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
+                      onClick={() => handleShowCatalogList(link.id)}
+                    >
+                      {link.text}
+                    </button>
+                    <AnimatePresence>
+                      {showCatalogList === link.id && (
+                        <motion.ul
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className='list-reset nav-menu__accordion nav-menu__accordion-mobile'
+                        >
+                          <li className='nav-menu__accordion__item '>
+                            {link.children?.map((item) => (
+                              <>
+                                <motion.button
+                                  key={item.id}
+                                  initial={false}
+                                  onClick={() => handleShowAccordion(item.id)}
+                                  className={`btn-reset nav-menu__accordion__item__title`}
+                                >
+                                  {item.text}
+                                </motion.button>
+                                <ul className='list-reset nav-menu__accordion__item__list'>
+                                  <AnimatePresence initial={false}>
+                                    {showAccordion === item.id &&
+                                      item.children?.map((child) => (
+                                        <motion.div
+                                          key='content'
+                                          initial='collapsed'
+                                          animate='open'
+                                          exit='collapsed'
+                                          variants={{
+                                            open: {
+                                              opacity: 1,
+                                              height: 'auto',
+                                            },
+                                            collapsed: {
+                                              opacity: 0,
+                                              height: 0,
+                                            },
+                                          }}
+                                          style={{ overflow: 'hidden' }}
+                                          transition={{
+                                            duration: 0.8,
+                                            ease: [0.04, 0.62, 0.23, 0.98],
+                                          }}
+                                        >
+                                          <MenuLinkItem
+                                            key={child.id}
+                                            item={child}
+                                            handleRedirectToCatalog={
+                                              handleRedirectToCatalog
+                                            }
+                                          />
+                                        </motion.div>
+                                      ))}
+                                  </AnimatePresence>
+                                </ul>
+                              </>
+                            ))}
+                          </li>
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
+                  </li>
+                ))}
+              </Slider>
             )}
           </li>
         </ul>

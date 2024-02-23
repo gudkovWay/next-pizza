@@ -27,8 +27,9 @@ const EmptyPageContent = ({
       <div className={`${styles.empty_content__bg} ${bgClassName}`} />
       <div className={styles.empty_content__inner}>
         <span
-          className={`${styles.empty_content__word} ${bgWordClassName ? bgWordClassName : ''
-            }`}
+          className={`${styles.empty_content__word} ${
+            bgWordClassName ? bgWordClassName : ''
+          }`}
         >
           {emptyWord ? emptyWord : 'Пусто'}
         </span>

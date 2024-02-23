@@ -6,8 +6,9 @@ const ProductAvailable = ({ vendorCode, inStock }: IProductAvailableProps) => {
   return (
     <div className={styles.product}>
       <span
-        className={`${styles.product__stock} ${isInStock ? styles.product__stock__green : styles.product__stock__red
-          }`}
+        className={`${styles.product__stock} ${
+          isInStock ? styles.product__stock__green : styles.product__stock__red
+        }`}
       >
         {isInStock ? `В наличии :)` : `Нет в наличии :(`}
       </span>
