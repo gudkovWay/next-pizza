@@ -23,14 +23,13 @@ const PromotionalCode = ({
     <div className={styles.cart__promotional_code}>
       <input
         type='text'
-        placeholder={`order.promocode`}
+        placeholder={`Есть промокод? Вводите!`}
         value={value}
         onChange={handleChangeValue}
         style={
           isCorrectCode ? { border: '1px solid #16D9A6', color: '16D9A6' } : {}
         }
       />
-      <p>{`order.promo_code_text`}</p>
     </div>
   )
 }
