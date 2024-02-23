@@ -9,7 +9,7 @@ import {
   addOverflowHiddenToBody,
   handleOpenAuthPopup,
   triggerLoginCheck,
-} from '@/lib/utils/common'
+} from '@/shared/api/lib/utils/common'
 import Logo from '@/components/elements/Logo/Logo'
 import CartPopup from './CartPopup/CartPopup'
 import HeaderProfile from './HeaderProfile'

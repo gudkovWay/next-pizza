@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { sendMail } from '@/service/mailService'
+import { sendMail } from '@/shared/api/service/mailService'
 
 export async function POST(req: Request) {
   const res = await req.json()

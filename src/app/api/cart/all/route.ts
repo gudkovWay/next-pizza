@@ -1,5 +1,5 @@
-import clientPromise from '@/lib/mongodb'
-import { getDataFromDBByCollection } from '@/lib/utils/api-routes'
+import clientPromise from '@/shared/api/lib/mongodb'
+import { getDataFromDBByCollection } from '@/shared/api/lib/utils/api-routes'
 
 export async function GET(req: Request) {
   try {

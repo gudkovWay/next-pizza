@@ -1,10 +1,10 @@
 import { createEffect } from 'effector'
 import toast from 'react-hot-toast'
 import api from './apiInstance'
-import { onAuthSuccess } from '@/lib/utils/auth'
+import { onAuthSuccess } from '@/shared/api/lib/utils/auth'
 import { ISignUpFx } from '@/types/authPopup'
 import { setIsAuth } from '@/context/auth'
-import { handleJWTError } from '@/lib/utils/errors'
+import { handleJWTError } from '@/shared/api/lib/utils/errors'
 
 export const oauthFx = createEffect(
   async ({ name, password, email }: ISignUpFx) => {

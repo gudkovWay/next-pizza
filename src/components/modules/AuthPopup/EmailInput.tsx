@@ -1,4 +1,4 @@
-import { emailValidationRules } from '@/lib/utils/auth'
+import { emailValidationRules } from '@/shared/api/lib/utils/auth'
 import { IAuthInput } from '@/types/authPopup'
 import styles from '@/styles/auth-popup/index.module.scss'
 

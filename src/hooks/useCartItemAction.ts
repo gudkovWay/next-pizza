@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ICartItem } from '@/types/cart'
 import { usePriceAction } from './usePriceAction'
 import { usePriceAnimation } from './usePricceAnimation'
-import { deleteProductFromLS, isUserAuth } from '@/lib/utils/common'
+import { deleteProductFromLS, isUserAuth } from '@/shared/api/lib/utils/common'
 import { deleteProductFromCart, setCartFromLS } from '@/context/cart'
 
 export const useCartItemAction = (cartItem: ICartItem) => {

@@ -4,7 +4,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { ICartItem } from '@/types/cart'
 import { useCartItemAction } from '@/hooks/useCartItemAction'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { formatPrice } from '@/lib/utils/common'
+import { formatPrice } from '@/shared/api/lib/utils/common'
 import ProductCounter from '../ProductsListItem/ProductCounter'
 import styles from '@/styles/cart-page/index.module.scss'
 

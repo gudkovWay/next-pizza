@@ -6,15 +6,11 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Header from '../modules/Header/Header'
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar'
 import SearchModal from '../modules/Header/SearchModal'
-import {
-  $searchModal,
-  $showQuickViewModal,
-  $showSizeTable,
-} from '@/context/modals'
+import { $searchModal, $showQuickViewModal } from '@/context/modals'
 import {
   handleCloseAuthPopup,
   handleCloseSearchModal,
-} from '@/lib/utils/common'
+} from '@/shared/api/lib/utils/common'
 import Footer from '../modules/Footer/Footer'
 import QuickViewModal from '../modules/QuickViewModal/QuickViewModal'
 import { $openAuthPopup } from '@/context/auth'
@@ -24,7 +20,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const isMedia800 = useMediaQuery(800)
   const searchModal = useUnit($searchModal)
   const showQuickViewModal = useUnit($showQuickViewModal)
-  const showSizeTable = useUnit($showSizeTable)
   const openAuthPopup = useUnit($openAuthPopup)
   const authWrapperRef = useRef() as MutableRefObject<HTMLDivElement>
 
@@ -81,9 +76,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </AnimatePresence>
       )}
       <div
-        className={`header__search-overlay ${
-          searchModal ? 'overlay-active' : ''
-        }`}
+        className={`header__search-overlay ${searchModal ? 'overlay-active' : ''
+          }`}
         onClick={handleCloseSearchModal}
       />
       <Footer />

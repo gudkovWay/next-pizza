@@ -1,5 +1,5 @@
-import clientPromise from '@/lib/mongodb'
-import { replaceProductsInCollection } from '@/lib/utils/api-routes'
+import clientPromise from '@/shared/api/lib/mongodb'
+import { replaceProductsInCollection } from '@/shared/api/lib/utils/api-routes'
 
 export async function POST(req: Request) {
   try {

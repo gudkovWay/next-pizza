@@ -9,7 +9,7 @@ import {
   closeSizeTableByCheck,
   handleCloseAuthPopup,
   removeOverflowHiddenFromBody,
-} from '@/lib/utils/common'
+} from '@/shared/api/lib/utils/common'
 import { $openAuthPopup } from '@/context/auth'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'

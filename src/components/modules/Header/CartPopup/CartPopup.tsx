@@ -10,7 +10,7 @@ import { useCartByAuth } from '@/hooks/useCartByAuth'
 import { IWrappedComponentProps } from '@/types/hocs'
 import CartPopupItem from './CartPopupItem'
 import { useTotalPrice } from '@/hooks/useTotalPrice'
-import { formatPrice } from '@/lib/utils/common'
+import { formatPrice } from '@/shared/api/lib/utils/common'
 
 const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
   ({ open, setOpen }, ref) => {

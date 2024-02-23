@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
-import clientPromise from '@/lib/mongodb'
+import clientPromise from '@/shared/api/lib/mongodb'
 import {
   getDbAndReqBody,
   getNewAndBestsellerGoods,
-} from '@/lib/utils/api-routes'
+} from '@/shared/api/lib/utils/api-routes'
 
 export async function GET() {
   const { db } = await getDbAndReqBody(clientPromise, null)

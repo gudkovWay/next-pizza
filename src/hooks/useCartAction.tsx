@@ -2,12 +2,12 @@ import { useUnit } from 'effector-react'
 import { useMemo, useState } from 'react'
 import { $currentProduct } from '@/context/goods'
 import { useCartByAuth } from './useCartByAuth'
-import { isUserAuth } from '@/lib/utils/common'
+import { isUserAuth } from '@/shared/api/lib/utils/common'
 import {
   addCartItemToLS,
   addItemToCart,
   addProductToCartBySizeTable,
-} from '@/lib/utils/cart'
+} from '@/shared/api/lib/utils/cart'
 import { updateCartItemCount } from '@/context/cart'
 
 export const useCartAction = (isSizeTable = false) => {

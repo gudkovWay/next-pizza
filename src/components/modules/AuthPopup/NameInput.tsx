@@ -1,5 +1,5 @@
 import NameErrorMessage from '@/components/elements/NameErrorMessage/NameErrorMessage'
-import { nameValidationRules } from '@/lib/utils/auth'
+import { nameValidationRules } from '@/shared/api/lib/utils/auth'
 import { IAuthInput } from '@/types/authPopup'
 import styles from '@/styles/auth-popup/index.module.scss'
 

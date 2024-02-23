@@ -1,6 +1,6 @@
 import { updateCartItemCount } from '@/context/cart'
-import { updateCartItemCountInLS } from '@/lib/utils/cart'
-import { isUserAuth } from '@/lib/utils/common'
+import { updateCartItemCountInLS } from '@/shared/api/lib/utils/cart'
+import { isUserAuth } from '@/shared/api/lib/utils/common'
 import { IProductCounterProps } from '@/types/goods'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

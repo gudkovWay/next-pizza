@@ -1,4 +1,4 @@
-import { handleCloseSearchModal } from '@/lib/utils/common'
+import { handleCloseSearchModal } from '@/shared/api/lib/utils/common'
 
 const SearchModal = () => {
   const handleInputFocus = (

@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server'
-import clientPromise from '@/lib/mongodb'
+import clientPromise from '@/shared/api/lib/mongodb'
 import {
   createUserAndGenerateTokens,
   findUserByEmail,
   getDbAndReqBody,
-} from '@/lib/utils/api-routes'
+} from '@/shared/api/lib/utils/api-routes'
 
 export async function POST(req: Request) {
   try {

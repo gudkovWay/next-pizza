@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server'
-import clientPromise from '@/lib/mongodb'
+import clientPromise from '@/shared/api/lib/mongodb'
 import {
   getAuthRouteData,
   findUserByEmail,
   parseJwt,
-} from '@/lib/utils/api-routes'
+} from '@/shared/api/lib/utils/api-routes'
 import { IUser } from '@/types/user'
 
 export async function GET(req: Request) {

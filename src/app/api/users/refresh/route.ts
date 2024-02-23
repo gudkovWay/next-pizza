@@ -1,11 +1,11 @@
 import jwt, { VerifyErrors } from 'jsonwebtoken'
-import clientPromise from '@/lib/mongodb'
+import clientPromise from '@/shared/api/lib/mongodb'
 import {
   getDbAndReqBody,
   findUserByEmail,
   parseJwt,
   generateTokens,
-} from '@/lib/utils/api-routes'
+} from '@/shared/api/lib/utils/api-routes'
 import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {

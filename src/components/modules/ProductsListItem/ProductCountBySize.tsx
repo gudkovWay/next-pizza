@@ -1,4 +1,4 @@
-import { getCartItemCountBySize } from '@/lib/utils/common'
+import { getCartItemCountBySize } from '@/shared/api/lib/utils/common'
 import { IProductCountBySizeProps } from '@/types/goods'
 import styles from '@/styles/product-count-indicator/index.module.scss'
 

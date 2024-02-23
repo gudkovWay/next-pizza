@@ -9,7 +9,7 @@ import {
   addOverflowHiddenToBody,
   formatPrice,
   isItemInList,
-} from '@/lib/utils/common'
+} from '@/shared/api/lib/utils/common'
 import ProductLabel from './ProductLabel'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
@@ -18,7 +18,7 @@ import { showQuickViewModal } from '@/context/modals'
 import { setCurrentProduct } from '@/context/goods'
 import { productsWithoutSizes } from '@/shared/constants/product'
 import { useCartAction } from '@/hooks/useCartAction'
-import { addProductToCartBySizeTable } from '@/lib/utils/cart'
+import { addProductToCartBySizeTable } from '@/shared/api/lib/utils/cart'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

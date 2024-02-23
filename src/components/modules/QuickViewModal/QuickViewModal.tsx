@@ -1,5 +1,8 @@
 import { closeQuickViewModal } from '@/context/modals'
-import { formatPrice, removeOverflowHiddenFromBody } from '@/lib/utils/common'
+import {
+  formatPrice,
+  removeOverflowHiddenFromBody,
+} from '@/shared/api/lib/utils/common'
 import styles from '@/styles/quick-view-modal/index.module.scss'
 import QuickViewModalSlider from './QuickViewModalSlider'
 import { useCartAction } from '@/hooks/useCartAction'

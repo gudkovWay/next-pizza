@@ -1,6 +1,6 @@
 import { corsHeaders } from '@/shared/constants/corsHeaders'
-import clientPromise from '@/lib/mongodb'
-import { getDbAndReqBody } from '@/lib/utils/api-routes'
+import clientPromise from '@/shared/api/lib/mongodb'
+import { getDbAndReqBody } from '@/shared/api/lib/utils/api-routes'
 import { ObjectId } from 'mongodb'
 import { NextResponse } from 'next/server'
 

@@ -1,6 +1,6 @@
 import { createEffect } from 'effector'
 import toast from 'react-hot-toast'
-import { handleJWTError } from '@/lib/utils/errors'
+import { handleJWTError } from '@/shared/api/lib/utils/errors'
 import {
   IAddProductToCartFx,
   ICartItem,

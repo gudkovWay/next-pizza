@@ -1,5 +1,5 @@
-import clientPromise from '@/lib/mongodb'
-import { deleteProduct } from '@/lib/utils/api-routes'
+import clientPromise from '@/shared/api/lib/mongodb'
+import { deleteProduct } from '@/shared/api/lib/utils/api-routes'
 
 export async function DELETE(req: Request) {
   try {

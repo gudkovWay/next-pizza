@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongodb'
 import { NextResponse } from 'next/server'
-import clientPromise from '@/lib/mongodb'
-import { getAuthRouteData } from '@/lib/utils/api-routes'
+import clientPromise from '@/shared/api/lib/mongodb'
+import { getAuthRouteData } from '@/shared/api/lib/utils/api-routes'
 
 export async function PATCH(req: Request) {
   try {
