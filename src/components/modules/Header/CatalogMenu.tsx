@@ -184,6 +184,7 @@ const CatalogMenu = () => {
                       )}
                       {isMedia450 && (
                         <Accordion
+                          id={id}
                           title={name}
                           titleClass='btn-reset nav-menu__accordion__item__title'
                         >
