@@ -6,7 +6,7 @@ export const useBreadcrumbs = (page: string) => {
   const { crumbText } = useCrumbText(page)
   const getDefaultTextGenerator = useCallback(() => crumbText, [crumbText])
   const getTextGenerator = useCallback((param: string) => ({})[param], [])
-  usePageTitle(page)
+  usePageTitle()
 
   useEffect(() => {
     const lastCrumb = document.querySelector('.last-crumb') as HTMLElement
