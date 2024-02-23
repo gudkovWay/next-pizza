@@ -2,11 +2,9 @@ import Link from 'next/link'
 import Logo from '@/components/elements/Logo/Logo'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import FooterLinks from './FooterLinks'
-import FooterMobileLink from './FooterMobileLink'
 
 const Footer = () => {
   const isMedia950 = useMediaQuery(950)
-  const isMedia640 = useMediaQuery(640)
 
   return (
     <footer className='footer'>
@@ -49,11 +47,7 @@ const Footer = () => {
       </div>
       <div className='footer__bottom'>
         <div className='container footer__bottom__container'>
-          <div className='footer__copyright'>
-            © 2024 GENIUS
-            <br />
-            (18+)
-          </div>
+          <div className='footer__copyright'>© 2024 GENIUS</div>
           <div className='footer__policy'>
             <div className='footer__policy__inner'>
               <Link href='/personal-data-policy'>
@@ -61,9 +55,7 @@ const Footer = () => {
               </Link>
               <Link href='/privacy-policy'>Политика конфиденциальности</Link>
             </div>
-            {isMedia640 && <FooterMobileLink text={`Полная версия`} />}
           </div>
-          {!isMedia640 && <FooterMobileLink text={`Мобильная версия`} />}
         </div>
       </div>
     </footer>

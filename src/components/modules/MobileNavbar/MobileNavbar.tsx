@@ -1,13 +1,7 @@
 'use client'
 import Link from 'next/link'
-import {
-  closeCatalogMenu,
-  closeMenu,
-  openCatalogMenu,
-  openMenu,
-} from '@/context/modals'
+import { closeCatalogMenu, openMenu } from '@/context/modals'
 import { addOverflowHiddenToBody } from '@/lib/utils/common'
-import CatalogMenu from '../Header/CatalogMenu'
 import { useCartByAuth } from '@/hooks/useCartByAuth'
 
 const MobileNavbar = () => {
@@ -18,25 +12,15 @@ const MobileNavbar = () => {
     closeCatalogMenu()
   }
 
-  const handleOpenCatalogMenu = () => {
-    addOverflowHiddenToBody('0')
-    openCatalogMenu()
-    closeMenu()
-  }
-
   return (
     <>
-      <CatalogMenu />
       <div className='mobile-navbar'>
         <Link href='/' className='mobile-navbar__btn'>
           Главная
         </Link>
-        <button
-          className='btn-reset mobile-navbar__btn'
-          onClick={handleOpenCatalogMenu}
-        >
+        <Link href='/catalog' className='btn-reset mobile-navbar__btn'>
           Каталог
-        </button>
+        </Link>
         <Link className='btn-reset mobile-navbar__btn' href='/favorites'>
           Избранное
         </Link>

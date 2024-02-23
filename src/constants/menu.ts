@@ -33,12 +33,12 @@ export const menuLinks = [
         children: [
           {
             id: 7,
-            text: 'Популярные',
+            text: 'Мясные',
             href: '/catalog/pizza&{params}',
           },
           {
             id: 8,
-            text: 'Новинки',
+            text: 'Вегетарианские',
             href: '/catalog/pizza/isNew',
           },
         ],
@@ -84,7 +84,7 @@ export const menuLinks = [
           },
           {
             id: 16,
-            text: 'Политика конфиденциальности',
+            text: 'Конфиденциальности',
             href: '/privacy-policy',
           },
         ],

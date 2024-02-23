@@ -167,7 +167,10 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                                 >
                                   {item.text}
                                 </motion.button>
-                                <ul className='list-reset nav-menu__accordion__item__list'>
+                                <ul
+                                  className='list-reset nav-menu__accordion__item__list
+                                  nav-menu__accordion__item__list-mobile'
+                                >
                                   <AnimatePresence initial={false}>
                                     {showAccordion === item.id &&
                                       item.children?.map((child) => (
