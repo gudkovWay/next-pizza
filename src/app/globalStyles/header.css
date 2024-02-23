@@ -16,8 +16,34 @@
 .header__logo {
   position: absolute;
   left: 50%;
-  top: 8px;
   transform: translateX(-65%);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .logo p {
+    color: #E8E9EA;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 60px;
+    font-weight: 700;
+
+    @media (max-width: 420px) {
+      font-size: 42px;
+    }
+  }
+
+  .logo img {
+    position: absolute;
+    left: 30%;
+    color: transparent;
+    transform: rotate(270deg);
+  }
 }
 
 .header__links {
