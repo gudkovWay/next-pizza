@@ -43,18 +43,19 @@ export const shuffle = <T>(array: T[]) => {
   while (currentIndex != 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
     currentIndex--
-    ;[array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ]
+      ;[array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ]
   }
 
   return array
 }
 
-export const formatPrice = (x: number) =>
-  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-
+export const formatPrice = (x: number) => {
+  x = Number(x)
+  return x
+}
 export const idGenerator = () => {
   const S4 = () =>
     (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)

@@ -56,6 +56,7 @@ const MainSlider = ({
             height={357}
             onLoad={handleLoadingImageComplete}
           />
+          <span>{item.title.replace(/\s/g, '\u00A0')}</span>
         </Link>
       ))}
     </Slider>
