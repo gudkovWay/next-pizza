@@ -52,10 +52,9 @@ export const shuffle = <T>(array: T[]) => {
   return array
 }
 
-export const formatPrice = (x: number) => {
-  x = Number(x)
-  return x
-}
+export const formatPrice = (x: number) =>
+  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+
 export const idGenerator = () => {
   const S4 = () =>
     (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
