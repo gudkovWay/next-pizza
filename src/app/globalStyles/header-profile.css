@@ -26,6 +26,7 @@
   top: 72px;
   right: -7px;
   transform-origin: top right;
+  width: max-content;
 }
 
 .header-profile__btn {
@@ -52,15 +53,20 @@
   align-items: center;
 }
 
+
 .header-profile__item__btn__icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-.header-profile__item__btn{
+.header-profile__item__btn {
   color: #E8E9EA;
   transition: color .2s ease-in-out;
+}
+
+.header-profile__item__btn--logout {
+  color: #565c66
 }
 
 .header-profile__item__btn:hover {

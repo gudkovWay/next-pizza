@@ -90,9 +90,9 @@ const CartPage = () => {
         <section>
           <div className='container'>
             <EmptyPageContent
-              subtitle={`Подзаголовок пустого контента`}
-              description={`Описание пустого контента`}
-              btnText={`Вперёд к покупкам!`}
+              subtitle={`Добавьте товаров в корзину`}
+              description={`и добавите к своему дню гормонии`}
+              btnText={`Переместиться в каталог ->`}
               bgClassName={styles.empty_bg}
             />
           </div>

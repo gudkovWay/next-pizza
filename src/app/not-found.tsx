@@ -9,7 +9,7 @@ const NotFound = () => (
         <EmptyPageContent
           subtitle={`Наша <a href=\"/\">секретная служба</a> уже ведет расследование`}
           description={`Похоже, что иноплонетные бибизьяны удалили контент страницы`}
-          btnText={`Переместиться в корзину ->`}
+          btnText={`Переместиться в каталог ->`}
           emptyWord={`Зона 404...`}
           bgClassName={styles.empty_bg}
           bgWordClassName={styles.not_found_bg}

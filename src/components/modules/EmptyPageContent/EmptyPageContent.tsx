@@ -16,7 +16,7 @@ const EmptyPageContent = ({
 }: IEmptyPageContentProps) => {
   const isMedia950 = useMediaQuery(950)
   const isMedia500 = useMediaQuery(500)
-  const currentTitle = title ? title : `common.empty_text`
+  const currentTitle = title ? title : `Вашу корзину украли`
   const currentOopsWord = oopsWord ? oopsWord : `Ой...`
 
   return (
