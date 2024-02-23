@@ -91,7 +91,7 @@ const QuickViewModal = () => {
           )}
           <div className={styles.modal__right__bottom}>
             <span className={stylesForProduct.product__count_title}>
-              В наличии:
+              В корзине:
             </span>
             <div className={styles.modal__right__bottom__inner}>
               {!!selectedSize ? (
@@ -111,7 +111,7 @@ const QuickViewModal = () => {
                 >
                   <span>
                     Всего в корзине:
-                    {allCurrentCartItemCount}
+                    {` ${allCurrentCartItemCount}`}
                   </span>
                 </div>
               )}

@@ -82,16 +82,16 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
           )}
           <div className={styles.list__item__actions}>
             <ProductItemActionBtn
-              text={`product.add_to_favorites`}
+              text={`В избранное`}
               iconClass='actions__btn_favorite'
             />
             <ProductItemActionBtn
-              text={`product.add_to_comparison`}
+              text={`Сравнить`}
               iconClass='actions__btn_comparison'
             />
             {!isMedia800 && (
               <ProductItemActionBtn
-                text={`product.quick_view`}
+                text={`Предпросмотр товара`}
                 iconClass='actions__btn_quick_view'
                 callback={handleShowQuickViewModal}
               />
