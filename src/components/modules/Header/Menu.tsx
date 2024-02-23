@@ -130,6 +130,7 @@ const Menu = () => {
           <li className='nav-menu__list__item'>
             {isMedia640 && (
               <Accordion
+                id={0}
                 title={`Заказчики`}
                 titleClass='btn-reset nav-menu__list__item__btn'
               >
@@ -142,6 +143,7 @@ const Menu = () => {
           <li className='nav-menu__list__item'>
             {isMedia640 && (
               <Accordion
+                id={0}
                 title='contacts'
                 titleClass='btn-reset nav-menu__list__item__btn'
               >
