@@ -35,7 +35,9 @@ export default function RootLayout({
       <head>
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='DoodlePizza' />
-        <meta property='og:url' content='https://doodlepizza.ru' />
+        <meta property='og:title' content='DoodlePizza | Ошалевшая курсовая' />
+        <meta property='og:url' content='https://next-pizza-six.vercel.app/' />
+        <meta property='og:image' content='/logo.png' />
       </head>
       <body>
         <PagesLayout>{children}</PagesLayout>
