@@ -18,7 +18,7 @@ import './globalStyles/breadcrumbs.css'
 
 export const metadata: Metadata = {
   title: 'DoodlePizza',
-  description: 'Ахуитильная курсовая работа.',
+  description: 'I USE ARCH BTW',
 }
 
 export const viewport: Viewport = {
