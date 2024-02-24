@@ -8,7 +8,6 @@ import {
   setCartFromLS,
   setShouldShowEmpty,
 } from '@/context/cart'
-import { productsWithoutSizes } from '@/shared/constants/product'
 
 export const addItemToCart = (
   product: IProduct,
@@ -104,11 +103,6 @@ export const addProductToCartBySizeTable = (
   count: number,
   selectedSize = ''
 ) => {
-  if (productsWithoutSizes.includes(product.type)) {
-    addItemToCart(product, setSpinner, count)
-    return
-  }
-
   if (selectedSize) {
     addItemToCart(product, setSpinner, count, selectedSize)
     return

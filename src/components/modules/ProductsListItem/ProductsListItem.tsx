@@ -1,13 +1,10 @@
 /* eslint-disable indent */
 import Link from 'next/link'
 import Image from 'next/image'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {
   addOverflowHiddenToBody,
   formatPrice,
-  isItemInList,
 } from '@/shared/api/lib/utils/common'
 import ProductLabel from './ProductLabel'
 import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle'
@@ -19,8 +16,6 @@ import { useCartAction } from '@/features/hooks/useCartAction'
 import { showQuickViewModal } from '@/context/modals'
 import { setCurrentProduct } from '@/context/goods'
 
-import { productsWithoutSizes } from '@/shared/constants/product'
-import { addProductToCartBySizeTable } from '@/shared/api/lib/utils/cart'
 import { IProductsListItemProps } from '@/shared/types/modules'
 import styles from '@/styles/product-list-item/index.module.scss'
 import stylesForAd from '@/styles/ad/index.module.scss'
@@ -28,18 +23,13 @@ import stylesForAd from '@/styles/ad/index.module.scss'
 const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
   const isMedia800 = useMediaQuery(800)
   const isTitleForNew = title === `Новинки`
-  const { addToCartSpinner, setAddToCartSpinner, currentCartByAuth } =
-    useCartAction()
-  const isProductInCart = isItemInList(currentCartByAuth, item._id)
+  useCartAction()
 
   const handleShowQuickViewModal = () => {
     addOverflowHiddenToBody()
     showQuickViewModal()
     setCurrentProduct(item)
   }
-
-  const addToCart = () =>
-    addProductToCartBySizeTable(item, setAddToCartSpinner, 1)
 
   return (
     <>
@@ -120,31 +110,12 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
               {formatPrice(+item.price)} ₽
             </span>
           </div>
-          {productsWithoutSizes.includes(item.type) ? (
-            <button
-              onClick={addToCart}
-              className={`btn-reset ${styles.list__item__cart} ${
-                isProductInCart ? styles.list__item__cart_added : ''
-              }`}
-              disabled={addToCartSpinner}
-              style={addToCartSpinner ? { minWidth: 125, height: 48 } : {}}
-            >
-              {addToCartSpinner ? (
-                <FontAwesomeIcon icon={faSpinner} spin color='#fff' />
-              ) : isProductInCart ? (
-                `В корзине`
-              ) : (
-                `В корзину`
-              )}
-            </button>
-          ) : (
-            <button
-              className={`btn-reset ${styles.list__item__cart}`}
-              onClick={addToCart}
-            >
-              Добавить в корзину!
-            </button>
-          )}
+          <button
+            className={`btn-reset ${styles.list__item__cart}`}
+            onClick={handleShowQuickViewModal}
+          >
+            Добавить в корзину!
+          </button>
         </li>
       )}
     </>
