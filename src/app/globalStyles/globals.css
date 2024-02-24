@@ -68,8 +68,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .site-title {
-  margin: 0;
-  margin-bottom: 40px;
   color: #E8E9EA;
   font-size: 42px;
   font-weight: 700;
@@ -235,6 +233,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 .quick-modal-dots li.slick-active button {
   background-image: url(/img/white-ellipse.svg) !important;
+}
+
+@media (max-width: 550px) {
+  .quick-modal-dots {
+    display: none;
+  }
 }
 
 @media (max-width: 1460px) {

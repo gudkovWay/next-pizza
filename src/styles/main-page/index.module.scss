@@ -515,8 +515,8 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
     width: 100%;
 
     @media (max-width: 1150px) {
@@ -556,12 +556,6 @@
 
   &__inner {
     position: relative;
-
-    .all {
-      @media (max-width: 490px) {
-        top: -45px;
-      }
-    }
   }
 
   &__list {
@@ -662,9 +656,6 @@
 }
 
 .all {
-  position: absolute;
-  right: 0;
-  top: -65px;
   text-decoration: none;
   color: #fff;
   font-size: 16px;

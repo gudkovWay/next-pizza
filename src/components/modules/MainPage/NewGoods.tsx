@@ -6,7 +6,14 @@ import { getNewProductsFx } from '@/shared/api/main-page'
 const NewGoods = () => {
   const goods = useUnit($newProducts)
   const spinner = useUnit(getNewProductsFx.pending)
-  return <MainPageSection title={`Новинки`} goods={goods} spinner={spinner} />
+  return (
+    <MainPageSection
+      title='Новинки'
+      goods={goods}
+      spinner={spinner}
+      sortBy='data'
+    />
+  )
 }
 
 export default NewGoods

@@ -8,7 +8,12 @@ const BestsellerGoods = () => {
   const spinner = useUnit(getBestsellerProductsFx.pending)
 
   return (
-    <MainPageSection title={`Бестселлеры`} goods={goods} spinner={spinner} />
+    <MainPageSection
+      title='Бестселлеры'
+      goods={goods}
+      spinner={spinner}
+      sortBy='popularity'
+    />
   )
 }
 

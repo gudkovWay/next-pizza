@@ -1,18 +1,22 @@
-import AllLink from '@/components/elements/AllLink/AllLink'
 import { IMainPageSectionProps } from '@/shared/types/main-page'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import styles from '@/styles/main-page/index.module.scss'
 import { motion } from 'framer-motion'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
+import ProductsListHeader from '../ProductsListItem/ProductsListHeader'
 
-const MainPageSection = ({ title, goods, spinner }: IMainPageSectionProps) => (
+const MainPageSection = ({
+  title,
+  sortBy,
+  goods,
+  spinner,
+}: IMainPageSectionProps) => (
   <section className={styles.main_section}>
     <div className={`container ${styles.main_section__container}`}>
       <span className={styles.main_section__bg}>{title}</span>
-      <h2 className={`site-title ${styles.main_section__title}`}>{title}</h2>
+      <ProductsListHeader title={title} sortBy={sortBy} />
       <div className={styles.main_section__inner}>
-        <AllLink />
         {spinner && (
           <motion.ul
             className={skeletonStyles.skeleton}

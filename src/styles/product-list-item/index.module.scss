@@ -1,6 +1,6 @@
 .list {
   &__item {
-    min-height: 453px;
+    min-height: 333px;
     position: relative;
     padding: 16px;
     transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out;
@@ -56,6 +56,7 @@
     &__img {
       margin: auto;
       display: block;
+      height: 332px;
 
       img {
         max-height: 332px;
@@ -68,7 +69,16 @@
     }
 
     &__inner {
+      width: 100%;
       align-self: flex-start;
+
+      &__price {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
     }
 
     &__title {
@@ -84,23 +94,22 @@
     }
 
     &__price {
+      width: 100%;
       color: #E8E9EA;
       font-size: 24px;
       font-weight: 500;
     }
 
     &__cart {
+      width: 100%;
+      height: 60px;
       opacity: 0;
       visibility: hidden;
-      position: absolute;
-      bottom: 16px;
-      right: 16px;
       color: #fff;
       font-size: 16px;
       font-weight: 500;
       border-radius: 32px;
       background-color: #9466FF;
-      padding: 12px 24px !important;
       transition: background-color .2s ease-in-out, opacity .2s ease-in-out, visibility .2s ease-in-out;
 
       @media (max-width: 800px) {
@@ -141,7 +150,8 @@
       transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out;
     }
 
-    &:hover &__actions, &:hover &__cart {
+    &:hover &__actions,
+    &:hover &__cart {
       opacity: 1;
       visibility: visible;
       transition: background-color .2s ease-in-out, opacity .2s ease-in-out, visibility .2s ease-in-out;
@@ -304,7 +314,8 @@
     font-size: 12px;
   }
 
-  &__color, &__composition {
+  &__color,
+  &__composition {
     display: block;
     margin-bottom: 24px;
     color: #E8E9EA;

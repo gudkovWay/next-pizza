@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import AllLink from '@/components/elements/AllLink/AllLink'
 import MainSlider from '../MainSlider'
 import useImagePreloader from '@/features/hooks/useImagePreloader'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
@@ -34,7 +33,6 @@ const Categories = () => {
       <div className={`container ${styles.categories__container}`}>
         <h2 className={`site-title ${styles.categories__title}`}>Категории</h2>
         <div className={styles.categories__inner}>
-          <AllLink />
           {!isMedia490 && (
             <>
               <Link

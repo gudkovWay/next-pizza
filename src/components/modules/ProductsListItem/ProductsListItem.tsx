@@ -6,7 +6,6 @@ import {
   addOverflowHiddenToBody,
   formatPrice,
 } from '@/shared/api/lib/utils/common'
-import ProductLabel from './ProductLabel'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
 
@@ -17,10 +16,8 @@ import { setCurrentProduct } from '@/context/goods'
 import { IProductsListItemProps } from '@/shared/types/modules'
 import styles from '@/styles/product-list-item/index.module.scss'
 
-const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
-  const isTitleForNew = title === `Новинки`
+const ProductsListItem = ({ item }: IProductsListItemProps) => {
   useCartAction()
-
   const handleShowQuickViewModal = () => {
     addOverflowHiddenToBody()
     showQuickViewModal()
@@ -30,21 +27,6 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
   return (
     <>
       <li className={styles.list__item}>
-        {title ? (
-          <span
-            className={`${styles.list__item__label} ${
-              isTitleForNew
-                ? styles.list__item__new
-                : styles.list__item__bestseller
-            }`}
-          >
-            {isTitleForNew ? `Новинки ` : `Бестселлеры`}
-          </span>
-        ) : !item.isNew && !item.isBestseller ? (
-          ''
-        ) : (
-          <ProductLabel isBestseller={item.isBestseller} isNew={item.isNew} />
-        )}
         <div className={styles.list__item__actions}>
           <ProductItemActionBtn
             text={`В избранное`}
@@ -71,16 +53,18 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
             vendorCode={item.vendorCode}
             inStock={+item.inStock}
           />
-          <span className={styles.list__item__price}>
-            {formatPrice(+item.price)} ₽
-          </span>
+          <div className={styles.list__item__inner__price}>
+            <span className={styles.list__item__price}>
+              {formatPrice(+item.price)} ₽
+            </span>
+            <button
+              className={`btn-reset ${styles.list__item__cart}`}
+              onClick={handleShowQuickViewModal}
+            >
+              В корзину
+            </button>
+          </div>
         </div>
-        <button
-          className={`btn-reset ${styles.list__item__cart}`}
-          onClick={handleShowQuickViewModal}
-        >
-          Добавить в корзину!
-        </button>
       </li>
     </>
   )

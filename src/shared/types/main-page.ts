@@ -11,6 +11,7 @@ export type IHeroSlideTooltip = IHeroSlide
 
 export interface IMainPageSectionProps {
   title: string
+  sortBy: string
   goods: IProduct[]
   spinner: boolean
 }

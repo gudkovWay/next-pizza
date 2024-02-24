@@ -47,22 +47,22 @@ const QuickViewModal = () => {
         className={`btn-reset ${styles.modal__close}`}
         onClick={handleCloseModal}
       />
-      <div className={styles.modal__actions}>
-        <ProductItemActionBtn
-          text={`В избранное`}
-          iconClass='actions__btn_favorite'
-          withTooltip={false}
-        />
-        <ProductItemActionBtn
-          text={`Сравнить`}
-          iconClass='actions__btn_comparison'
-          withTooltip={false}
-        />
-      </div>
       <div className={styles.modal__left}>
         <QuickViewModalSlider images={images} />
       </div>
       <div className={styles.modal__right}>
+        <div className={styles.modal__actions}>
+          <ProductItemActionBtn
+            text={`В избранное`}
+            iconClass='actions__btn_favorite'
+            withTooltip={false}
+          />
+          <ProductItemActionBtn
+            text={`Сравнить`}
+            iconClass='actions__btn_comparison'
+            withTooltip={false}
+          />
+        </div>
         <h3 className={styles.modal__right__title}>{product.name}</h3>
         <div className={styles.modal__right__price}>
           {formatPrice(+product.price)} ₽
@@ -72,11 +72,11 @@ const QuickViewModal = () => {
             vendorCode={product.vendorCode}
             inStock={+product.inStock}
           />
-          {Object.keys(product.sizes).length ? (
+          {Object.keys(product.sizes).length && (
             <div className={styles.modal__right__info__size}>
               <div className={styles.modal__right__info__size__inner}>
                 <span className={stylesForProduct.product__size_title}>
-                  Размер
+                  Размер:
                 </span>
               </div>
               <ul className={`list-reset ${styles.modal__right__info__sizes}`}>
@@ -91,57 +91,54 @@ const QuickViewModal = () => {
                 ))}
               </ul>
             </div>
-          ) : (
-            ''
           )}
           <div className={styles.modal__right__bottom}>
-            <span className={stylesForProduct.product__count_title}>
-              В корзине:
-            </span>
             <div className={styles.modal__right__bottom__inner}>
               {!!selectedSize ? (
-                <ProductCounter
-                  className={`counter ${styles.modal__right__bottom__counter}`}
-                  count={count}
-                  totalCount={+product.inStock}
-                  initialCount={+(existingItem?.count || 1)}
-                  setCount={setCount}
-                  cartItem={existingItem as ICartItem}
-                  updateCountAsync={false}
-                />
+                <>
+                  <ProductCounter
+                    className={`counter ${styles.modal__right__bottom__counter}`}
+                    count={count}
+                    totalCount={+product.inStock}
+                    initialCount={+(existingItem?.count || 1)}
+                    setCount={setCount}
+                    cartItem={existingItem as ICartItem}
+                    updateCountAsync={false}
+                  />
+                  <AddToCartBtn
+                    className={styles.modal__right__bottom__add}
+                    text={`Добавить в корзину `}
+                    handleAddToCart={addToCart}
+                    addToCartSpinner={addToCartSpinner || updateCountSpinner}
+                    btnDisabled={
+                      addToCartSpinner ||
+                      updateCountSpinner ||
+                      allCurrentCartItemCount === +product.inStock
+                    }
+                  />
+                </>
               ) : (
                 <div
                   className={`counter ${styles.modal__right__bottom__counter}`}
                   style={{ justifyContent: 'center' }}
                 >
                   <span>
-                    Всего в корзине:
-                    {` ${allCurrentCartItemCount}`}
+                    Сейчас в корзине:
+                    {` ${allCurrentCartItemCount} шт. :(`}
                   </span>
                 </div>
               )}
-              <AddToCartBtn
-                className={styles.modal__right__bottom__add}
-                text={`В корзину `}
-                handleAddToCart={addToCart}
-                addToCartSpinner={addToCartSpinner || updateCountSpinner}
-                btnDisabled={
-                  addToCartSpinner ||
-                  updateCountSpinner ||
-                  allCurrentCartItemCount === +product.inStock
-                }
-              />
             </div>
           </div>
-        </div>
-        <div className={styles.modal__right__more}>
-          <Link
-            href={`/catalog/${product.category}/${product._id}`}
-            className={styles.modal__right__more__link}
-            onClick={handleCloseModal}
-          >
-            Больше
-          </Link>
+          <div className={styles.modal__right__more}>
+            <Link
+              href={`/catalog/${product.category}/${product._id}`}
+              className={styles.modal__right__more__link}
+              onClick={handleCloseModal}
+            >
+              Больше
+            </Link>
+          </div>
         </div>
       </div>
     </div>

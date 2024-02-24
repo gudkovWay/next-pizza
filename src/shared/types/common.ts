@@ -36,3 +36,8 @@ export interface IBaseEffectProps {
   id: string
   setSpinner: (arg0: boolean) => void
 }
+
+export interface ProductHeaderProps {
+  title: string
+  sortBy: string
+}
