@@ -5,7 +5,7 @@ import {
   findUserByEmail,
   parseJwt,
 } from '@/shared/api/lib/utils/api-routes'
-import { IUser } from '@/types/user'
+import { IUser } from '@/shared/types/user'
 
 export async function GET(req: Request) {
   try {

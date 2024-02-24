@@ -5,9 +5,9 @@ import {
   getBestsellerProductsFx,
   getNewProductsFx,
 } from '@/shared/api/main-page'
-import { IProduct } from '@/types/common'
+import { IProduct } from '@/shared/types/common'
 import { loadOneProductFx } from '@/shared/api/goods'
-import { ILoadOneProductFx } from '@/types/goods'
+import { ILoadOneProductFx } from '@/shared/types/goods'
 
 const goods = createDomain()
 

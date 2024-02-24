@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ICrumbProps } from '@/types/modules'
+import { ICrumbProps } from '@/shared/types/modules'
 
 const Crumb = ({ text: defaultText, href, last = false }: ICrumbProps) =>
   last ? (

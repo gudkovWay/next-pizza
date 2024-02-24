@@ -1,7 +1,7 @@
 import { createEffect } from 'effector'
 import { toast } from 'react-hot-toast'
 import api from './apiInstance'
-import { ILoadOneProductFx } from '@/types/goods'
+import { ILoadOneProductFx } from '@/shared/types/goods'
 
 export const loadOneProductFx = createEffect(
   async ({ productId, category }: ILoadOneProductFx) => {

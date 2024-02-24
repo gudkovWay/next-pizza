@@ -1,4 +1,4 @@
-import { IProductAvailableProps } from '@/types/elements'
+import { IProductAvailableProps } from '@/shared/types/elements'
 import styles from '@/styles/product-list-item/index.module.scss'
 
 const ProductAvailable = ({ vendorCode, inStock }: IProductAvailableProps) => {

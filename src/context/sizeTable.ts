@@ -1,5 +1,5 @@
 import { createDomain } from 'effector'
-import { ISelectedSizes } from '@/types/common'
+import { ISelectedSizes } from '@/shared/types/common'
 
 const sizeTable = createDomain()
 

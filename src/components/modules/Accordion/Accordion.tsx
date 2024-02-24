@@ -1,4 +1,4 @@
-import { IAccordionProps } from '@/types/modules'
+import { IAccordionProps } from '@/shared/types/modules'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useState } from 'react'
 

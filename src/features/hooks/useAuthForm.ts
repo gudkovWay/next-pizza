@@ -3,7 +3,7 @@ import { EventCallable, Store } from 'effector'
 import { useUnit } from 'effector-react'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { IInputs, ISignUpFx } from '@/types/authPopup'
+import { IInputs, ISignUpFx } from '@/shared/types/authPopup'
 
 export const useAuthForm = (
   initialSpinner: Store<boolean>,
@@ -30,7 +30,7 @@ export const useAuthForm = (
         })
       }
     }
-  }, [isConnected])
+  }, [isConnected, event, isSideActive, user])
 
   const handleSignupWithOAuth = () =>
     connectWithPopup({

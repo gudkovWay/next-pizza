@@ -1,6 +1,6 @@
 'use client'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
-import { useBreadcrumbs } from '@/hooks/useBreadcrumbs'
+import { useBreadcrumbs } from '@/features/hooks/useBreadcrumbs'
 import styles from '@/styles/policy/index.module.scss'
 
 const PersonalDataPolicyPage = () => {

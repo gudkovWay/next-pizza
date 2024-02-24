@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { closeCatalogMenu, openMenu } from '@/context/modals'
+import { useCartByAuth } from '@/features/hooks/useCartByAuth'
 import { addOverflowHiddenToBody } from '@/shared/api/lib/utils/common'
-import { useCartByAuth } from '@/hooks/useCartByAuth'
 
 const MobileNavbar = () => {
   const currentCartByAuth = useCartByAuth()

@@ -1,5 +1,5 @@
 import AllLink from '@/components/elements/AllLink/AllLink'
-import { IMainPageSectionProps } from '@/types/main-page'
+import { IMainPageSectionProps } from '@/shared/types/main-page'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import styles from '@/styles/main-page/index.module.scss'
 import { motion } from 'framer-motion'

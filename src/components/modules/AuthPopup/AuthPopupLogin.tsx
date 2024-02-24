@@ -1,13 +1,15 @@
-import { singInFx } from '@/shared/api/auth'
-import { handleSignIn } from '@/context/auth'
-import { useAuthForm } from '@/hooks/useAuthForm'
-import { IAuthSideProps, IInputs } from '@/types/authPopup'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import AuthPopupClose from './AuthPopupClose'
 import EmailInput from './EmailInput'
 import PasswordInput from './PasswordInput'
 import AuthPopupSocials from './AuthPopupSocials'
+
+import { useAuthForm } from '@/features/hooks/useAuthForm'
+import { handleSignIn } from '@/context/auth'
+import { IAuthSideProps, IInputs } from '@/shared/types/authPopup'
+import { singInFx } from '@/shared/api/auth'
 
 const AuthPopupLogin = ({ toggleAuth, isSideActive }: IAuthSideProps) => {
   const { spinner, register, errors, handleSubmit, handleSignupWithOAuth } =

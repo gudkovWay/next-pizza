@@ -1,6 +1,7 @@
 import Link from 'next/link'
+
 import Logo from '@/components/elements/Logo/Logo'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import FooterLinks from './FooterLinks'
 
 const Footer = () => {

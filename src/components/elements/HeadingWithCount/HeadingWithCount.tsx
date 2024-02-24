@@ -1,6 +1,6 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IHeadingWithCountProps } from '@/types/elements'
+import { IHeadingWithCountProps } from '@/shared/types/elements'
 import styles from '@/styles/heading-with-count/index.module.scss'
 
 const HeadingWithCount = ({ title, spinner }: IHeadingWithCountProps) => (

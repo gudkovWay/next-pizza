@@ -1,4 +1,4 @@
-import { INameErrorMessageProps } from '@/types/authPopup'
+import { INameErrorMessageProps } from '@/shared/types/authPopup'
 
 const NameErrorMessage = ({
   errors,

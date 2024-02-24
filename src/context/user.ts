@@ -1,5 +1,5 @@
 import { createDomain, sample } from 'effector'
-import { IUser } from '@/types/user'
+import { IUser } from '@/shared/types/user'
 import { loginCheckFx } from '@/shared/api/auth'
 
 const user = createDomain()

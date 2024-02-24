@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { idGenerator } from '@/shared/api/lib/utils/common'
-import { IProduct } from '@/types/common'
+import { IProduct } from '@/shared/types/common'
 
 export const useProductImages = (product: IProduct) => {
   const images = useMemo(() => {

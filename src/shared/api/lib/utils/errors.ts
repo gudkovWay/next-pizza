@@ -11,7 +11,7 @@ import {
   IAddProductToCartFx,
   IAddProductsFromLSToCartFx,
   IDeleteCartItemsFx,
-} from '@/types/cart'
+} from '@/shared/types/cart'
 
 export const handleJWTError = async (
   errorName: string,

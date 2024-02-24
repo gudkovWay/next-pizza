@@ -1,14 +1,15 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import AllLink from '@/components/elements/AllLink/AllLink'
-import useImagePreloader from '@/hooks/useImagePreloader'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
-import styles from '@/styles/main-page/index.module.scss'
 import MainSlider from '../MainSlider'
+import useImagePreloader from '@/features/hooks/useImagePreloader'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import img1 from '@/../public/img/categories-img-1.png'
 import img2 from '@/../public/img/categories-img-2.png'
 import img3 from '@/../public/img/categories-img-3.png'
+import styles from '@/styles/main-page/index.module.scss'
 
 const images = [
   { src: img1, id: 1, title: 'Комбо' },

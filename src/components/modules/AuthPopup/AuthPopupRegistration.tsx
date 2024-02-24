@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { useAuthForm } from '@/hooks/useAuthForm'
-import AuthPopupClose from './AuthPopupClose'
-import { handleSignUp } from '@/context/auth'
-import { singUpFx } from '@/shared/api/auth'
-import { IAuthSideProps, IInputs } from '@/types/authPopup'
+
 import NameInput from './NameInput'
 import EmailInput from './EmailInput'
 import PasswordInput from './PasswordInput'
 import AuthPopupSocials from './AuthPopupSocials'
+import AuthPopupClose from './AuthPopupClose'
+
+import { useAuthForm } from '@/features/hooks/useAuthForm'
+import { handleSignUp } from '@/context/auth'
+import { singUpFx } from '@/shared/api/auth'
+import { IAuthSideProps, IInputs } from '@/shared/types/authPopup'
 
 const AuthPopupRegistration = ({
   toggleAuth,
@@ -30,7 +32,6 @@ const AuthPopupRegistration = ({
       <AuthPopupClose />
       <div className='card-body wow-bg'>
         <h3 className='card-body__title'>Регистрация</h3>
-        <p className='card-body__description'>Ещё нет аккаунта?</p>
         <form onSubmit={handleSubmit(submitForm)}>
           <NameInput register={register} errors={errors} />
           <EmailInput register={register} errors={errors} />

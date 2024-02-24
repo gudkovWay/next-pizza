@@ -13,7 +13,7 @@ import {
   ICartItem,
   IDeleteCartItemsFx,
   IUpdateCartItemCountFx,
-} from '@/types/cart'
+} from '@/shared/types/cart'
 import api from '@/shared/api/apiInstance'
 
 export const addProductsFromLSToCartFx = createEffect(

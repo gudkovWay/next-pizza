@@ -1,6 +1,6 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IAddToCartBtnProps } from '@/types/goods'
+import { IAddToCartBtnProps } from '@/shared/types/goods'
 
 const AddToCartBtn = ({
   handleAddToCart,

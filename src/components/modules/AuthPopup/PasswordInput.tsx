@@ -1,4 +1,4 @@
-import { IAuthInput } from '@/types/authPopup'
+import { IAuthInput } from '@/shared/types/authPopup'
 import styles from '@/styles/auth-popup/index.module.scss'
 
 const PasswordInput = ({ register, errors }: IAuthInput) => (

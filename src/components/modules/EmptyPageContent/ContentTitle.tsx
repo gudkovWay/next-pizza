@@ -1,4 +1,4 @@
-import { IContentTitleProps } from '@/types/modules'
+import { IContentTitleProps } from '@/shared/types/modules'
 import styles from '@/styles/empty-content/index.module.scss'
 
 const ContentTitle = ({ title, oopsWord }: IContentTitleProps) => (

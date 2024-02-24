@@ -23,7 +23,7 @@ export const useTotalPrice = () => {
     setTotalPrice(getNewTotal())
     setFrom(totalPrice)
     setTo(getNewTotal())
-  }, [currentCartByAuth])
+  }, [currentCartByAuth, setFrom, setTo, totalPrice])
 
   return { animatedPrice }
 }

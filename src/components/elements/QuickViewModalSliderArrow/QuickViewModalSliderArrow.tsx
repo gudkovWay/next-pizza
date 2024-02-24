@@ -1,4 +1,4 @@
-import { IQuickViewModalSliderArrowProps } from '@/types/elements'
+import { IQuickViewModalSliderArrowProps } from '@/shared/types/elements'
 import styles from '@/styles/quick-view-modal/index.module.scss'
 
 const QuickViewModalSliderArrow = (props: IQuickViewModalSliderArrowProps) => (

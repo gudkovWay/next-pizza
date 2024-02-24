@@ -1,20 +1,22 @@
+import Link from 'next/link'
+
+import QuickViewModalSlider from './QuickViewModalSlider'
+import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
+import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
+import ProductSizesItem from '../ProductsListItem/ProductSizesItem'
+import ProductCounter from '../ProductsListItem/ProductCounter'
+import AddToCartBtn from '../ProductsListItem/AddToCartBtn'
+import { useCartAction } from '@/features/hooks/useCartAction'
+import { useProductImages } from '@/features/hooks/useProductImages'
 import { closeQuickViewModal } from '@/context/modals'
+
 import {
   formatPrice,
   removeOverflowHiddenFromBody,
 } from '@/shared/api/lib/utils/common'
+import { ICartItem } from '@/shared/types/cart'
 import styles from '@/styles/quick-view-modal/index.module.scss'
-import QuickViewModalSlider from './QuickViewModalSlider'
-import { useCartAction } from '@/hooks/useCartAction'
-import { useProductImages } from '@/hooks/useProductImages'
-import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
-import ProductSizesItem from '../ProductsListItem/ProductSizesItem'
-import ProductCounter from '../ProductsListItem/ProductCounter'
-import AddToCartBtn from '../ProductsListItem/AddToCartBtn'
-import Link from 'next/link'
 import stylesForProduct from '@/styles/product-list-item/index.module.scss'
-import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
-import { ICartItem } from '@/types/cart'
 
 const QuickViewModal = () => {
   const {

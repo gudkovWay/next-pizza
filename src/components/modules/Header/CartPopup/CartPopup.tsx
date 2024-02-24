@@ -1,16 +1,17 @@
+import Link from 'next/link'
+import { forwardRef } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useUnit } from 'effector-react'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
-import { forwardRef } from 'react'
-import { getCartItemsFx } from '@/shared/api/cart'
-import { withClickOutside } from '@/components/hocs/withClickOutside'
-import { useCartByAuth } from '@/hooks/useCartByAuth'
-import { IWrappedComponentProps } from '@/types/hocs'
+
 import CartPopupItem from './CartPopupItem'
-import { useTotalPrice } from '@/hooks/useTotalPrice'
+import { withClickOutside } from '@/components/hocs/withClickOutside'
+import { useCartByAuth } from '@/features/hooks/useCartByAuth'
+import { useTotalPrice } from '@/features/hooks/useTotalPrice'
+import { getCartItemsFx } from '@/shared/api/cart'
 import { formatPrice } from '@/shared/api/lib/utils/common'
+import { IWrappedComponentProps } from '@/shared/types/hocs'
 
 const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
   ({ open, setOpen }, ref) => {

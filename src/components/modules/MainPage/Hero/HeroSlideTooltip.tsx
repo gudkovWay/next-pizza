@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { IHeroSlideTooltip } from '@/types/main-page'
+import { IHeroSlideTooltip } from '@/shared/types/main-page'
 import styles from '@/styles/main-page/index.module.scss'
 
 const HeroSlideTooltip = ({ title, image }: IHeroSlideTooltip) => (

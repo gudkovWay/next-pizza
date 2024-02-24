@@ -6,7 +6,7 @@ import {
   ICartItem,
   IDeleteCartItemsFx,
   IUpdateCartItemCountFx,
-} from '@/types/cart'
+} from '@/shared/types/cart'
 import api from './apiInstance'
 
 export const getCartItemsFx = createEffect(async ({ jwt }: { jwt: string }) => {

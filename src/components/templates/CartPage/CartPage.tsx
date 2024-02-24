@@ -2,17 +2,19 @@
 import { useUnit } from 'effector-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { getCartItemsFx } from '@/shared/api/cart'
+
 import HeadingWithCount from '@/components/elements/HeadingWithCount/HeadingWithCount'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import CartList from '@/components/modules/CartPage/CartList'
 import PromotionalCode from '@/components/modules/CartPage/PromotionalCode'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
 import OrderInfoBlock from '@/components/modules/OrderInfoBlock/OrderInfoBlock'
-import { basePropsForMotion } from '@/shared/constants/motion'
-import { useBreadcrumbs } from '@/hooks/useBreadcrumbs'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useBreadcrumbs } from '@/features/hooks/useBreadcrumbs'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { $shouldShowEmpty } from '@/context/cart'
+
+import { basePropsForMotion } from '@/shared/constants/motion'
+import { getCartItemsFx } from '@/shared/api/cart'
 import styles from '@/styles/cart-page/index.module.scss'
 import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
 

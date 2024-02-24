@@ -1,6 +1,6 @@
 import NameErrorMessage from '@/components/elements/NameErrorMessage/NameErrorMessage'
 import { nameValidationRules } from '@/shared/api/lib/utils/auth'
-import { IAuthInput } from '@/types/authPopup'
+import { IAuthInput } from '@/shared/types/authPopup'
 import styles from '@/styles/auth-popup/index.module.scss'
 
 const NameInput = ({ register, errors }: IAuthInput) => (

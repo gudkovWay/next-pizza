@@ -2,19 +2,20 @@
 import { useUnit } from 'effector-react'
 import { useRef, MutableRefObject } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+
 import Header from '../modules/Header/Header'
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar'
 import SearchModal from '../modules/Header/SearchModal'
+import Footer from '../modules/Footer/Footer'
+import QuickViewModal from '../modules/QuickViewModal/QuickViewModal'
+import AuthPopup from '../modules/AuthPopup/AuthPopup'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { $searchModal, $showQuickViewModal } from '@/context/modals'
 import {
   handleCloseAuthPopup,
   handleCloseSearchModal,
 } from '@/shared/api/lib/utils/common'
-import Footer from '../modules/Footer/Footer'
-import QuickViewModal from '../modules/QuickViewModal/QuickViewModal'
 import { $openAuthPopup } from '@/context/auth'
-import AuthPopup from '../modules/AuthPopup/AuthPopup'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const isMedia800 = useMediaQuery(800)

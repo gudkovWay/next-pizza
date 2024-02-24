@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { ICartItem } from '@/types/cart'
-import { useCartItemAction } from '@/hooks/useCartItemAction'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { formatPrice } from '@/shared/api/lib/utils/common'
+
 import ProductCounter from '../ProductsListItem/ProductCounter'
+import { useCartItemAction } from '@/features/hooks/useCartItemAction'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
+import { formatPrice } from '@/shared/api/lib/utils/common'
+import { ICartItem } from '@/shared/types/cart'
 import styles from '@/styles/cart-page/index.module.scss'
 
 const CartListItem = ({ item }: { item: ICartItem }) => {

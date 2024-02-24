@@ -1,26 +1,29 @@
 /* eslint-disable indent */
-import { IProductsListItemProps } from '@/types/modules'
-import styles from '@/styles/product-list-item/index.module.scss'
-import stylesForAd from '@/styles/ad/index.module.scss'
 import Link from 'next/link'
-import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle'
 import Image from 'next/image'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import {
   addOverflowHiddenToBody,
   formatPrice,
   isItemInList,
 } from '@/shared/api/lib/utils/common'
 import ProductLabel from './ProductLabel'
+import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
+import { useCartAction } from '@/features/hooks/useCartAction'
 import { showQuickViewModal } from '@/context/modals'
 import { setCurrentProduct } from '@/context/goods'
+
 import { productsWithoutSizes } from '@/shared/constants/product'
-import { useCartAction } from '@/hooks/useCartAction'
 import { addProductToCartBySizeTable } from '@/shared/api/lib/utils/cart'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IProductsListItemProps } from '@/shared/types/modules'
+import styles from '@/styles/product-list-item/index.module.scss'
+import stylesForAd from '@/styles/ad/index.module.scss'
 
 const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
   const isMedia800 = useMediaQuery(800)

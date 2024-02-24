@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import { useUnit } from 'effector-react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
-import Logo from '@/components/elements/Logo/Logo'
-import { $menuIsOpen, closeMenu } from '@/context/modals'
-import { removeOverflowHiddenFromBody } from '@/shared/api/lib/utils/common'
 import { usePathname } from 'next/navigation'
-import MenuLinkItem from './MenuLinkItem'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { menuLinks } from '@/shared/constants/menu'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Slider from 'react-slick'
+
+import Logo from '@/components/elements/Logo/Logo'
+import MenuLinkItem from './MenuLinkItem'
+import { $menuIsOpen, closeMenu } from '@/context/modals'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
+import { removeOverflowHiddenFromBody } from '@/shared/api/lib/utils/common'
+import { menuLinks } from '@/shared/constants/menu'
 
 export interface MenuLinksProps {
   id: number

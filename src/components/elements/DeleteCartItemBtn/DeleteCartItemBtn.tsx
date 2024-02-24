@@ -1,6 +1,6 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IDeleteCartItemBtnProps } from '@/types/cart'
+import { IDeleteCartItemBtnProps } from '@/shared/types/cart'
 
 const DeleteCartItemBtn = ({
   btnDisabled,

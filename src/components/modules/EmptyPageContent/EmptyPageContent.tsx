@@ -1,7 +1,7 @@
-import { IEmptyPageContentProps } from '@/types/modules'
 import ContentLinks from './ContentLinks'
 import ContentTitle from './ContentTitle'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useMediaQuery } from '@/features/hooks/useMediaQuery'
+import { IEmptyPageContentProps } from '@/shared/types/modules'
 import styles from '@/styles/empty-content/index.module.scss'
 
 const EmptyPageContent = ({

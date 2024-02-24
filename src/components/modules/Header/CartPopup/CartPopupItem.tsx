@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+
 import DeleteCartItemBtn from '@/components/elements/DeleteCartItemBtn/DeleteCartItemBtn'
-import { useCartItemAction } from '@/hooks/useCartItemAction'
-import { formatPrice } from '@/shared/api/lib/utils/common'
-import { ICartItem } from '@/types/cart'
 import ProductCounter from '../../ProductsListItem/ProductCounter'
+import { useCartItemAction } from '@/features/hooks/useCartItemAction'
+import { formatPrice } from '@/shared/api/lib/utils/common'
+import { ICartItem } from '@/shared/types/cart'
 
 const CartPopupItem = ({ item }: { item: ICartItem }) => {
   const {

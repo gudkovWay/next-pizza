@@ -1,4 +1,4 @@
-import { IProductSubtitleProps } from '@/types/elements'
+import { IProductSubtitleProps } from '@/shared/types/elements'
 import styles from '@/styles/productSubtitle/index.module.scss'
 
 const ProductSubtitle = ({

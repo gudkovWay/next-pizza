@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ICartItem } from '@/types/cart'
+import { ICartItem } from '@/shared/types/cart'
 import { usePriceAction } from './usePriceAction'
 import { usePriceAnimation } from './usePricceAnimation'
 import { deleteProductFromLS, isUserAuth } from '@/shared/api/lib/utils/common'

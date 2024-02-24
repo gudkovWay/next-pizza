@@ -1,11 +1,12 @@
-import { withClickOutside } from '@/components/hocs/withClickOutside'
-import { useUserLogout } from '@/hooks/useLogout'
-import { useUserAvatar } from '@/hooks/useUserAvatar'
-import { IWrappedComponentProps } from '@/types/hocs'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { forwardRef } from 'react'
+
+import { withClickOutside } from '@/components/hocs/withClickOutside'
+import { useUserLogout } from '@/features/hooks/useLogout'
+import { useUserAvatar } from '@/features/hooks/useUserAvatar'
+import { IWrappedComponentProps } from '@/shared/types/hocs'
 
 const HeaderProfile = forwardRef<HTMLDivElement, IWrappedComponentProps>(
   ({ open, setOpen }, ref) => {

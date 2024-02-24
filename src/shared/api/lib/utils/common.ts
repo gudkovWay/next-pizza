@@ -1,15 +1,11 @@
 import { closeAuthPopup, openAuthPopup, setIsAuth } from '@/context/auth'
 import { setShouldShowEmpty } from '@/context/cart'
 import { setCurrentProduct } from '@/context/goods'
-import {
-  closeSearchModal,
-  closeSizeTable,
-  showSizeTable,
-} from '@/context/modals'
+import { closeSearchModal, closeSizeTable } from '@/context/modals'
 import { setSizeTableSizes } from '@/context/sizeTable'
 import { loginCheck } from '@/context/user'
-import { ICartItem } from '@/types/cart'
-import { IProduct } from '@/types/common'
+import { ICartItem } from '@/shared/types/cart'
+import { IProduct } from '@/shared/types/common'
 import { EventCallable } from 'effector'
 import toast from 'react-hot-toast'
 
@@ -93,10 +89,9 @@ export const handleCloseAuthPopup = () => {
 }
 
 export const closeAuthPopupWhenSomeModalOpened = (
-  showQuickViewModal: boolean,
-  showSizeTable: boolean
+  showQuickViewModal: boolean
 ) => {
-  if (showQuickViewModal || showSizeTable) {
+  if (showQuickViewModal) {
     closeAuthPopup()
     return
   }
@@ -132,7 +127,6 @@ export const handleShowSizeTable = (product: IProduct) => {
   setCurrentProduct(product)
   setSizeTableSizes({ sizes: product.sizes, type: product.type })
   addOverflowHiddenToBody()
-  showSizeTable()
 }
 
 export const getCartItemCountBySize = (

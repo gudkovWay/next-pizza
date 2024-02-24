@@ -5,7 +5,7 @@ export const usePriceAction = (count: number, initialPrice: number) => {
 
   useEffect(() => {
     setPrice(price * count)
-  }, [])
+  }, [count, price])
 
   const increasePrice = () => setPrice(price + initialPrice)
   const decreasePrice = () => setPrice(price - initialPrice)

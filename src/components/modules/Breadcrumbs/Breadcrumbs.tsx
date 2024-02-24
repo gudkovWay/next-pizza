@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useMemo } from 'react'
 import Crumb from './Crumb'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { IBreadcrumbsProps } from '@/types/modules'
+import { IBreadcrumbsProps } from '@/shared/types/modules'
 
 const generatePathParts = (pathStr: string) => {
   const pathWithoutQuery = pathStr.split('?')[0]

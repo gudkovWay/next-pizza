@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { IMenuLinkItemProps } from '@/types/modules'
+import { IMenuLinkItemProps } from '@/shared/types/modules'
 
 const MenuLinkItem = ({
   item,
