@@ -93,12 +93,13 @@ module.exports = {
           images: images.filter((item) => item.includes(name)),
           rating: faker.number.int({ min: 0, max: 5 }),
           popularity: +faker.string.numeric(3),
+          vendorCode: faker.string.numeric(4),
           characteristics: currentCharacteristics,
           price: faker.number.int({ min: 300, max: 999 }),
           sizes: {
-            small: +faker.datatype.boolean(),
-            medium: +faker.datatype.boolean(),
-            large: +faker.datatype.boolean(),
+            26: +faker.datatype.boolean(),
+            30: +faker.datatype.boolean(),
+            36: +faker.datatype.boolean(),
           },
           types: {
             thin: +faker.datatype.boolean(),
