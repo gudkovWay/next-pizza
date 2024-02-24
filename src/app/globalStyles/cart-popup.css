@@ -2,9 +2,15 @@
   position: relative;
 }
 
+.cart-popup:hover {
+  .cart-popup__wrapper {
+    display: block;
+  }
+}
+
 .cart-popup__wrapper {
   position: absolute;
-  top: 70px;
+  top: 30px;
   left: -300px;
   width: 328px;
   padding: 12px;
@@ -12,6 +18,7 @@
   border-radius: 12px;
   background-color: #3D4555;
   transform-origin: top right;
+  display: none;
 }
 
 .cart-popup__arrow {

@@ -36,7 +36,7 @@ export const useCartItemAction = (cartItem: ICartItem) => {
         cartItem.clientId,
         'cart',
         setCartFromLS,
-        'Удалено из карзины!'
+        'Удалено из корзины!'
       )
       return
     }
