@@ -1,4 +1,4 @@
-import PrivacyPolicyPage from '@/components/templates/PrivacyPolicyPage/PrivacyPolicyPage'
+import PrivacyPolicyPage from '@/components/templates/PrivacyPolicyPage'
 
 export default function PersonalDataPolicy() {
   return <PrivacyPolicyPage />

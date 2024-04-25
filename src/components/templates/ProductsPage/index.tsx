@@ -139,10 +139,6 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
       <Breadcrumbs
         crumbs={[
           {
-            href: '/',
-            children: 'Главная',
-          },
-          {
             href: '/catalog',
             children: 'Каталог',
           },

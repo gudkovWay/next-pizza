@@ -1,4 +1,4 @@
-import ProductsPage from '@/components/templates/ProductsPage/ProductsPage'
+import ProductsPage from '@/components/templates/ProductsPage'
 import { SearchParams } from '@/shared/types/catalog'
 
 export default function Catalog({

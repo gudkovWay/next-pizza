@@ -12,12 +12,16 @@ interface BreadcrumbsProps {
 const Breadcrumbs = ({ crumbs }: BreadcrumbsProps) => (
   <div className='container breadcrumbs__container'>
     <ul className='list-reset breadcrumbs'>
+      <li className='breadcrumbs__item'>
+        <Link href='/' className='breadcrumbs__item__link first-crumb'>
+          Главная
+        </Link>
+      </li>
       {crumbs.map((crumb, index) => (
         <li key={index} className='breadcrumbs__item'>
           <Link
             href={crumb.href}
             className={clsx('breadcrumbs__item__link', {
-              ['first-crumb']: index === 0,
               ['last-crumb']: index === crumbs.length - 1,
             })}
           >

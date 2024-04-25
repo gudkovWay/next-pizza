@@ -1,4 +1,4 @@
-import ProductsPage from '@/components/templates/ProductsPage/ProductsPage'
+import ProductsPage from '@/components/templates/ProductsPage'
 import { productCategories } from '@/shared/constants/product'
 import { notFound } from 'next/navigation'
 
