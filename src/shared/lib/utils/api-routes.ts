@@ -19,7 +19,6 @@ export const getDbAndReqBody = async (
 }
 
 export const getNewAndBestsellerGoods = async (db: Db, fieldName: string) => {
-  const combo = await db.collection('combo').find().toArray()
   const pizzas = await db.collection('pizza').find().toArray()
   const drinks = await db.collection('drinks').find().toArray()
 
@@ -35,13 +34,7 @@ export const getNewAndBestsellerGoods = async (db: Db, fieldName: string) => {
         (item) =>
           item[fieldName] && Object.values(item.sizes).some((value) => value)
       )
-      .slice(0, 1),
-    ...combo
-      .filter(
-        (item) =>
-          item[fieldName] && Object.values(item.name).some((value) => value)
-      )
-      .slice(0, 1),
+      .slice(0, 2),
   ])
 }
 
