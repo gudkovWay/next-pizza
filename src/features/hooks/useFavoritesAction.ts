@@ -67,6 +67,7 @@ export const useFavoritesAction = (product: IProduct) => {
       jwt: auth.accessToken,
       productId: product._id,
       setSpinner: setAddToFavoritesSpinner,
+      slug: product.slug,
       size: '',
       category: product.category,
       clientId,

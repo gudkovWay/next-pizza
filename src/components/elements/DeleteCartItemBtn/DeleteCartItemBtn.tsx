@@ -8,7 +8,7 @@ const DeleteItemBtn = ({
   className,
 }: IDeleteCartItemBtnProps) => (
   <button
-    className={`btn-reset cart-list__item__delete ${className}`}
+    className={`cart-list__item__delete ${className}`}
     onClick={callback}
     disabled={btnDisabled}
   >

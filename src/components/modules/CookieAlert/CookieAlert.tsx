@@ -22,10 +22,7 @@ const CookieAlert = ({
 
   return (
     <div className='container cookie-popup__container'>
-      <button
-        className='btn-reset cookie-popup__close'
-        onClick={handleCloseAlert}
-      />
+      <button className='cookie-popup__close' onClick={handleCloseAlert} />
       <p
         className='cookie-popup__text'
         dangerouslySetInnerHTML={{
@@ -36,10 +33,7 @@ const CookieAlert = ({
                     в настройках браузера.`,
         }}
       />
-      <button
-        className='btn-reset cookie-popup__accept'
-        onClick={handleAcceptCookie}
-      >
+      <button className='cookie-popup__accept' onClick={handleAcceptCookie}>
         Ок!
       </button>
     </div>

@@ -11,7 +11,7 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs = ({ crumbs }: BreadcrumbsProps) => (
   <div className='container breadcrumbs__container'>
-    <ul className='list-reset breadcrumbs'>
+    <ul className='breadcrumbs'>
       <li className='breadcrumbs__item'>
         <Link href='/' className='breadcrumbs__item__link first-crumb'>
           Главная

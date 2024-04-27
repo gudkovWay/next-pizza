@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -34,13 +36,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0 auto;
   padding: 0 15px;
 }
-.link-reset {
+a {
   text-decoration: none;
 }
 
-.btn-reset {
-  margin: 0;
-  padding: 0;
+button {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -50,7 +50,9 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0 9px;
 }
 
-.list-reset {
+ul,
+li,
+ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -300,14 +302,15 @@ body::-webkit-scrollbar-thumb:hover {
   padding-right: 8px;
 }
 
-.catalog-pagination-prev.disabled, .catalog-pagination-next.disabled {
+.catalog-pagination-prev.disabled,
+.catalog-pagination-next.disabled {
   display: none;
 }
 
 .catalog-pagination-item.selected {
-  background-color: #FBAE7C;
+  background-color: #fbae7c;
 }
 
 .catalog-pagination-item:hover.selected a {
-  background-color: #FBAE7C;
+  background-color: #fbae7c;
 }

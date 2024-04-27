@@ -28,6 +28,7 @@ export const addItemToCart = (
     setSpinner,
     productId: product._id,
     category: product.category,
+    slug: product.slug,
     count,
     size: selectedSize,
     clientId,
@@ -87,6 +88,7 @@ export const addCartItemToLS = (
       price: product.price,
       inStock: product.inStock,
       category: product.category,
+      slug: product.slug,
     },
   ]
   localStorage.setItem('cart', JSON.stringify(cart))

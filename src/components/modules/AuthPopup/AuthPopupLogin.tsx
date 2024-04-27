@@ -44,7 +44,7 @@ const AuthPopupLogin = ({ toggleAuth, isSideActive }: IAuthSideProps) => {
               <span className='inner__bottom__text'>Впервые у нас?</span>
               <button
                 type='button'
-                className='btn-reset inner__switch'
+                className='inner__switch'
                 onClick={toggleAuth}
               >
                 Зарегестрируйтесь!

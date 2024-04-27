@@ -52,7 +52,7 @@ const FavoritesPage = () => {
             {!favoritesSpinner && (
               <motion.ul
                 {...basePropsForMotion}
-                className={`list-reset ${styles.favorites__list}`}
+                className={styles.favorites__list}
               >
                 <FavoritesList />
               </motion.ul>

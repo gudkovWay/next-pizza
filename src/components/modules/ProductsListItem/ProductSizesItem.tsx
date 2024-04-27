@@ -8,6 +8,7 @@ const ProductSizesItem = ({
   selectedSize,
   setSelectedSize,
   currentCartItems,
+  category,
 }: IProductSizesItemProps) => {
   const handleSelectSize = () => setSelectedSize(currentSize[0])
 
@@ -30,8 +31,8 @@ const ProductSizesItem = ({
         products={currentCartItems}
         withCartIcon={false}
       />
-      <button className='btn-reset' onClick={handleSelectSize}>
-        {currentSize[0].toLocaleUpperCase()} см.
+      <button onClick={handleSelectSize}>
+        {currentSize[0]} {category === 'pizza' ? 'см.' : 'л.'}
       </button>
     </li>
   )

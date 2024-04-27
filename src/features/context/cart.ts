@@ -64,7 +64,7 @@ export const $cart = cart
   .on(addProductsFromLSToCartFx.done, (_, { result }) => result.items)
   .on(addProductToCartFx.done, (cart, { result }) => [
     ...new Map(
-      [...cart, result.newCartItem].map((item) => [item.clientId, item])
+      [...cart, ...result.newCartItem].map((item) => [item.clientId, item])
     ).values(),
   ])
   .on(updateCartItemCountFx.done, (cart, { result }) =>

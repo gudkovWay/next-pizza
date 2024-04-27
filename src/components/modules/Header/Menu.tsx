@@ -64,15 +64,15 @@ const Menu = () => {
           alt='menu background'
         />
         <button
-          className={`btn-reset nav-menu__close ${menuIsOpen ? 'open' : ''}`}
+          className={`nav-menu__close ${menuIsOpen ? 'open' : ''}`}
           onClick={handleCloseMenu}
         />
-        <ul className={`list-reset nav-menu__list ${menuIsOpen ? 'open' : ''}`}>
+        <ul className={` nav-menu__list ${menuIsOpen ? 'open' : ''}`}>
           {!isMedia800 &&
             menuLinks.map((link: MenuLinksProps) => (
               <li className='nav-menu__list__item' key={link.id}>
                 <button
-                  className={`btn-reset nav-menu__list__item__btn
+                  className={`nav-menu__list__item__btn
 ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                   onMouseEnter={() => handleShowCatalogList(link.id)}
                 >
@@ -84,7 +84,7 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className='list-reset nav-menu__accordion'
+                      className=' nav-menu__accordion'
                     >
                       <li className='nav-menu__accordion__item'>
                         {link.children?.map((item) => (
@@ -95,11 +95,11 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                                   key={item.id}
                                   initial={false}
                                   onClick={() => handleShowAccordion(item.id)}
-                                  className={`btn-reset nav-menu__accordion__item__title`}
+                                  className={`nav-menu__accordion__item__title`}
                                 >
                                   {item.text}
                                 </motion.button>
-                                <ul className='list-reset nav-menu__accordion__item__list'>
+                                <ul className=' nav-menu__accordion__item__list'>
                                   <AnimatePresence initial={false}>
                                     {showAccordion === item.id &&
                                       item.children?.map((child) => (
@@ -142,9 +142,9 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                                   key={item.id}
                                   initial={false}
                                   onClick={() => handleShowAccordion(item.id)}
-                                  className={`btn-reset nav-menu__accordion__item__title`}
+                                  className={`nav-menu__accordion__item__title`}
                                 >
-                                  <ul className='list-reset '>
+                                  <ul className=' '>
                                     <MenuLinkItem
                                       key={item.id}
                                       item={item}
@@ -173,7 +173,7 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                     key={link.id}
                   >
                     <button
-                      className={`btn-reset nav-menu__list__item__btn
+                      className={`nav-menu__list__item__btn
 ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                       onClick={() => handleShowCatalogList(link.id)}
                     >
@@ -185,7 +185,7 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className='list-reset nav-menu__accordion nav-menu__accordion-mobile'
+                          className=' nav-menu__accordion nav-menu__accordion-mobile'
                         >
                           <li className='nav-menu__accordion__item '>
                             {link.children?.map((item) => (
@@ -198,11 +198,11 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                                       onClick={() =>
                                         handleShowAccordion(item.id)
                                       }
-                                      className={`btn-reset nav-menu__accordion__item__title`}
+                                      className={`nav-menu__accordion__item__title`}
                                     >
                                       {item.text}
                                     </motion.button>
-                                    <ul className='list-reset nav-menu__accordion__item__list'>
+                                    <ul className=' nav-menu__accordion__item__list'>
                                       <AnimatePresence initial={false}>
                                         {showAccordion === item.id &&
                                           item.children?.map((child) => (
@@ -247,9 +247,9 @@ ${showCatalogList === link.id && 'nav-menu__list__item__btn-active'}`}
                                       onClick={() =>
                                         handleShowAccordion(item.id)
                                       }
-                                      className={`btn-reset nav-menu__accordion__item__title`}
+                                      className={`nav-menu__accordion__item__title`}
                                     >
-                                      <ul className='list-reset '>
+                                      <ul className=' '>
                                         <MenuLinkItem
                                           key={item.id}
                                           item={item}

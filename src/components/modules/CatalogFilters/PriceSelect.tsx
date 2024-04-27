@@ -55,7 +55,7 @@ const PriceSelect = ({
       <AnimatePresence>
         {open && (
           <motion.ul
-            className={`list-reset ${styles.catalog__filters__list}`}
+            className={` ${styles.catalog__filters__list}`}
             {...basePropsForMotion}
           >
             <li
@@ -82,7 +82,7 @@ const PriceSelect = ({
                 </label>
               </div>
               <button
-                className={`btn-reset ${styles.catalog__filters__list__item__done}`}
+                className={`${styles.catalog__filters__list__item__done}`}
                 disabled={!priceFrom || !priceTo}
                 onClick={handleSelectPrice}
               >

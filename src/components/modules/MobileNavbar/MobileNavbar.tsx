@@ -21,25 +21,22 @@ const MobileNavbar = () => {
         <Link href='/' className='mobile-navbar__btn'>
           Главная
         </Link>
-        <Link href='/catalog' className='btn-reset mobile-navbar__btn'>
+        <Link href='/catalog' className='mobile-navbar__btn'>
           Каталог
         </Link>
-        <Link className='btn-reset mobile-navbar__btn' href='/favorites'>
+        <Link className='mobile-navbar__btn' href='/favorites'>
           {!!currentFavoritesByAuth.length && (
             <span className='not-empty not-empty-mobile-favorite' />
           )}
           Избранное
         </Link>
-        <Link className='btn-reset mobile-navbar__btn' href='/cart'>
+        <Link className='mobile-navbar__btn' href='/cart'>
           {!!currentCartByAuth.length && (
             <span className='not-empty not-empty-mobile' />
           )}
           Корзина
         </Link>
-        <button
-          className='btn-reset mobile-navbar__btn'
-          onClick={handleOpenMenu}
-        >
+        <button className='mobile-navbar__btn' onClick={handleOpenMenu}>
           Больше
         </button>
       </div>

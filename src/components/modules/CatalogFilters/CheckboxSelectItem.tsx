@@ -14,9 +14,7 @@ const CheckboxSelectItem = ({
         item.checked ? styles.option_active : ''
       } ${mobileClassName}`}
     >
-      <label
-        className={`btn-reset ${styles.catalog__filters__list__item__btn}`}
-      >
+      <label className={`${styles.catalog__filters__list__item__btn}`}>
         <input
           type='checkbox'
           checked={item.checked}

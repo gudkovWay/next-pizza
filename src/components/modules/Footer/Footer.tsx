@@ -24,7 +24,7 @@ const Footer = () => {
             {isMedia950 && <FooterLinks />}
           </div>
           {!isMedia950 && <FooterLinks />}
-          <ul className='list-reset footer__socials'>
+          <ul className=' footer__socials'>
             <li className='footer__socials__item'>
               <a
                 href='https://t.me/gudkoviurii'

@@ -14,9 +14,7 @@ const CategoryFilterList = ({
   handleSelectAllCategories,
   setOption,
 }: ICategoryFilterListProps) => (
-  <motion.ul
-    className={`list-reset ${styles.catalog__filters__list} ${mobileClassName}`}
-  >
+  <motion.ul className={`${styles.catalog__filters__list} ${mobileClassName}`}>
     {currentOptions &&
       Object.keys(catalogCategoryOptions)[0] !== 'rootCategoryOptions' &&
       currentOptions.map((item) => (
@@ -38,7 +36,7 @@ const CategoryFilterList = ({
           }`}
         >
           <button
-            className={`btn-reset ${styles.catalog__filters__list__item__btn}`}
+            className={`${styles.catalog__filters__list__item__btn}`}
             onClick={handleSelectAllCategories}
           >
             {allCategoriesTitle}

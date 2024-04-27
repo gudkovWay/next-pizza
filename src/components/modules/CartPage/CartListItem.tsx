@@ -7,6 +7,7 @@ import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { formatPrice } from '@/shared/lib/utils/common'
 import ProductCounter from '../ProductsListItem/ProductCounter'
 import styles from '@/styles/cart-page/index.module.scss'
+import Link from 'next/link'
 
 const CartListItem = ({ item }: { item: ICartItem }) => {
   const {
@@ -25,7 +26,7 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
     <>
       <button
         disabled={deleteSpinner}
-        className={`btn-reset ${styles.cart__list__item__delete}`}
+        className={styles.cart__list__item__delete}
         onClick={handleDeleteCartItem}
       >
         {deleteSpinner ? (
@@ -34,7 +35,8 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
           <span />
         )}
       </button>
-      <div
+      <Link
+        href={`/catalog/${item.category}/${item.slug}`}
         className={`${styles.cart__list__item__img} ${styles.cart__list__item__block}`}
       >
         <Image
@@ -43,7 +45,7 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
           width={imageSize}
           height={imageSize}
         />
-      </div>
+      </Link>
       <div className={styles.cart__list__item__wrapper}>
         <div
           className={`${styles.cart__list__item__name} ${styles.cart__list__item__block}`}

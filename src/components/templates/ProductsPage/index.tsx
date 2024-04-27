@@ -163,10 +163,7 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
         </motion.ul>
       )}
       {!productsSpinner && (
-        <motion.ul
-          {...basePropsForMotion}
-          className={`list-reset ${styles.catalog__list}`}
-        >
+        <motion.ul {...basePropsForMotion} className={styles.catalog__list}>
           {(products.items || []).map((item) => (
             <ProductsListItem key={item._id} item={item} />
           ))}

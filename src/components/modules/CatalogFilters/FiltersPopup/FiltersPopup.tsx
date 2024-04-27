@@ -70,7 +70,7 @@ const FiltersPopup = ({
               variants={sideVariants}
             >
               <motion.button
-                className={`btn-reset ${styles.catalog__filters__popup__close}`}
+                className={`${styles.catalog__filters__popup__close}`}
                 variants={itemVariants}
                 onClick={handleClosePopup}
               />
@@ -115,7 +115,7 @@ const FiltersPopup = ({
               </motion.div>
               <motion.button
                 variants={itemVariants}
-                className={`btn-reset ${styles.catalog__filters__popup__apply}`}
+                className={`${styles.catalog__filters__popup__apply}`}
                 onClick={handleClosePopup}
               >
                 {productsSpinner ? (

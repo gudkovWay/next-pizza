@@ -106,7 +106,7 @@ export const useProductFilters = (
   }
 
   const paginationProps = {
-    containerClassName: `list-reset ${styles.catalog__bottom__list}`,
+    containerClassName: `${styles.catalog__bottom__list}`,
     pageClassName: `catalog-pagination-item ${styles.catalog__bottom__list__item}`,
     pageLinkClassName: styles.catalog__bottom__list__item__link,
     previousClassName: `catalog-pagination-prev ${styles.catalog__bottom__list__prev}`,

@@ -112,17 +112,17 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='container header__container'>
-        <button className='btn-reset header__burger' onClick={handleOpenMenu}>
+        <button className='header__burger' onClick={handleOpenMenu}>
           Меню
         </button>
         <Menu />
         <div className='header__logo'>
           <Logo />
         </div>
-        <ul className='header__links list-reset'>
+        <ul className='header__links '>
           <li className='header__links__item'>
             <button
-              className='btn-reset header__links__item__btn header__links__item__btn--search'
+              className='header__links__item__btn header__links__item__btn--search'
               onClick={handleOpenSearchModal}
             />
           </li>
@@ -146,7 +146,7 @@ const Header = () => {
               <FontAwesomeIcon icon={faSpinner} spin />
             ) : (
               <button
-                className='btn-reset header__links__item__btn header__links__item__btn--profile'
+                className='header__links__item__btn header__links__item__btn--profile'
                 onClick={handleOpenAuthPopup}
               />
             )}

@@ -22,14 +22,12 @@ const QuickViewModalSlider = ({
     slidesToScroll: 1,
     variableWidth: true,
     speed: 500,
-    dotsClass: `list-reset ${styles.modal__left__slider__slide__dots} quick-modal-dots`,
+    dotsClass: `${styles.modal__left__slider__slide__dots} quick-modal-dots`,
     nextArrow: <QuickViewModalSliderArrow directionClassName={styles.next} />,
     prevArrow: <QuickViewModalSliderArrow directionClassName={styles.prev} />,
     appendDots: (dots: React.ReactNode) => <ul>{dots}</ul>,
     customPaging: () => (
-      <button
-        className={`btn-reset ${styles.modal__left__slider__slide__dot}`}
-      />
+      <button className={styles.modal__left__slider__slide__dot} />
     ),
   }
 

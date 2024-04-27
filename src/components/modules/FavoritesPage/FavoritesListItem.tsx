@@ -23,6 +23,7 @@ import {
   isUserAuth,
 } from '@/shared/lib/utils/common'
 import styles from '@/styles/favorites/index.module.scss'
+import Link from 'next/link'
 
 const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
   const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs)
@@ -65,6 +66,7 @@ const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
       setSpinner: setAddToCartSpinner,
       productId: item.productId,
       category: item.category,
+      slug: item.slug,
       count: 1,
       size: item.size,
       clientId,
@@ -108,14 +110,17 @@ const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
         className={styles.favorites__list__item__cart}
         addedClassName={styles.favorites__list__item__cart_added}
       />
-      <div className={styles.favorites__list__item__img}>
+      <Link
+        href={`/catalog/${item.category}/${item.slug}`}
+        className={styles.favorites__list__item__img}
+      >
         <Image
           src={item.image}
           alt={item.name}
           width={imgSize}
           height={imgSize}
         />
-      </div>
+      </Link>
       <p className={styles.favorites__list__item__info}>
         <span className={styles.favorites__list__item__info__name}>
           {item.name}

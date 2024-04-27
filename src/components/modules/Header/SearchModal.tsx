@@ -20,7 +20,7 @@ const SearchModal = () => {
   return (
     <div className='search-modal'>
       <button
-        className='btn-reset search-modal__close'
+        className='search-modal__close'
         onClick={handleCloseSearchModal}
       />
       <h3 className='search-modal__title'>Поиск продуктов</h3>

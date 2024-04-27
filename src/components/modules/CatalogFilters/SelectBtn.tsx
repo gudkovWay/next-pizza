@@ -9,9 +9,9 @@ const SelectBtn = ({
   bgClassName,
 }: ISelectBtnProps) => (
   <button
-    className={`btn-reset ${styles.catalog__filters__btn} ${
-      open ? styles.is_open : ''
-    } ${bgClassName || ''}`}
+    className={`${styles.catalog__filters__btn} ${open ? styles.is_open : ''} ${
+      bgClassName || ''
+    }`}
     onClick={toggle}
   >
     {dynamicText ? (

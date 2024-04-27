@@ -14,10 +14,7 @@ const HeaderProfile = forwardRef<HTMLDivElement, IWrappedComponentProps>(
 
     return (
       <div className='header-profile__popup' ref={ref}>
-        <button
-          className='btn-reset header-profile__btn'
-          onClick={handleTogglePopup}
-        >
+        <button className='header-profile__btn' onClick={handleTogglePopup}>
           <Image
             src={src ? src : '/img/profile.svg'}
             alt={alt ? alt : 'profile'}
@@ -31,17 +28,15 @@ const HeaderProfile = forwardRef<HTMLDivElement, IWrappedComponentProps>(
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              className='list-reset header-profile__inner'
+              className=' header-profile__inner'
             >
               <li className='header-profile__arrow' />
               <li className='header-profile__item'>
-                <button className='btn-reset header-profile__item__btn'>
-                  Профиль
-                </button>
+                <button className='header-profile__item__btn'>Профиль</button>
               </li>
               <li className='header-profile__item'>
                 <button
-                  className='btn-reset header-profile__item__btn'
+                  className='header-profile__item__btn'
                   onClick={handleLogout}
                 >
                   Выйти из аккаунта

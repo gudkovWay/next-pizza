@@ -15,7 +15,7 @@ const SizesFilter = ({
     <>
       <h3 className={styles.catalog__filters__popup__inner_title}>Размер</h3>
       <ul
-        className={`list-reset ${styles.catalog__filters__list} ${styles.filters_mobile}`}
+        className={` ${styles.catalog__filters__list} ${styles.filters_mobile}`}
       >
         {sizesOptions.map((item) => (
           <CheckboxSelectItem

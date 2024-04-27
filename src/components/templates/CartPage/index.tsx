@@ -59,7 +59,7 @@ const CartPage = () => {
                 {!cartSpinner && (
                   <motion.ul
                     {...basePropsForMotion}
-                    className={`list-reset ${styles.cart__list}`}
+                    className={styles.cart__list}
                   >
                     <CartList />
                   </motion.ul>

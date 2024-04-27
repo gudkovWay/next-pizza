@@ -50,7 +50,7 @@ const AuthPopupRegistration = ({
               </span>
               <button
                 type='button'
-                className='btn-reset inner__switch'
+                className='inner__switch'
                 onClick={toggleAuth}
               >
                 Авторизуйтесь!

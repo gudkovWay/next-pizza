@@ -44,6 +44,7 @@ export const addFavoriteItemToLS = (
       price: product.price,
       inStock: product.inStock,
       category: product.category,
+      slug: product.slug,
     },
   ]
 

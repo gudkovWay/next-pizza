@@ -10,7 +10,7 @@ const SelectInfoItem = ({ text, handleRemoveItem, id }: ISelectInfoItem) => {
         {text}
       </span>
       <button
-        className={`btn-reset ${styles.catalog__filters__bottom__list__item__close}`}
+        className={`${styles.catalog__filters__bottom__list__item__close}`}
         onClick={handleClick}
       />
     </li>

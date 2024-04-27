@@ -37,7 +37,7 @@ const SelectItem = ({
       )}
       <button
         onClick={handleSelectOption}
-        className={`btn-reset ${styles.catalog__filters__list__item__btn}`}
+        className={`${styles.catalog__filters__list__item__btn}`}
       >
         {item.title}
       </button>

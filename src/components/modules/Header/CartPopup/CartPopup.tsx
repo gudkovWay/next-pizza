@@ -44,10 +44,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
               onMouseLeave={handleHidePopup}
             >
               <span className='cart-popup__arrow' />
-              <button
-                className='btn-reset cart-popup__close'
-                onClick={handleHidePopup}
-              />
+              <button className='cart-popup__close' onClick={handleHidePopup} />
               <h3 className='cart-popup__title'>Корзина</h3>
               {spinner ? (
                 <div className='cart-popup__spinner'>
@@ -59,7 +56,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                   />
                 </div>
               ) : (
-                <ul className='list-reset cart-popup__cart-list'>
+                <ul className=' cart-popup__cart-list'>
                   <AnimatePresence>
                     {currentCartByAuth.length ? (
                       currentCartByAuth.map((item) => (

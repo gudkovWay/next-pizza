@@ -37,7 +37,7 @@ const MainPageSection = ({ title, goods, spinner }: IMainPageSectionProps) => (
         )}
         {!spinner && (
           <motion.ul
-            className={`list-reset ${styles.main_section__list}`}
+            className={styles.main_section__list}
             {...basePropsForMotion}
           >
             {goods.map((item) => (

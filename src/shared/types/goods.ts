@@ -12,6 +12,7 @@ export interface IProductSizesItemProps {
   selectedSize: string
   setSelectedSize: (arg0: string) => void
   currentCartItems: ICartItem[]
+  category: string
 }
 
 export interface IProductCounterProps {

@@ -90,15 +90,12 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
             {formatPrice(+item.price)} ₽
           </span>
           {isMediaQuery568 ? (
-            <Link
-              href={`/pizza/`}
-              className={`btn-reset link-reset ${styles.list__item__cart}`}
-            >
+            <Link href={`/pizza/`} className={styles.list__item__cart}>
               Подробнее
             </Link>
           ) : (
             <button
-              className={`btn-reset ${styles.list__item__cart}`}
+              className={styles.list__item__cart}
               onClick={handleShowQuickViewModal}
             >
               В корзину

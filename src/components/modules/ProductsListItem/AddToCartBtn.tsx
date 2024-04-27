@@ -10,7 +10,7 @@ const AddToCartBtn = ({
   className,
 }: IAddToCartBtnProps) => (
   <button
-    className={`btn-reset ${className}`}
+    className={className}
     disabled={btnDisabled}
     onClick={handleAddToCart}
   >

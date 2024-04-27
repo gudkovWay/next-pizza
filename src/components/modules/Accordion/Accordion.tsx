@@ -17,7 +17,7 @@ const Accordion = ({
       <motion.button
         initial={false}
         onClick={toggleAccordion}
-        className={`btn-reset ${titleClass} ${
+        className={`${titleClass} ${
           rotateIconClass ? (expanded ? rotateIconClass : '') : ''
         }`}
       >

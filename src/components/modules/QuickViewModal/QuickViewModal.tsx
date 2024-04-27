@@ -51,10 +51,7 @@ const QuickViewModal = () => {
 
   return (
     <div className={styles.modal}>
-      <button
-        className={`btn-reset ${styles.modal__close}`}
-        onClick={handleCloseModal}
-      />
+      <button className={styles.modal__close} onClick={handleCloseModal} />
       <div className={styles.modal__actions}>
         <ProductItemActionBtn
           spinner={addToFavoritesSpinner}
@@ -95,7 +92,7 @@ const QuickViewModal = () => {
                   Размер
                 </span>
               </div>
-              <ul className={`list-reset ${styles.modal__right__info__sizes}`}>
+              <ul className={styles.modal__right__info__sizes}>
                 {Object.entries(product.sizes).map(([key, value], i) => (
                   <ProductSizesItem
                     key={i}
@@ -103,6 +100,7 @@ const QuickViewModal = () => {
                     selectedSize={selectedSize}
                     setSelectedSize={setSelectedSize}
                     currentCartItems={currentCartItems}
+                    category={product.category}
                   />
                 ))}
               </ul>

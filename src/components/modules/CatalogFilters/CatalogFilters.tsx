@@ -84,7 +84,7 @@ const CatalogFilters = ({
             <>
               <SortSelect handleApplyFiltersBySort={handleApplyFiltersBySort} />
               <button
-                className={`btn-reset ${styles.catalog__filters__top__filter_btn}`}
+                className={`${styles.catalog__filters__top__filter_btn}`}
                 onClick={handleOpenPopup}
               />
             </>
@@ -92,7 +92,7 @@ const CatalogFilters = ({
         </div>
         <div className={styles.catalog__filters__bottom}>
           <motion.ul
-            className={`list-reset ${styles.catalog__filters__bottom__list}`}
+            className={` ${styles.catalog__filters__bottom__list}`}
             {...basePropsForMotion}
           >
             {sizesOptions

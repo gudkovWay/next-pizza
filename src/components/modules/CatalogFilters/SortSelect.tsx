@@ -67,7 +67,7 @@ const SortSelect = ({
       <AnimatePresence>
         {open && (
           <motion.ul
-            className={`list-reset ${styles.catalog__filters__list}`}
+            className={` ${styles.catalog__filters__list}`}
             {...basePropsForMotion}
           >
             {sortOptions.map((item) => (
