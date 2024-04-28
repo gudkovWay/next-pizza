@@ -1,10 +1,19 @@
 'use client'
+import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import styles from '@/styles/policy/index.module.scss'
 
 const PrivacyPolicyPage = () => (
   <main>
     <section className={styles.policy}>
       <div className='container'>
+        <Breadcrumbs
+          crumbs={[
+            {
+              href: '/privacy-policy',
+              children: 'Политика конфиденциальности',
+            },
+          ]}
+        />
         <div className='wpb_wrapper'>
           <h2>
             <strong>Политика в отношении обработки персональных данных</strong>

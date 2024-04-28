@@ -314,3 +314,6 @@ ol {
 .catalog-pagination-item:hover.selected a {
   background-color: #fbae7c;
 }
+.wpb_wrapper {
+  padding: 0 15px;
+}

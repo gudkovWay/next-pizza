@@ -18,6 +18,7 @@ import styles from '@/styles/favorites/index.module.scss'
 import FavoritesList from '@/components/modules/FavoritesPage/FavoritesList'
 import { isUserAuth } from '@/shared/lib/utils/common'
 import { loginCheckFx } from '@/features/context/user'
+import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 const FavoritesPage = () => {
   const currentFavoritesByAuth = useGoodsByAuth($favorites, $favoritesFromLS)
@@ -30,6 +31,14 @@ const FavoritesPage = () => {
       {!shouldShowEmptyFavorites ? (
         <section className={styles.favorites}>
           <div className={`container ${styles.favorites__container}`}>
+            <Breadcrumbs
+              crumbs={[
+                {
+                  href: '/favorites',
+                  children: 'Избранное',
+                },
+              ]}
+            />
             <HeadingWithCount
               count={currentFavoritesByAuth.length}
               title={'Избранные'}
