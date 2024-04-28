@@ -43,11 +43,6 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
               title: 'Напитки',
               href: '/catalog/drinks',
             },
-            {
-              id: 4,
-              title: 'Комбо наборы',
-              href: '/catalog/combo',
-            },
           ],
         })
         break
@@ -108,27 +103,6 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
           ],
         })
         break
-      case 'combo':
-        setCatalogCategoryOptions({
-          comboCategoryOptions: [
-            {
-              id: 1,
-              title: 'Комбо наборы (напитки и пиццы)',
-              filterHandler: () => handleApplyFiltersWithCategory('full'),
-            },
-            {
-              id: 2,
-              title: 'Комбо наборы (только пиццы)',
-              filterHandler: () => handleApplyFiltersWithCategory('pizza'),
-            },
-            {
-              id: 3,
-              title: 'Комбо наборы (только напитки)',
-              filterHandler: () => handleApplyFiltersWithCategory('drinks'),
-            },
-          ],
-        })
-        break
       default:
         break
     }
@@ -136,14 +110,29 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
 
   return (
     <>
-      <Breadcrumbs
-        crumbs={[
-          {
-            href: '/catalog',
-            children: 'Каталог',
-          },
-        ]}
-      />
+      {pageName === 'catalog' ? (
+        <Breadcrumbs
+          crumbs={[
+            {
+              href: '/catalog',
+              children: 'Каталог',
+            },
+          ]}
+        />
+      ) : (
+        <Breadcrumbs
+          crumbs={[
+            {
+              href: '/catalog',
+              children: 'Каталог',
+            },
+            {
+              href: `/catalog/${pageName}`,
+              children: `${pageName === 'pizza' ? 'Пиццы' : 'Напитки'}`,
+            },
+          ]}
+        />
+      )}
       <CatalogFilters
         handleApplyFiltersWithPrice={handleApplyFiltersWithPrice}
         handleApplyFiltersWithSizes={handleApplyFiltersWithSizes}

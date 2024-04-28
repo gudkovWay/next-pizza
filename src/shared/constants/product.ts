@@ -7,5 +7,5 @@ export const productTypes = [
   'для одного',
 ]
 
-export const productCategories = ['pizza', 'drinks', 'combo']
-export const allowedSizes = [26, 30, 36]
+export const productCategories = ['pizza', 'drinks']
+export const allowedSizes = [26, 30, 36, 0.5, 1]

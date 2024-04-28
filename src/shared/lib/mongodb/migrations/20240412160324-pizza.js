@@ -58,7 +58,7 @@ const translit = (word) =>
 
 const generateSlug = (name, vendorCode) => {
   const newName = translit(name)
-  const slug = `pizza-${newName}-${vendorCode}`
+  const slug = `${newName}-${vendorCode}`
   return slug.toLowerCase()
 }
 

@@ -13,7 +13,6 @@ export interface ICatalogCategoryOptions {
   }[]
   pizzaCategoryOptions?: ICategoryOption[]
   drinksCategoryOptions?: ICategoryOption[]
-  comboCategoryOptions?: ICategoryOption[]
 }
 
 export interface ICategoryOption {

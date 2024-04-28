@@ -68,24 +68,19 @@ export async function GET(req: Request) {
         return goods
       }
 
-      const [pizza, drinks, combo] = await Promise.allSettled([
+      const [pizza, drinks] = await Promise.allSettled([
         getFilteredCollection('pizza'),
         getFilteredCollection('drinks'),
-        getFilteredCollection('combo'),
       ])
 
-      if (
-        pizza.status !== 'fulfilled' ||
-        drinks.status !== 'fulfilled' ||
-        combo.status !== 'fulfilled'
-      ) {
+      if (pizza.status !== 'fulfilled' || drinks.status !== 'fulfilled') {
         return NextResponse.json({
           count: 0,
           items: [],
         })
       }
 
-      const allGoods = [...pizza.value, ...drinks.value, ...combo.value]
+      const allGoods = [...pizza.value, ...drinks.value]
 
       return NextResponse.json({
         count: allGoods.length,

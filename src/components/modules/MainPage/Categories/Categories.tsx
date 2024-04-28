@@ -5,21 +5,19 @@ import Link from 'next/link'
 import MainSlider from '../MainSlider'
 import useImagePreloader from '@/features/hooks/useImagePreloader'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
-import img1 from '@/../public/img/categories-img-1.png'
 import img2 from '@/../public/img/categories-img-2.png'
 import img3 from '@/../public/img/categories-img-3.png'
 import styles from '@/styles/main-page/index.module.scss'
 
 const images = [
-  { src: img1, id: 1, title: 'Комбо' },
   {
     src: img2,
-    id: 2,
+    id: 1,
     title: 'Питцы',
   },
   {
     src: img3,
-    id: 3,
+    id: 2,
     title: 'Напитки',
   },
 ]
@@ -35,18 +33,6 @@ const Categories = () => {
         <div className={styles.categories__inner}>
           {!isMedia490 && (
             <>
-              <Link
-                href='/catalog/combo'
-                className={`${styles.categories__right} ${styles.categories__img} ${imgSpinnerClass}`}
-              >
-                <Image
-                  src={img1}
-                  alt='Комбо наборы для лучших'
-                  className='transition-opacity opacity-0 duration'
-                  onLoad={handleLoadingImageComplete}
-                />
-                <span>Комбо наборы</span>
-              </Link>
               <div className={styles.categories__left}>
                 <div className={styles.categories__left__top}>
                   <Link

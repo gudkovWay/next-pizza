@@ -56,7 +56,7 @@ const translit = (word) =>
 
 const generateSlug = (name, vendorCode) => {
   const newName = translit(name)
-  const slug = `drinks-${newName}-${vendorCode}`
+  const slug = `${newName}-${vendorCode}`
   return slug.toLowerCase()
 }
 const drinksCategories = ['milkshake', 'water', 'sodas', 'juice']
