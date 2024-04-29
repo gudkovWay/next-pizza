@@ -208,7 +208,7 @@
       }
     }
 
-    &__color, &__size, &__collection {
+    &__size, &__collection {
       display: block;
       margin-bottom: 24px;
       color: #E8E9EA;
@@ -401,24 +401,6 @@
 
       @media (max-width: 800px) {
         display: none;
-      }
-    }
-
-    &__title {
-      margin: 0;
-      color: #F1F3F5;
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 40px;
-
-      @media (max-width: 650px) {
-        font-size: 32px;
-      }
-
-      @media (max-width: 590px) {
-        margin-bottom: 20px;
-        font-size: 24px;
-        max-width: 200px;
       }
     }
 

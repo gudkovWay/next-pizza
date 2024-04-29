@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
@@ -7,22 +6,19 @@ import { IMainPageSectionProps } from '@/shared/types/main-page'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import styles from '@/styles/main-page/index.module.scss'
+import AllLink from '@/components/elements/AllLink'
 
 const MainPageSection = ({ title, goods, spinner }: IMainPageSectionProps) => (
   <section className={styles.main_section}>
     <div className={`container ${styles.main_section__container}`}>
       <span className={styles.main_section__bg}>{title}</span>
       <div className={styles.main_section__header}>
-        <h2 className={`site-title ${styles.main_section__title}`}>{title}</h2>
-        <Link
+        <AllLink
           href={`/catalog?${
-            title === 'Новинки' ? 'offset=0&sort=new' : 'offset=0&sort=popular'
+            title === 'Новинки' ? 'offset=0&sort=new' : 'ofsset=0&sort=popular'
           }`}
-          className='all-link'
-        >
-          Все
-          <span />
-        </Link>
+          text={title}
+        />
       </div>
       <div className={styles.main_section__inner}>
         {spinner && (

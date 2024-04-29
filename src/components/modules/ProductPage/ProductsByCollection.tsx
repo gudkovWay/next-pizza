@@ -10,6 +10,7 @@ import { allowedCollectionsCategories } from '@/shared/constants/product'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import styles from '@/styles/product/index.module.scss'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
+import AllLink from '@/components/elements/AllLink'
 
 const ProductsByCollection = ({ collection }: { collection: string }) => {
   const { title, capitalizedCollection, spinner, products } =
@@ -40,15 +41,11 @@ const ProductsByCollection = ({ collection }: { collection: string }) => {
       <span className={styles.product__collection__bg}>
         {capitalizedCollection}
       </span>
-      <h2 className={styles.product__collection__title}>{title}</h2>
+      <AllLink
+        text={title}
+        href={`/collection-products?collection=${collection}&category=${currentCategory}`}
+      />
       <div className={styles.product__collection__inner}>
-        <Link
-          href={`/collection-products?collection=${collection}&category=${currentCategory}`}
-          className='all-link'
-        >
-          Все
-          <span />
-        </Link>
         {spinner && (
           <motion.ul
             className={skeletonStyles.skeleton}

@@ -3,6 +3,7 @@ import { useUnit } from 'effector-react'
 import { motion } from 'framer-motion'
 
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
+import AllLink from '@/components/elements/AllLink'
 import { loadWatchedProductsFx } from '@/features/context/goods'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 
@@ -10,7 +11,6 @@ import { basePropsForMotion } from '@/shared/constants/motion'
 import { IProducts } from '@/shared/types/goods'
 import styles from '@/styles/watched-products/index.module.scss'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import Link from 'next/link'
 
 const WatchedProducts = ({
   watchedProducts,
@@ -33,12 +33,8 @@ const WatchedProducts = ({
 
   return (
     <div className={styles.watched}>
-      <h2 className={styles.watched__title}>Товары, которые вы смотрели</h2>
+      <AllLink href='/watched-products' text='Просмотренные товары' />
       <div className={styles.watched__inner}>
-        <Link href='/watched-products' className='all-link'>
-          Все
-          <span />
-        </Link>
         <Slider {...settings} className={styles.watched__slider}>
           {spinner ? (
             <motion.ul

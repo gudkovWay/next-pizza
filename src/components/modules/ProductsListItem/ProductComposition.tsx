@@ -5,7 +5,7 @@ const ProductComposition = ({ composition }: { composition: string[] }) => (
   <span className={styles.product__composition}>
     Состав:
     {composition.map((value, index) => (
-      <i key={index}>{value} </i>
+      <i key={index}>{value}, </i>
     ))}
   </span>
 )
