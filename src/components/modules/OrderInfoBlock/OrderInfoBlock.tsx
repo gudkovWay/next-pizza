@@ -58,7 +58,7 @@ const OrderInfoBlock = ({
           <button />
         ) : (
           <Link
-            href='/order'
+            href='/cart/order'
             className={`${styles.order_block__btn} ${
               !isUserAgree || !currentCartByAuth.length ? styles.disabled : ''
             }`}

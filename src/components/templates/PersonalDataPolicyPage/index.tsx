@@ -14,7 +14,7 @@ const PersonalDataPolicyPage = () => (
             },
           ]}
         />
-        <div className='wpb_wrapper'>
+        <div>
           <h1>Политика обработки персональных данных</h1>
           <p>
             <strong>1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</strong>

@@ -112,7 +112,7 @@ const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
         addedClassName={styles.favorites__list__item__cart_added}
       />
       <Link
-        href={`/catalog/${item.category}/${item._id}`}
+        href={`/catalog/${item.category}/${item.slug}`}
         className={styles.favorites__list__item__img}
       >
         <Image

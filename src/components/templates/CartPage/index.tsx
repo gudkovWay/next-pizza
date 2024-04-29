@@ -37,88 +37,83 @@ const CartPage = () => {
   const loginCheckSpinner = useUnit(loginCheckFx.pending)
 
   return (
-    <>
-      <Breadcrumbs
-        crumbs={[
-          {
-            href: '/cart',
-            children: 'Корзина',
-          },
-        ]}
-      />
-      <main>
-        {!shouldShowEmpty ? (
-          <section className={styles.cart}>
-            <div className='container'>
-              <HeadingWithCount
-                count={countWholeCartItemsAmount(currentCartByAuth)}
-                title={`Корзина`}
-                spinner={cartSpinner}
-              />
-              <div className={styles.cart__inner}>
-                <div className={styles.cart__left}>
-                  {(isUserAuth()
-                    ? cartSpinner || loginCheckSpinner
-                    : cartSpinner) && (
-                    <motion.ul
-                      {...basePropsForMotion}
-                      className={cartSkeletonStyles.skeleton}
-                    >
-                      {Array.from(new Array(3)).map((_, i) => (
-                        <li
-                          key={i}
-                          className={cartSkeletonStyles.skeleton__item}
-                        >
-                          <div
-                            className={cartSkeletonStyles.skeleton__item__light}
-                          />
-                        </li>
-                      ))}
-                    </motion.ul>
-                  )}
-                  {!cartSpinner && (
-                    <motion.ul
-                      {...basePropsForMotion}
-                      className={styles.cart__list}
-                    >
-                      <CartList />
-                    </motion.ul>
-                  )}
-                </div>
-                <div className={styles.cart__right}>
-                  {isMedia930 && (
-                    <PromotionalCode
-                      setIsCorrectPromotionalCode={setIsCorrectPromotionalCode}
-                    />
-                  )}
-                  <div className={styles.cart__right__order}>
-                    <OrderInfoBlock
-                      isCorrectPromotionalCode={isCorrectPromotionalCode}
-                    />
-                  </div>
+    <main>
+      {!shouldShowEmpty ? (
+        <section className={styles.cart}>
+          <div className='container'>
+            <Breadcrumbs
+              crumbs={[
+                {
+                  href: '/cart',
+                  children: 'Корзина',
+                },
+              ]}
+            />
+            <HeadingWithCount
+              count={countWholeCartItemsAmount(currentCartByAuth)}
+              title={`Корзина`}
+              spinner={cartSpinner}
+            />
+            <div className={styles.cart__inner}>
+              <div className={styles.cart__left}>
+                {(isUserAuth()
+                  ? cartSpinner || loginCheckSpinner
+                  : cartSpinner) && (
+                  <motion.ul
+                    {...basePropsForMotion}
+                    className={cartSkeletonStyles.skeleton}
+                  >
+                    {Array.from(new Array(3)).map((_, i) => (
+                      <li key={i} className={cartSkeletonStyles.skeleton__item}>
+                        <div
+                          className={cartSkeletonStyles.skeleton__item__light}
+                        />
+                      </li>
+                    ))}
+                  </motion.ul>
+                )}
+                {!cartSpinner && (
+                  <motion.ul
+                    {...basePropsForMotion}
+                    className={styles.cart__list}
+                  >
+                    <CartList />
+                  </motion.ul>
+                )}
+              </div>
+              <div className={styles.cart__right}>
+                {isMedia930 && (
+                  <PromotionalCode
+                    setIsCorrectPromotionalCode={setIsCorrectPromotionalCode}
+                  />
+                )}
+                <div className={styles.cart__right__order}>
+                  <OrderInfoBlock
+                    isCorrectPromotionalCode={isCorrectPromotionalCode}
+                  />
                 </div>
               </div>
-              {!isMedia930 && (
-                <PromotionalCode
-                  setIsCorrectPromotionalCode={setIsCorrectPromotionalCode}
-                />
-              )}
             </div>
-          </section>
-        ) : (
-          <section>
-            <div className='container'>
-              <EmptyPageContent
-                subtitle={`Ваша корзина пуста :(`}
-                description={`Чтобы совершить покупку перейдите в каталог и положите в корзину выбранные вещи`}
-                btnText={`Закупаться ->`}
-                bgClassName={styles.empty_bg}
+            {!isMedia930 && (
+              <PromotionalCode
+                setIsCorrectPromotionalCode={setIsCorrectPromotionalCode}
               />
-            </div>
-          </section>
-        )}
-      </main>
-    </>
+            )}
+          </div>
+        </section>
+      ) : (
+        <section>
+          <div className='container'>
+            <EmptyPageContent
+              subtitle={`Ваша корзина пуста :(`}
+              description={`Чтобы совершить покупку перейдите в каталог и положите в корзину выбранные вещи`}
+              btnText={`Закупаться ->`}
+              bgClassName={styles.empty_bg}
+            />
+          </div>
+        </section>
+      )}
+    </main>
   )
 }
 

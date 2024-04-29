@@ -69,7 +69,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
           />
         </div>
         <Link
-          href={`/catalog/${item.category}/${item._id}`}
+          href={`/catalog/${item.category}/${item.slug}`}
           className={styles.list__item__img}
         >
           <Image src={item.images[0]} alt={item.name} fill />

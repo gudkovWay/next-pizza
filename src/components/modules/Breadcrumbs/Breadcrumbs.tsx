@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
 }
 
 const Breadcrumbs = ({ crumbs }: BreadcrumbsProps) => (
-  <div className='container breadcrumbs__container'>
+  <div className='breadcrumbs__container'>
     <ul className='breadcrumbs'>
       <li className='breadcrumbs__item'>
         <Link href='/' className='breadcrumbs__item__link first-crumb'>

@@ -88,7 +88,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                   <span>{formatPrice(animatedPrice)} ₽</span>
                 </div>
                 <Link
-                  href='/order'
+                  href='/cart/order'
                   className={clsx('cart-popup__footer__link', {
                     ['cart-popup__footer__link--disabled']: shouldShowEmpty,
                   })}

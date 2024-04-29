@@ -14,7 +14,7 @@ const PrivacyPolicyPage = () => (
             },
           ]}
         />
-        <div className='wpb_wrapper'>
+        <div>
           <h2>
             <strong>Политика в отношении обработки персональных данных</strong>
           </h2>
