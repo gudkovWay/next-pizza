@@ -1,4 +1,4 @@
-import styles from '@/styles/tooltip/index.module.scss'
+import styles from '@/app/styles/tooltip/index.module.scss'
 
 const Tooltip = ({ text }: { text: string }) => (
   <div className={styles.tooltip__inner}>

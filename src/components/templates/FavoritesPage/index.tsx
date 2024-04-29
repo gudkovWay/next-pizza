@@ -19,8 +19,8 @@ import {   $favorites,
 
 import { isUserAuth } from '@/shared/lib/utils/common'
 import { basePropsForMotion } from '@/shared/constants/motion'
-import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
-import styles from '@/styles/favorites/index.module.scss'
+import cartSkeletonStyles from '@/app/styles/cart-skeleton/index.module.scss'
+import styles from '@/app/styles/favorites/index.module.scss'
 
 const FavoritesPage = () => {
   const currentFavoritesByAuth = useGoodsByAuth($favorites, $favoritesFromLS)

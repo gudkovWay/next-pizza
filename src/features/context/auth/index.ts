@@ -3,7 +3,7 @@ import { createDomain, createEffect } from 'effector'
 import toast from 'react-hot-toast'
 import { onAuthSuccess } from '@/shared/lib/utils/auth'
 import { ISignUpFx } from '@/shared/types/authPopup'
-import api from '@/api/apiInstance'
+import api from '@/shared/api/apiInstance'
 
 export const auth = createDomain()
 

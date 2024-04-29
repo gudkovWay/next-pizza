@@ -8,7 +8,7 @@ import {
   IAddProductsFromLSToFavoriteFx,
   IDeleteFavoriteItemsFx,
 } from '@/shared/types/favorites'
-import api from '@/api/apiInstance'
+import api from '@/shared/api/apiInstance'
 
 export const favorites = createDomain()
 

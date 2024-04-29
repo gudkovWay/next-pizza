@@ -9,7 +9,7 @@ import {
   IUpdateCartItemCountFx,
   IDeleteCartItemsFx,
 } from '@/shared/types/cart'
-import api from '@/api/apiInstance'
+import api from '@/shared/api/apiInstance'
 
 export const cart = createDomain()
 

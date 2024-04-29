@@ -1,6 +1,6 @@
 import { emailValidationRules } from '@/shared/lib/utils/auth'
 import { IAuthInput } from '@/shared/types/authPopup'
-import styles from '@/styles/auth-popup/index.module.scss'
+import styles from '@/app/styles/auth-popup/index.module.scss'
 
 const EmailInput = ({ register, errors }: IAuthInput) => (
   <div className='form__block'>

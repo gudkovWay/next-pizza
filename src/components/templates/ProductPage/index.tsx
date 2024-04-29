@@ -9,7 +9,7 @@ import ProductPageContent from '@/components/modules/ProductPage/ProductPageCont
 import { loadOneProduct, loadOneProductFx } from '@/features/context/goods'
 import { $currentProduct } from '@/features/context/goods/state'
 import { IProductPageProps } from '@/shared/types/product'
-import styles from '@/styles/product/index.module.scss'
+import styles from '@/app/styles/product/index.module.scss'
 
 const ProductPage = ({ productId, category }: IProductPageProps) => {
   const product = useUnit($currentProduct)

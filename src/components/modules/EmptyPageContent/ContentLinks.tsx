@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '@/styles/empty-content/index.module.scss'
+import styles from '@/app/styles/empty-content/index.module.scss'
 
 const ContentLinks = ({ btnText }: { btnText: string }) => (
   <div className={styles.empty_content__links}>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ICategoryFilterListProps } from '@/shared/types/catalog'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 import SelectItem from './SelectItem'
 import { getSearchParamsUrl } from '@/shared/lib/utils/common'
 

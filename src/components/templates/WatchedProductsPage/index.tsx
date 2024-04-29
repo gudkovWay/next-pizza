@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import ProductsListItem from '@/components/modules/ProductsListItem/ProductsListItem'
 import { useWatchedProducts } from '@/features/hooks/useWatchedProducts'
 
-import styles from '@/styles/watched-products-page/index.module.scss'
+import styles from '@/app/styles/watched-products-page/index.module.scss'
 
 const WatchedProductsPage = () => {
   const { watchedProducts } = useWatchedProducts()

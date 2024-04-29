@@ -20,7 +20,7 @@ import { basePropsForMotion } from '@/shared/constants/motion'
 import { addOverflowHiddenToBody } from '@/shared/lib/utils/common'
 import { ICatalogFiltersProps } from '@/shared/types/catalog'
 
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const CatalogFilters = ({
   handleApplyFiltersWithPrice,

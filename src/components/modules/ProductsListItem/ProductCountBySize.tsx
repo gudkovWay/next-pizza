@@ -1,6 +1,6 @@
 import { getCartItemCountBySize } from '@/shared/lib/utils/common'
 import { IProductCountBySizeProps } from '@/shared/types/goods'
-import styles from '@/styles/product-count-indicator/index.module.scss'
+import styles from '@/app/styles/product-count-indicator/index.module.scss'
 
 const ProductCountBySize = ({
   products,

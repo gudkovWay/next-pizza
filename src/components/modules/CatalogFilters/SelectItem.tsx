@@ -3,7 +3,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { useUnit } from 'effector-react'
 import { loadProductsByFilterFx } from '@/features/context/goods'
 import { ISelectItemProps } from '@/shared/types/catalog'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const SelectItem = ({
   isActive,

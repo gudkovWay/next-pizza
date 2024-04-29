@@ -5,7 +5,7 @@ import SelectBtn from './SelectBtn'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import SelectItem from './SelectItem'
 import { getSearchParamsUrl } from '@/shared/lib/utils/common'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const SortSelect = ({
   handleApplyFiltersBySort,

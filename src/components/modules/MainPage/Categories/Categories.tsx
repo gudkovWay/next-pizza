@@ -7,7 +7,7 @@ import useImagePreloader from '@/features/hooks/useImagePreloader'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import img2 from '@/../public/img/categories-img-2.png'
 import img3 from '@/../public/img/categories-img-3.png'
-import styles from '@/styles/main-page/index.module.scss'
+import styles from '@/app/styles/main-page/index.module.scss'
 
 const images = [
   {

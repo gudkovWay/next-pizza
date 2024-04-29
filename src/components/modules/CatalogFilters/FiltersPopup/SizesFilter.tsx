@@ -1,6 +1,6 @@
 import CheckboxSelectItem from '../CheckboxSelectItem'
 import { useSizeFilter } from '@/features/hooks/useSizeFilter'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const SizesFilter = ({
   handleApplyFiltersWithSizes,

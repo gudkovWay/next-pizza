@@ -24,7 +24,7 @@ import {
   formatPrice,
   isUserAuth,
 } from '@/shared/lib/utils/common'
-import styles from '@/styles/favorites/index.module.scss'
+import styles from '@/app/styles/favorites/index.module.scss'
 
 const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
   const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs)

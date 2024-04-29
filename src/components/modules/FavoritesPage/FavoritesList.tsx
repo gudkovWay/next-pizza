@@ -8,7 +8,7 @@ import {
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 
 import { basePropsForMotion } from '@/shared/constants/motion'
-import styles from '@/styles/favorites/index.module.scss'
+import styles from '@/app/styles/favorites/index.module.scss'
 
 const FavoritesList = () => {
   const currentFavoritesByAuth = useGoodsByAuth($favorites, $favoritesFromLS)

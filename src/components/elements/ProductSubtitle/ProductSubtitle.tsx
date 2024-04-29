@@ -1,5 +1,5 @@
 import { IProductSubtitleProps } from '@/shared/types/elements'
-import styles from '@/styles/productSubtitle/index.module.scss'
+import styles from '@/app/styles/productSubtitle/index.module.scss'
 
 const ProductSubtitle = ({
   subtitleClassName,

@@ -13,7 +13,7 @@ import { useFavoritesAction } from '@/features/hooks/useFavoritesAction'
 import { IProductsListItemProps } from '@/shared/types/modules'
 import { addOverflowHiddenToBody, formatPrice } from '@/shared/lib/utils/common'
 
-import styles from '@/styles/product-list-item/index.module.scss'
+import styles from '@/app/styles/product-list-item/index.module.scss'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 
 const ProductsListItem = ({ item, title }: IProductsListItemProps) => {

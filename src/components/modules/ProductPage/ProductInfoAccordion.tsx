@@ -1,6 +1,6 @@
 import Accordion from '../Accordion/Accordion'
 import { IProductInfoAccordionProps } from '@/shared/types/product'
-import styles from '@/styles/product/index.module.scss'
+import styles from '@/app/styles/product/index.module.scss'
 
 const ProductInfoAccordion = ({
   children,

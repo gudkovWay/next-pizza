@@ -1,5 +1,5 @@
 import { IProductLabelProps } from '@/shared/types/modules'
-import styles from '@/styles/product-list-item/index.module.scss'
+import styles from '@/app/styles/product-list-item/index.module.scss'
 
 const ProductLabel = ({ isNew, isBestseller }: IProductLabelProps) => {
   const bestsellerLabel = (

@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
+import AllLink from '@/components/elements/AllLink'
 
 import { IMainPageSectionProps } from '@/shared/types/main-page'
 import { basePropsForMotion } from '@/shared/constants/motion'
-import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import styles from '@/styles/main-page/index.module.scss'
-import AllLink from '@/components/elements/AllLink'
+import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
+import styles from '@/app/styles/main-page/index.module.scss'
 
 const MainPageSection = ({ title, goods, spinner }: IMainPageSectionProps) => (
   <section className={styles.main_section}>

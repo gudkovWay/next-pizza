@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import CartPopupItem from './CartPopupItem'
 import { withClickOutside } from '@/components/hocs/withClickOutside'
 
-import { getCartItemsFx } from '@/api/cart'
+import { getCartItemsFx } from '@/shared/api/cart'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import { useTotalPrice } from '@/features/hooks/useTotalPrice'
 import {

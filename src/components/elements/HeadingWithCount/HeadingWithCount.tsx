@@ -2,7 +2,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { showCountMessage } from '@/shared/lib/utils/common'
 import { IHeadingWithCountProps } from '@/shared/types/elements'
-import styles from '@/styles/heading-with-count/index.module.scss'
+import styles from '@/app/styles/heading-with-count/index.module.scss'
 
 const HeadingWithCount = ({
   count,

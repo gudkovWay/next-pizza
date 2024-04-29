@@ -1,7 +1,7 @@
 'use client'
 import toast from 'react-hot-toast'
 import { createDomain, createEffect } from 'effector'
-import api from '@/api/apiInstance'
+import api from '@/shared/api/apiInstance'
 import { handleJWTError } from '@/shared/lib/utils/errors'
 import { setIsAuth } from '../auth'
 

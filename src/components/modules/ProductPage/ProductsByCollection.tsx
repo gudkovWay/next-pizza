@@ -2,14 +2,14 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import ProductsListItem from '../ProductsListItem/ProductsListItem'
+import AllLink from '@/components/elements/AllLink'
 import { loadProductsByFilter } from '@/features/context/goods'
 import { useProductsByCollection } from '@/features/hooks/useProductsByCollection'
 
 import { allowedCollectionsCategories } from '@/shared/constants/product'
 import { basePropsForMotion } from '@/shared/constants/motion'
-import styles from '@/styles/product/index.module.scss'
-import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import AllLink from '@/components/elements/AllLink'
+import styles from '@/app/styles/product/index.module.scss'
+import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
 
 const ProductsByCollection = ({ collection }: { collection: string }) => {
   const { title, capitalizedCollection, spinner, products } =

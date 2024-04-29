@@ -1,6 +1,6 @@
 'use client'
 import { IProductSizesItemProps } from '@/shared/types/goods'
-import styles from '@/styles/quick-view-modal/index.module.scss'
+import styles from '@/app/styles/quick-view-modal/index.module.scss'
 import ProductCountBySize from './ProductCountBySize'
 
 const ProductSizesItem = ({

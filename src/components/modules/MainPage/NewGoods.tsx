@@ -1,7 +1,7 @@
 import { useUnit } from 'effector-react'
 import MainPageSection from './MainPageSection'
 import { $newProducts } from '@/features/context/goods/state'
-import { getNewProductsFx } from '@/api/main-page'
+import { getNewProductsFx } from '@/shared/api/main-page'
 
 const NewGoods = () => {
   const goods = useUnit($newProducts)

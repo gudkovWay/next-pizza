@@ -8,7 +8,7 @@ import {
   ILoadProductsByFilterFx,
   ILoadWatchedProductsFx,
 } from '@/shared/types/goods'
-import api from '@/api/apiInstance'
+import api from '@/shared/api/apiInstance'
 
 export const goods = createDomain()
 

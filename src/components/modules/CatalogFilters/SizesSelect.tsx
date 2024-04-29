@@ -4,7 +4,7 @@ import { useSizeFilter } from '@/features/hooks/useSizeFilter'
 import SelectBtn from './SelectBtn'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import CheckboxSelectItem from './CheckboxSelectItem'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const SizesSelect = ({
   handleApplyFiltersWithSizes,

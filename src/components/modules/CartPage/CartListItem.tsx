@@ -6,7 +6,7 @@ import { useCartItemAction } from '@/features/hooks/useCartItemAction'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { formatPrice } from '@/shared/lib/utils/common'
 import ProductCounter from '../ProductsListItem/ProductCounter'
-import styles from '@/styles/cart-page/index.module.scss'
+import styles from '@/app/styles/cart-page/index.module.scss'
 import Link from 'next/link'
 
 const CartListItem = ({ item }: { item: ICartItem }) => {

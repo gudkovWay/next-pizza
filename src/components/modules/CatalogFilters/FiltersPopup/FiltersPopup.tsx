@@ -19,7 +19,7 @@ import {
   removeOverflowHiddenFromBody,
   showCountMessage,
 } from '@/shared/lib/utils/common'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const FiltersPopup = ({
   handleApplyFiltersWithPrice,

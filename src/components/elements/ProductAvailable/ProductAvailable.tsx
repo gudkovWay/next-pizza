@@ -1,5 +1,5 @@
 import { IProductAvailableProps } from '@/shared/types/elements'
-import styles from '@/styles/product-list-item/index.module.scss'
+import styles from '@/app/styles/product-list-item/index.module.scss'
 
 const ProductAvailable = ({ vendorCode, inStock }: IProductAvailableProps) => {
   const isInStock = +inStock > 0

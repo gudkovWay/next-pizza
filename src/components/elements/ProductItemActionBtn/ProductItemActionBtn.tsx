@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AnimatePresence, motion } from 'framer-motion'
 import Tooltip from '../Tooltip/Tooltip'
 import { IProductItemActionBtnProps } from '@/shared/types/elements'
-import styles from '@/styles/product-item-action-btn/index.module.scss'
-import tooltipStyles from '@/styles/tooltip/index.module.scss'
+import styles from '@/app/styles/product-item-action-btn/index.module.scss'
+import tooltipStyles from '@/app/styles/tooltip/index.module.scss'
 
 const ProductItemActionBtn = ({
   text,

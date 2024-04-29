@@ -13,7 +13,7 @@ import {
   updateSearchParam,
 } from '@/shared/lib/utils/common'
 import { SearchParams } from '@/shared/types/catalog'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 export const useProductFilters = (
   searchParams: SearchParams,

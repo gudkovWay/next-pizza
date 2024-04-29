@@ -3,7 +3,7 @@ import { useCategoryFilter } from '@/features/hooks/useCategoryFilter'
 import { useClickOutside } from '@/features/hooks/useClickOutside'
 import CategoryFilterList from './CategoryFilterList'
 import SelectBtn from './SelectBtn'
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const CategorySelect = () => {
   const { open, ref, toggle } = useClickOutside()

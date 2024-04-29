@@ -7,7 +7,7 @@ import {
 } from 'react-share'
 
 import { handleCloseShareModal } from '@/shared/lib/utils/common'
-import styles from '@/styles/share-modal/index.module.scss'
+import styles from '@/app/styles/share-modal/index.module.scss'
 
 const ShareModal = () => (
   <div className={styles.share_modal}>

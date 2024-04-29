@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import useImagePreloader from '@/features/hooks/useImagePreloader'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
-import styles from '@/styles/main-page/index.module.scss'
+import styles from '@/app/styles/main-page/index.module.scss'
 
 const MainSlider = ({
   images,

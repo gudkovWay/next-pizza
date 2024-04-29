@@ -3,7 +3,7 @@ import {
   addProductToCartFx,
   deleteCartItemFx,
   getCartItemsFx,
-} from '@/api/cart'
+} from '@/shared/api/cart'
 import { refreshTokenFx } from '@/features/context/auth'
 import { addProductsFromLSToCartFx } from '@/features/context/cart'
 import {

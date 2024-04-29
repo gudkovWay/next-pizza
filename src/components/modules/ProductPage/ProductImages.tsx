@@ -5,7 +5,7 @@ import ProductImagesItem from './ProductImagesItem'
 import { useProductImages } from '@/features/hooks/useProductImages'
 import { $currentProduct } from '@/features/context/goods/state'
 import { baseSliderSettings } from '@/shared/constants/slider'
-import styles from '@/styles/product/index.module.scss'
+import styles from '@/app/styles/product/index.module.scss'
 
 const ProductImages = () => {
   const product = useUnit($currentProduct)

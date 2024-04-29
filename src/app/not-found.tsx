@@ -1,6 +1,6 @@
 'use client'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
-import styles from '@/styles/not-found/index.module.scss'
+import styles from '@/app/styles/not-found/index.module.scss'
 
 const NotFound = () => (
   <main>

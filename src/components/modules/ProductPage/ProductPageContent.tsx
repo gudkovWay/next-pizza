@@ -24,7 +24,7 @@ import {
   formatPrice,
   getWatchedProductFromLS,
 } from '@/shared/lib/utils/common'
-import styles from '@/styles/product/index.module.scss'
+import styles from '@/app/styles/product/index.module.scss'
 
 const ProductPageContent = () => {
   const product = useUnit($currentProduct)

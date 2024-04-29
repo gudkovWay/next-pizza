@@ -11,8 +11,8 @@ import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtit
 import img1 from '@/../public/img/products/pizza/итальянская.png'
 import img2 from '@/../public/img/products/pizza/мясная.png'
 import img3 from '@/../public/img/products/pizza/сырная.png'
-import styles from '@/styles/main-page/index.module.scss'
-import stylesForAd from '@/styles/ad/index.module.scss'
+import styles from '@/app/styles/main-page/index.module.scss'
+import stylesForAd from '@/app/styles/ad/index.module.scss'
 
 const Hero = () => {
   const slides = [

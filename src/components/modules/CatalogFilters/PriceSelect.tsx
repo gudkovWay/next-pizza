@@ -10,7 +10,7 @@ import {
   getCheckedPriceTo,
 } from '@/shared/lib/utils/catalog'
 
-import styles from '@/styles/catalog/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const PriceSelect = ({
   handleApplyFiltersWithPrice,

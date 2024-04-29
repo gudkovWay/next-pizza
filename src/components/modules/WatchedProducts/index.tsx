@@ -9,8 +9,8 @@ import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 
 import { basePropsForMotion } from '@/shared/constants/motion'
 import { IProducts } from '@/shared/types/goods'
-import styles from '@/styles/watched-products/index.module.scss'
-import skeletonStyles from '@/styles/skeleton/index.module.scss'
+import styles from '@/app/styles/watched-products/index.module.scss'
+import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
 
 const WatchedProducts = ({
   watchedProducts,

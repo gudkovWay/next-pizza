@@ -13,8 +13,8 @@ import { useProductFilters } from '@/features/hooks/useProductFilters'
 
 import { IProductsPage } from '@/shared/types/catalog'
 import { basePropsForMotion } from '@/shared/constants/motion'
-import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import styles from '@/styles/catalog/index.module.scss'
+import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
+import styles from '@/app/styles/catalog/index.module.scss'
 
 const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
   const {

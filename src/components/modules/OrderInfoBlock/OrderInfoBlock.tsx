@@ -8,7 +8,7 @@ import { $cart, $cartFromLs } from '@/features/context/cart/state'
 import { countWholeCartItemsAmount } from '@/shared/lib/utils/cart'
 import { formatPrice } from '@/shared/lib/utils/common'
 import { OrderInfoBlock } from '@/shared/types/modules'
-import styles from '@/styles/order-block/index.module.scss'
+import styles from '@/app/styles/order-block/index.module.scss'
 
 const OrderInfoBlock = ({
   isCorrectPromotionalCode,

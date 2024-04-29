@@ -1,5 +1,5 @@
 import { useUnit } from 'effector-react'
-import { getBestsellerProductsFx } from '@/api/main-page'
+import { getBestsellerProductsFx } from '@/shared/api/main-page'
 import { $bestsellerProducts } from '@/features/context/goods/state'
 import MainPageSection from './MainPageSection'
 

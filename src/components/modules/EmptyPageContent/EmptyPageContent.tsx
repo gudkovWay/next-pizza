@@ -2,7 +2,7 @@ import { IEmptyPageContentProps } from '@/shared/types/modules'
 import ContentLinks from './ContentLinks'
 import ContentTitle from './ContentTitle'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
-import styles from '@/styles/empty-content/index.module.scss'
+import styles from '@/app/styles/empty-content/index.module.scss'
 
 const EmptyPageContent = ({
   subtitle,

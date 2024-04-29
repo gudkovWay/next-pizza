@@ -1,5 +1,5 @@
 import { IAuthInput } from '@/shared/types/authPopup'
-import styles from '@/styles/auth-popup/index.module.scss'
+import styles from '@/app/styles/auth-popup/index.module.scss'
 
 const PasswordInput = ({ register, errors }: IAuthInput) => (
   <div className='form__block'>

@@ -18,8 +18,8 @@ import {
   formatPrice,
   removeOverflowHiddenFromBody,
 } from '@/shared/lib/utils/common'
-import stylesForProduct from '@/styles/product-list-item/index.module.scss'
-import styles from '@/styles/quick-view-modal/index.module.scss'
+import stylesForProduct from '@/app/styles/product-list-item/index.module.scss'
+import styles from '@/app/styles/quick-view-modal/index.module.scss'
 
 const QuickViewModal = () => {
   const {

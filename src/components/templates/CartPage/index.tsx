@@ -11,7 +11,7 @@ import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageCon
 import OrderInfoBlock from '@/components/modules/OrderInfoBlock/OrderInfoBlock'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
-import { getCartItemsFx } from '@/api/cart'
+import { getCartItemsFx } from '@/shared/api/cart'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import { loginCheckFx } from '@/features/context/user'
@@ -24,8 +24,8 @@ import {
 import { basePropsForMotion } from '@/shared/constants/motion'
 import { countWholeCartItemsAmount } from '@/shared/lib/utils/cart'
 import { isUserAuth } from '@/shared/lib/utils/common'
-import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
-import styles from '@/styles/cart-page/index.module.scss'
+import cartSkeletonStyles from '@/app/styles/cart-skeleton/index.module.scss'
+import styles from '@/app/styles/cart-page/index.module.scss'
 
 const CartPage = () => {
   const cartSpinner = useUnit(getCartItemsFx.pending)

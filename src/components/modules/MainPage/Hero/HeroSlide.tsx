@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { IHeroSlide } from '@/shared/types/main-page'
-import styles from '@/styles/main-page/index.module.scss'
+import styles from '@/app/styles/main-page/index.module.scss'
 
 const HeroSlide = ({ slide }: { slide: IHeroSlide }) => (
   <>

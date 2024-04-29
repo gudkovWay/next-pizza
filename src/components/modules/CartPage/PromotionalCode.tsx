@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '@/styles/cart-page/index.module.scss'
+import styles from '@/app/styles/cart-page/index.module.scss'
 
 const PromotionalCode = ({
   setIsCorrectPromotionalCode,
