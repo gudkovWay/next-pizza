@@ -10,16 +10,16 @@ const WatchedProductsPage = () => {
 
   return (
     <main>
-      <Breadcrumbs
-        crumbs={[
-          {
-            children: 'Просмотренные товары',
-            href: '/watched-products',
-          },
-        ]}
-      />
       <section className={styles.watched_products}>
         <div className='container'>
+          <Breadcrumbs
+            crumbs={[
+              {
+                children: 'Просмотренные товары',
+                href: '/watched-products',
+              },
+            ]}
+          />
           <h1 className={`site-title ${styles.watched_products__title}`}>
             Просмотренные товары
           </h1>

@@ -31,8 +31,8 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   const [isClient, setIsClient] = useState(false)
   const [cookieAlertOpen, setCookieAlertOpen] = useState(false)
   const showQuickViewModal = useUnit($showQuickViewModal)
-  const shareModal = useUnit($shareModal)
   const openAuthPopup = useUnit($openAuthPopup)
+  const shareModal = useUnit($shareModal)
 
   useEffect(() => setIsClient(true), [])
 

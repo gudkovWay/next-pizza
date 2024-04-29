@@ -63,7 +63,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </motion.div>
         )}
         {searchModal && (
-          <motion.div {...basePropsForMotion}>
+          <motion.div
+            initial={{ opacity: 0, zIndex: 102 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <SearchModal />
           </motion.div>
         )}
@@ -72,8 +76,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <ShareModal />
           </motion.div>
         )}
-      </AnimatePresence>
-      <AnimatePresence>
         {showQuickViewModal && (
           <motion.div {...basePropsForMotion}>
             <QuickViewModal />
