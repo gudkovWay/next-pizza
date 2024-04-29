@@ -36,6 +36,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0 auto;
   padding: 0 15px;
 }
+
 a {
   text-decoration: none;
 }
@@ -314,6 +315,43 @@ ol {
 .catalog-pagination-item:hover.selected a {
   background-color: #fbae7c;
 }
+
 .wpb_wrapper {
   padding: 0 15px;
+}
+
+.all-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 25px;
+  transition: color 0.2s ease-in-out;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -55px;
+      width: 24px;
+      height: 24px;
+      background-color: #e8e9ea;
+      -webkit-mask: url(/img/simple-arrow.svg) no-repeat 50% 50%;
+      mask: url(/img/simple-arrow.svg) no-repeat 50% 50%;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+
+  &:hover span::before {
+    transition: background-color 0.2s ease-in-out;
+    background-color: #f7ca6a;
+  }
+
+  &:hover {
+    color: #f7ca6a;
+    transition: color 0.2s ease-in-out;
+  }
 }

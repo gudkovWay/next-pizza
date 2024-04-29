@@ -10,13 +10,15 @@ import Menu from './Menu'
 import CartPopup from './CartPopup/CartPopup'
 import HeaderProfile from './HeaderProfile'
 
-import { $isAuth } from '@/features/context/auth'
+import { $isAuth } from '@/features/context/auth/state'
 import { openMenu, openSearchModal } from '@/features/context/modals'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import { loginCheckFx } from '@/features/context/user'
 import {
   $favorites,
   $favoritesFromLS,
+} from '@/features/context/favorites/state'
+import {
   addProductsFromLSToFavorites,
   setFavoritesFromLS,
   setShouldShowEmptyFavorites,

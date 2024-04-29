@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react'
 import { getBestsellerProductsFx } from '@/api/main-page'
-import { $bestsellerProducts } from '@/features/context/goods'
+import { $bestsellerProducts } from '@/features/context/goods/state'
 import MainPageSection from './MainPageSection'
 
 const BestsellerGoods = () => {

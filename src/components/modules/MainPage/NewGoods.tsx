@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react'
 import MainPageSection from './MainPageSection'
-import { $newProducts } from '@/features/context/goods'
+import { $newProducts } from '@/features/context/goods/state'
 import { getNewProductsFx } from '@/api/main-page'
 
 const NewGoods = () => {

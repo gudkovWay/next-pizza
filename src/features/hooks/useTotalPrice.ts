@@ -1,13 +1,10 @@
 import { useEffect } from 'react'
 import { useUnit } from 'effector-react'
-import {
-  $cart,
-  $cartFromLs,
-  $totalPrice,
-  setTotalPrice,
-} from '@/features/context/cart'
+
 import { usePriceAnimation } from './usePricceAnimation'
 import { useGoodsByAuth } from './useGoodsByAuth'
+import { setTotalPrice } from '@/features/context/cart'
+import { $cart, $cartFromLs, $totalPrice } from '@/features/context/cart/state'
 
 export const useTotalPrice = () => {
   const totalPrice = useUnit($totalPrice)

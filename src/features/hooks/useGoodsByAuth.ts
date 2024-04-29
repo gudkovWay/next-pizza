@@ -1,5 +1,5 @@
 import { useUnit } from 'effector-react'
-import { $isAuth } from '@/features/context/auth'
+import { $isAuth } from '@/features/context/auth/state'
 import { UseGoodsByAuth } from '@/shared/types/common'
 
 export const useGoodsByAuth = <T>(

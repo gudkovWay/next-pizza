@@ -1,10 +1,14 @@
 'use client'
 import Link from 'next/link'
+
 import { openMenu } from '@/features/context/modals'
-import { addOverflowHiddenToBody } from '@/shared/lib/utils/common'
-import { $cart, $cartFromLs } from '@/features/context/cart'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
-import { $favorites, $favoritesFromLS } from '@/features/context/favorites'
+import { $cart, $cartFromLs } from '@/features/context/cart/state'
+import {
+  $favorites,
+  $favoritesFromLS,
+} from '@/features/context/favorites/state'
+import { addOverflowHiddenToBody } from '@/shared/lib/utils/common'
 
 const MobileNavbar = () => {
   const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs)

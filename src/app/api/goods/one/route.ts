@@ -1,7 +1,8 @@
-import clientPromise from '@/shared/lib/mongodb'
-import { getDbAndReqBody } from '@/shared/lib/utils/api-routes'
 import { ObjectId } from 'mongodb'
 import { NextResponse } from 'next/server'
+
+import clientPromise from '@/shared/lib/mongodb'
+import { getDbAndReqBody } from '@/shared/lib/utils/api-routes'
 
 export async function POST(req: Request) {
   try {

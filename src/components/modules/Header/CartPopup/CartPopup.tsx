@@ -8,10 +8,16 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import CartPopupItem from './CartPopupItem'
 import { withClickOutside } from '@/components/hocs/withClickOutside'
+
 import { getCartItemsFx } from '@/api/cart'
-import { $cart, $cartFromLs, $shouldShowEmpty } from '@/features/context/cart'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import { useTotalPrice } from '@/features/hooks/useTotalPrice'
+import {
+  $cart,
+  $cartFromLs,
+  $shouldShowEmpty,
+} from '@/features/context/cart/state'
+
 import { formatPrice } from '@/shared/lib/utils/common'
 import { IWrappedComponentProps } from '@/shared/types/hocs'
 

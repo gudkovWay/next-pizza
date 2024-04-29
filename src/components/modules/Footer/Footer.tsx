@@ -16,10 +16,14 @@ const Footer = () => {
           </div>
           <div className='footer__contacts'>
             <span>
-              <a href='https://github.com/gudkovWay'>github (dev)</a>
+              <a href='https://github.com/gudkovWay'>
+                <b>github (developer)</b>
+              </a>
             </span>
             <span>
-              <a href='https://t.me/gudkoviurii'>telegram (dev)</a>
+              <a href='https://t.me/gudkoviurii'>
+                <b>telegram (developer)</b>
+              </a>
             </span>
             {isMedia950 && <FooterLinks />}
           </div>
@@ -49,7 +53,9 @@ const Footer = () => {
       <div className='footer__bottom'>
         <div className='container footer__bottom__container'>
           <div className='footer__copyright'>
-            <b>© 2024 GENIUS</b>
+            <b>
+              © 2024 GENIUS. сделано с <i>выe**нами.</i>
+            </b>
           </div>
           <div className='footer__policy'>
             <div className='footer__policy__inner'>

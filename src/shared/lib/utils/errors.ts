@@ -4,7 +4,6 @@ import {
   deleteCartItemFx,
   getCartItemsFx,
 } from '@/api/cart'
-import { JWTError } from '@/shared/constants/jwt'
 import { refreshTokenFx } from '@/features/context/auth'
 import { addProductsFromLSToCartFx } from '@/features/context/cart'
 import {
@@ -14,6 +13,8 @@ import {
   getFavoriteItemsFx,
 } from '@/features/context/favorites'
 import { loginCheckFx } from '@/features/context/user'
+
+import { JWTError } from '@/shared/constants/jwt'
 import {
   IAddProductToCartFx,
   IAddProductsFromLSToCartFx,

@@ -3,24 +3,35 @@ import { useUnit } from 'effector-react'
 import { Toaster } from 'react-hot-toast'
 import { EarthoOneProvider } from '@eartho/one-client-react'
 import { Next13ProgressBar } from 'next13-progressbar'
-import {
-  $showQuickViewModal,
-  closeQuickViewModal,
-} from '@/features/context/modals'
-import Layout from './Layout'
-import {
-  handleCloseAuthPopup,
-  removeOverflowHiddenFromBody,
-} from '@/shared/lib/utils/common'
-import { $openAuthPopup } from '@/features/context/auth'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+
+import Layout from './Layout'
 import CookieAlert from '../modules/CookieAlert/CookieAlert'
+
+import { $openAuthPopup } from '@/features/context/auth/state'
+import { closeQuickViewModal } from '@/features/context/modals'
+import {
+  $shareModal,
+  $showQuickViewModal,
+} from '@/features/context/modals/state'
+import '@/features/context/goods/init'
+import '@/features/context/auth/init'
+import '@/features/context/cart/init'
+import '@/features/context/favorites/init'
+import '@/features/context/user/init'
+
+import {
+  handleCloseAuthPopup,
+  handleCloseShareModal,
+  removeOverflowHiddenFromBody,
+} from '@/shared/lib/utils/common'
 
 const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   const [isClient, setIsClient] = useState(false)
   const [cookieAlertOpen, setCookieAlertOpen] = useState(false)
   const showQuickViewModal = useUnit($showQuickViewModal)
+  const shareModal = useUnit($shareModal)
   const openAuthPopup = useUnit($openAuthPopup)
 
   useEffect(() => setIsClient(true), [])
@@ -58,6 +69,12 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
                   openAuthPopup ? 'overlay-active' : ''
                 }`}
                 onClick={handleCloseAuthPopup}
+              />
+              <div
+                className={`share-overlay ${
+                  shareModal ? 'overlay-active' : ''
+                }`}
+                onClick={handleCloseShareModal}
               />
               {cookieAlertOpen && (
                 <motion.div

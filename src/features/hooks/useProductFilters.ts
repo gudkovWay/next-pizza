@@ -1,8 +1,9 @@
 import { useUnit } from 'effector-react'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+
+import { $products } from '@/features/context/goods/state'
 import {
-  $products,
   loadProductsByFilter,
   loadProductsByFilterFx,
 } from '@/features/context/goods'

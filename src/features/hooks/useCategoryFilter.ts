@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react'
 import { useEffect, useState } from 'react'
-import { $catalogCategoryOptions } from '@/features/context/catalog'
+import { $catalogCategoryOptions } from '@/features/context/catalog/state'
 import { getSearchParamsUrl } from '@/shared/lib/utils/common'
 
 export const useCategoryFilter = () => {

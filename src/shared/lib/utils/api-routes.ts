@@ -18,6 +18,15 @@ export const getDbAndReqBody = async (
   return { db }
 }
 
+export const getProductBySlug = async (
+  db: Db,
+  category: string,
+  slug: string
+) => {
+  const product = await db.collection(category).findOne({ slug })
+  return product
+}
+
 export const getNewAndBestsellerGoods = async (db: Db, fieldName: string) => {
   const pizzas = await db.collection('pizza').find().toArray()
   const drinks = await db.collection('drinks').find().toArray()

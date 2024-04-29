@@ -5,9 +5,10 @@ import {
   openAuthPopup,
   setIsAuth,
 } from '@/features/context/auth'
-import { closeSearchModal } from '@/features/context/modals'
+import { closeSearchModal, closeShareModal } from '@/features/context/modals'
 import { loginCheck } from '@/features/context/user'
 import { ICartItem } from '@/shared/types/cart'
+import { IProduct } from '@/shared/types/common'
 
 export const removeOverflowHiddenFromBody = () => {
   const body = document.querySelector('body') as HTMLBodyElement
@@ -199,4 +200,23 @@ export const getCheckedArrayParam = (param: string) => {
   } catch (error) {
     return false
   }
+}
+export const capitalizeFirstLetter = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1)
+
+export const getWatchedProductFromLS = () => {
+  let watchedProducts: IProduct[] = JSON.parse(
+    localStorage.getItem('watched') as string
+  )
+
+  if (!watchedProducts || !Array.isArray(watchedProducts)) {
+    watchedProducts = []
+  }
+
+  return watchedProducts
+}
+
+export const handleCloseShareModal = () => {
+  removeOverflowHiddenFromBody()
+  closeShareModal()
 }

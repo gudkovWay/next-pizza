@@ -69,14 +69,14 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
           />
         </div>
         <Link
-          href={`/catalog/${item.category}/${item.slug}`}
+          href={`/catalog/${item.category}/${item._id}`}
           className={styles.list__item__img}
         >
           <Image src={item.images[0]} alt={item.name} fill />
         </Link>
         <div className={styles.list__item__inner}>
           <h3 className={styles.list__item__title}>
-            <Link href={`/catalog/${item.category}/${item.slug}`}>
+            <Link href={`/catalog/${item.category}/${item._id}`}>
               {item.name}
             </Link>
           </h3>

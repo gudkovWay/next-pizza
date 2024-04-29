@@ -1,24 +1,31 @@
 /* eslint-disable react/jsx-indent */
 'use client'
+import { useState } from 'react'
 import { useUnit } from 'effector-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { getCartItemsFx } from '@/api/cart'
+
 import HeadingWithCount from '@/components/elements/HeadingWithCount/HeadingWithCount'
 import CartList from '@/components/modules/CartPage/CartList'
 import PromotionalCode from '@/components/modules/CartPage/PromotionalCode'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
 import OrderInfoBlock from '@/components/modules/OrderInfoBlock/OrderInfoBlock'
-import { basePropsForMotion } from '@/shared/constants/motion'
+import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+
+import { getCartItemsFx } from '@/api/cart'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
-import { countWholeCartItemsAmount } from '@/shared/lib/utils/cart'
-import { $cart, $cartFromLs, $shouldShowEmpty } from '@/features/context/cart'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
+import { loginCheckFx } from '@/features/context/user'
+import {
+  $cart,
+  $cartFromLs,
+  $shouldShowEmpty,
+} from '@/features/context/cart/state'
+
+import { basePropsForMotion } from '@/shared/constants/motion'
+import { countWholeCartItemsAmount } from '@/shared/lib/utils/cart'
+import { isUserAuth } from '@/shared/lib/utils/common'
 import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
 import styles from '@/styles/cart-page/index.module.scss'
-import { isUserAuth } from '@/shared/lib/utils/common'
-import { loginCheckFx } from '@/features/context/user'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 const CartPage = () => {
   const cartSpinner = useUnit(getCartItemsFx.pending)

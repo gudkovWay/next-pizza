@@ -3,22 +3,24 @@
 'use client'
 import { useUnit } from 'effector-react'
 import { motion } from 'framer-motion'
+
+import FavoritesList from '@/components/modules/FavoritesPage/FavoritesList'
+import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import HeadingWithCount from '@/components/elements/HeadingWithCount/HeadingWithCount'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
-import { basePropsForMotion } from '@/shared/constants/motion'
-import {
-  $favorites,
+
+import { loginCheckFx } from '@/features/context/user'
+import {  getFavoriteItemsFx } from '@/features/context/favorites'
+import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
+import {   $favorites,
   $favoritesFromLS,
   $shouldShowEmptyFavorites,
-  getFavoriteItemsFx,
-} from '@/features/context/favorites'
-import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
+} from '@/features/context/favorites/state'
+
+import { isUserAuth } from '@/shared/lib/utils/common'
+import { basePropsForMotion } from '@/shared/constants/motion'
 import cartSkeletonStyles from '@/styles/cart-skeleton/index.module.scss'
 import styles from '@/styles/favorites/index.module.scss'
-import FavoritesList from '@/components/modules/FavoritesPage/FavoritesList'
-import { isUserAuth } from '@/shared/lib/utils/common'
-import { loginCheckFx } from '@/features/context/user'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 const FavoritesPage = () => {
   const currentFavoritesByAuth = useGoodsByAuth($favorites, $favoritesFromLS)

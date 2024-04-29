@@ -12,10 +12,11 @@ export interface IProduct {
   slug: string
   weight: number
   popularity: number
-  inStock: boolean
+  inStock: number
   isBestseller: boolean
   isNew: boolean
   sizes: ISizes
+  errorMessage?: string
 }
 
 export interface ISizes {
@@ -26,10 +27,10 @@ export interface ISizes {
 
 export interface ICharacteristics {
   name: string
-  category: string
+  type: string
   compositions: string[]
   collection: string
-  dough: string
+  dough?: string
 }
 
 export interface ISelectedSizes {

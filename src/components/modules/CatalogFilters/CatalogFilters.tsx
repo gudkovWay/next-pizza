@@ -1,21 +1,25 @@
 import { motion } from 'framer-motion'
 import { useUnit } from 'effector-react'
+
+import SelectInfoItem from './SelectInfoItem'
+import FiltersPopup from './FiltersPopup/FiltersPopup'
 import CategorySelect from './CategorySelect'
 import PriceSelect from './PriceSelect'
-import { ICatalogFiltersProps } from '@/shared/types/catalog'
 import SizesSelect from './SizesSelect'
 import SortSelect from './SortSelect'
+
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
+import { $sizesOptions } from '@/features/context/catalog/state'
 import {
-  $sizesOptions,
   setFiltersPopup,
   setSizes,
   setSizesOptions,
 } from '@/features/context/catalog'
+
 import { basePropsForMotion } from '@/shared/constants/motion'
-import SelectInfoItem from './SelectInfoItem'
-import FiltersPopup from './FiltersPopup/FiltersPopup'
 import { addOverflowHiddenToBody } from '@/shared/lib/utils/common'
+import { ICatalogFiltersProps } from '@/shared/types/catalog'
+
 import styles from '@/styles/catalog/index.module.scss'
 
 const CatalogFilters = ({

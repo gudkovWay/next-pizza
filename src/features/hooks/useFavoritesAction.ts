@@ -1,9 +1,12 @@
 import { useState } from 'react'
-import { IProduct } from '@/shared/types/common'
+
 import { useGoodsByAuth } from './useGoodsByAuth'
+import { useProductDelete } from './useProductDelete'
 import {
   $favorites,
   $favoritesFromLS,
+} from '@/features/context/favorites/state'
+import {
   addProductToFavorites,
   deleteProductFromFavorites,
   setFavoritesFromLS,
@@ -12,7 +15,7 @@ import {
 } from '@/features/context/favorites'
 import { deleteProductFromLS, isUserAuth } from '@/shared/lib/utils/common'
 import { addFavoriteItemToLS } from '@/shared/lib/utils/favorites'
-import { useProductDelete } from './useProductDelete'
+import { IProduct } from '@/shared/types/common'
 
 export const useFavoritesAction = (product: IProduct) => {
   const [addToFavoritesSpinner, setAddToFavoritesSpinner] = useState(false)

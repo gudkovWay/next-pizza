@@ -1,13 +1,15 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
 import DeleteItemBtn from '@/components/elements/DeleteCartItemBtn/DeleteCartItemBtn'
 import AddToCartIcon from '@/components/elements/AddToCartIcon/AddToCartIcon'
 
-import { $cart, $cartFromLs, addProductToCart } from '@/features/context/cart'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'
 import { useProductDelete } from '@/features/hooks/useProductDelete'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
+import { addProductToCart } from '@/features/context/cart'
+import { $cart, $cartFromLs } from '@/features/context/cart/state'
 import {
   deleteProductFromFavorites,
   setFavoritesFromLS,
@@ -23,7 +25,6 @@ import {
   isUserAuth,
 } from '@/shared/lib/utils/common'
 import styles from '@/styles/favorites/index.module.scss'
-import Link from 'next/link'
 
 const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
   const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs)
@@ -111,7 +112,7 @@ const FavoritesListItem = ({ item }: { item: IFavoriteItem }) => {
         addedClassName={styles.favorites__list__item__cart_added}
       />
       <Link
-        href={`/catalog/${item.category}/${item.slug}`}
+        href={`/catalog/${item.category}/${item._id}`}
         className={styles.favorites__list__item__img}
       >
         <Image

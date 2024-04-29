@@ -1,8 +1,8 @@
 import { useUnit } from 'effector-react'
 import { useEffect } from 'react'
+
+import { $sizesOptions, $sizes } from '@/features/context/catalog/state'
 import {
-  $sizesOptions,
-  $sizes,
   setSizesOptions,
   setSizes,
   updateSizesOptionBySize,

@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { MutableRefObject, useRef, useState } from 'react'
+
 import { useTotalPrice } from '@/features/hooks/useTotalPrice'
+import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
+import { $cart, $cartFromLs } from '@/features/context/cart/state'
+
 import { countWholeCartItemsAmount } from '@/shared/lib/utils/cart'
 import { formatPrice } from '@/shared/lib/utils/common'
 import { OrderInfoBlock } from '@/shared/types/modules'
-import { $cart, $cartFromLs } from '@/features/context/cart'
-import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import styles from '@/styles/order-block/index.module.scss'
 
 const OrderInfoBlock = ({

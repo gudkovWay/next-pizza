@@ -7,10 +7,12 @@ import PriceFilter from './PriceFilter'
 import CategoryFilterList from '../CategoryFilterList'
 import SizesFilter from './SizesFilter'
 
-import { $filtersPopup, setFiltersPopup } from '@/features/context/catalog'
-import { $products, loadProductsByFilterFx } from '@/features/context/goods'
+import { setFiltersPopup } from '@/features/context/catalog'
+import { loadProductsByFilterFx } from '@/features/context/goods'
 import { useCategoryFilter } from '@/features/hooks/useCategoryFilter'
 import { useMenuAnimation } from '@/features/hooks/useMenuAnimation'
+import { $products } from '@/features/context/goods/state'
+import { $filtersPopup } from '@/features/context/catalog/state'
 
 import { ICatalogFiltersProps } from '@/shared/types/catalog'
 import {

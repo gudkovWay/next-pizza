@@ -2,9 +2,10 @@ import { ICartItem } from './cart'
 import { IProduct } from './common'
 
 export interface ILoadOneProductFx {
-  productId: string
   category: string
-  setSpinner: (arg0: boolean) => void
+  productId?: string
+  slug?: string
+  setSpinner?: (arg0: boolean) => void
 }
 
 export interface IProductSizesItemProps {
@@ -52,4 +53,8 @@ export interface ILoadProductsByFilterFx {
 export interface IProducts {
   count: number
   items: IProduct[]
+}
+
+export interface ILoadWatchedProductsFx {
+  payload: { _id: string; category: string }[]
 }

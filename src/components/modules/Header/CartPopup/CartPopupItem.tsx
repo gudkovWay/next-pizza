@@ -28,7 +28,7 @@ const CartPopupItem = ({ item }: { item: ICartItem }) => {
       </div>
       <div className='cart-list__item__inner'>
         <Link
-          href={`/catalog/${item.category}/${item.slug}`}
+          href={`/catalog/${item.category}/${item._id}`}
           className='cart-list__item__title'
         >
           <span>

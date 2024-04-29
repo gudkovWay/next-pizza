@@ -1,18 +1,17 @@
 import { useUnit } from 'effector-react'
 import { useMemo, useState } from 'react'
-import { $currentProduct } from '@/features/context/goods'
+
+import { $currentProduct } from '@/features/context/goods/state'
+import { useGoodsByAuth } from './useGoodsByAuth'
+import { updateCartItemCount } from '@/features/context/cart'
+import { $cart, $cartFromLs } from '@/features/context/cart/state'
+
 import { isUserAuth } from '@/shared/lib/utils/common'
 import {
   addCartItemToLS,
   addItemToCart,
   addProductToCartBySizeTable,
 } from '@/shared/lib/utils/cart'
-import {
-  $cart,
-  $cartFromLs,
-  updateCartItemCount,
-} from '@/features/context/cart'
-import { useGoodsByAuth } from './useGoodsByAuth'
 
 export const useCartAction = (isSizeTable = false) => {
   const product = useUnit($currentProduct)

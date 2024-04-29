@@ -6,6 +6,7 @@ import ReactPaginate from 'react-paginate'
 
 import ProductsListItem from '@/components/modules/ProductsListItem/ProductsListItem'
 import CatalogFilters from '@/components/modules/CatalogFilters/CatalogFilters'
+import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 import { setCatalogCategoryOptions } from '@/features/context/catalog'
 import { useProductFilters } from '@/features/hooks/useProductFilters'
@@ -14,7 +15,6 @@ import { IProductsPage } from '@/shared/types/catalog'
 import { basePropsForMotion } from '@/shared/constants/motion'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import styles from '@/styles/catalog/index.module.scss'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
   const {
