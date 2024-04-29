@@ -76,7 +76,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
         </Link>
         <div className={styles.list__item__inner}>
           <h3 className={styles.list__item__title}>
-            <Link href={`/catalog/${item.category}/${item._id}`}>
+            <Link href={`/catalog/${item.category}/${item.slug}`}>
               {item.name}
             </Link>
           </h3>

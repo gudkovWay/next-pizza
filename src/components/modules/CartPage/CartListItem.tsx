@@ -36,7 +36,7 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
         )}
       </button>
       <Link
-        href={`/catalog/${item.category}/${item._id}`}
+        href={`/catalog/${item.category}/${item.slug}`}
         className={`${styles.cart__list__item__img} ${styles.cart__list__item__block}`}
       >
         <Image

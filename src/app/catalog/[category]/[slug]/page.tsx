@@ -5,11 +5,11 @@ import ProductPage from '@/components/templates/ProductPage'
 export default function Product({
   params,
 }: {
-  params: { productId: string; category: string }
+  params: { slug: string; category: string }
 }) {
   if (!productCategories.includes(params.category)) {
     notFound()
   }
 
-  return <ProductPage productId={params.productId} category={params.category} />
+  return <ProductPage productId={params.slug} category={params.category} />
 }
