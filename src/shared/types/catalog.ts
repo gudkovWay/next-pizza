@@ -50,11 +50,13 @@ export interface ICatalogFiltersProps {
   handleApplyFiltersWithPrice: (arg0: string, arg1: string) => void
   handleApplyFiltersWithSizes: (sizes: string[]) => void
   handleApplyFiltersBySort: (arg0: string) => void
+  pageName?: string
 }
 
 export interface ISizeOption {
   id: number
   size: string
+  category: string
   checked: boolean
 }
 

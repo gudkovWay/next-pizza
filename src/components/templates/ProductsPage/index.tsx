@@ -137,6 +137,7 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
         handleApplyFiltersWithPrice={handleApplyFiltersWithPrice}
         handleApplyFiltersWithSizes={handleApplyFiltersWithSizes}
         handleApplyFiltersBySort={handleApplyFiltersBySort}
+        pageName={pageName}
       />
       {productsSpinner && (
         <motion.ul

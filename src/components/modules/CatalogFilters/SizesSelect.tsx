@@ -8,8 +8,10 @@ import styles from '@/app/styles/catalog/index.module.scss'
 
 const SizesSelect = ({
   handleApplyFiltersWithSizes,
+  pageName,
 }: {
   handleApplyFiltersWithSizes: (sizes: string[]) => void
+  pageName?: string
 }) => {
   const { open, ref, toggle } = useClickOutside()
   const { handleSelectSize, sizes, sizesOptions } = useSizeFilter(
@@ -33,13 +35,15 @@ const SizesSelect = ({
             className={` ${styles.catalog__filters__list}`}
             {...basePropsForMotion}
           >
-            {sizesOptions.map((item) => (
-              <CheckboxSelectItem
-                key={item.id}
-                item={item}
-                callback={handleSelectSize}
-              />
-            ))}
+            {sizesOptions
+              .filter((item) => item.category === pageName)
+              .map((item) => (
+                <CheckboxSelectItem
+                  key={item.id}
+                  item={item}
+                  callback={handleSelectSize}
+                />
+              ))}
           </motion.ul>
         )}
       </AnimatePresence>

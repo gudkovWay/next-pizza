@@ -26,6 +26,7 @@ const CatalogFilters = ({
   handleApplyFiltersWithPrice,
   handleApplyFiltersWithSizes,
   handleApplyFiltersBySort,
+  pageName,
 }: ICatalogFiltersProps) => {
   const sizesOptions = useUnit($sizesOptions)
   const isMedia910 = useMediaQuery(910)
@@ -63,18 +64,20 @@ const CatalogFilters = ({
             <>
               <div className={styles.catalog__filters__top__left}>
                 <CategorySelect />
-                {isMedia910 && (
+                {isMedia910 && pageName !== 'catalog' && (
                   <SizesSelect
                     handleApplyFiltersWithSizes={handleApplyFiltersWithSizes}
+                    pageName={pageName}
                   />
                 )}
                 <PriceSelect
                   handleApplyFiltersWithPrice={handleApplyFiltersWithPrice}
                 />
               </div>
-              {!isMedia910 && (
+              {!isMedia910 && pageName !== 'catalog' && (
                 <SizesSelect
                   handleApplyFiltersWithSizes={handleApplyFiltersWithSizes}
+                  pageName={pageName}
                 />
               )}
               <div className={styles.catalog__filters__top__right}>

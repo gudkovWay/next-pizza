@@ -22,11 +22,11 @@ export const $catalogCategoryOptions = catalog
 
 export const $sizesOptions = catalog
   .createStore<ISizeOption[]>([
-    { id: 1, size: 'S', checked: false },
-    { id: 2, size: 'L', checked: false },
-    { id: 3, size: 'M', checked: false },
-    { id: 4, size: 'XL', checked: false },
-    { id: 5, size: 'XXL', checked: false },
+    { id: 1, size: '26 см.', category: 'pizza', checked: false },
+    { id: 2, size: '30 см.', category: 'pizza', checked: false },
+    { id: 3, size: '36 см.', category: 'pizza', checked: false },
+    { id: 4, size: '0.5 л.', category: 'drinks', checked: false },
+    { id: 5, size: '1 л.', category: 'drinks', checked: false },
   ])
   .on(setSizesOptions, (_, options) => options)
   .on(updateSizesOptionBySize, (state, size) =>
