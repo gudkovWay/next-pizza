@@ -17,11 +17,5 @@ export default function CatalogRootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang='ru'>
-      <body>
-        <CatalogLayout>{children}</CatalogLayout>
-      </body>
-    </html>
-  )
+  return <CatalogLayout>{children}</CatalogLayout>
 }
