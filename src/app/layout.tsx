@@ -18,6 +18,14 @@ import './styles/globalStyles/breadcrumbs.css'
 export const metadata: Metadata = {
   title: 'Doodle Pizza',
   description: 'Doodle Pizza | Ошалевшая курсовая',
+  openGraph: {
+    title: 'DoodlePizza | Гениальные вые**ны',
+    description:
+      // eslint-disable-next-line max-len
+      'Быстрый заказ пицц и напитков по Москве и области. Узнайте что такое максимальный комфорт с широким ассортиментом 🍕🥛. Позвоните по номеру +8 (800) 555-35-35',
+    images:
+      'https://habrastorage.org/r/w1560/getpro/habr/upload_files/9e5/b31/212/9e5b31212bc1f0924d832880c5dce8fa.png',
+  },
 }
 
 export const viewport: Viewport = {
@@ -31,19 +39,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ru'>
-      <head>
-        <meta property='og:type' content='website' />
-        <meta property='og:site_name' content='DoodlePizza' />
-        <meta property='og:title' content='by GENIUS \/2024/\' />
-        <meta
-          property='og:url'
-          content='https://next-pizza-genius.vercel.app/'
-        />
-        <meta
-          property='og:image'
-          content='https://next-pizza-genius.vercel.app/img/logo.svg'
-        />
-      </head>
       <body>
         <PagesLayout>{children}</PagesLayout>
       </body>
