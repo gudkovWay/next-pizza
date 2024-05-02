@@ -55,7 +55,9 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
         <div
           className={`${styles.cart__list__item__size} ${styles.cart__list__item__block}`}
         >
-          Размер: {`${item.size} ${item.category === 'pizza' ? 'см.' : 'л.'}`}
+          {item.category === 'pizza'
+            ? `Размер: ${item.size} см.`
+            : `Объём: ${item.size} л.`}
         </div>
       </div>
       <div className={styles.cart__list__item__inner}>
