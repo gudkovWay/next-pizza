@@ -20,7 +20,6 @@ import { $currentProduct } from '@/features/context/goods/state'
 import { ICartItem } from '@/shared/types/cart'
 import {
   addOverflowHiddenToBody,
-  capitalizeFirstLetter,
   formatPrice,
   getWatchedProductFromLS,
 } from '@/shared/lib/utils/common'
@@ -144,8 +143,7 @@ const ProductPageContent = () => {
           </div>
           {!!product.characteristics.collection && (
             <span className={styles.product__top__collection}>
-              <span>Для:</span>{' '}
-              {capitalizeFirstLetter(product.characteristics.collection)}
+              <span>Для:</span> {product.characteristics.collection}
             </span>
           )}
           {!!Object.keys(product.sizes).length && (
@@ -224,7 +222,7 @@ const ProductPageContent = () => {
                     key={key}
                     className={styles.product__top__description__text}
                   >
-                    {capitalizeFirstLetter(key)}: {value}
+                    {key}: {value}
                   </li>
                 ))}
               </ul>

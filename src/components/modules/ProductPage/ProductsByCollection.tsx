@@ -12,8 +12,7 @@ import styles from '@/app/styles/product/index.module.scss'
 import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
 
 const ProductsByCollection = ({ collection }: { collection: string }) => {
-  const { title, capitalizedCollection, spinner, products } =
-    useProductsByCollection(collection)
+  const { title, spinner, products } = useProductsByCollection(collection)
   const currentCategory =
     allowedCollectionsCategories[
       Math.floor(Math.random() * allowedCollectionsCategories.length)
@@ -37,9 +36,7 @@ const ProductsByCollection = ({ collection }: { collection: string }) => {
 
   return (
     <div className={styles.product__collection}>
-      <span className={styles.product__collection__bg}>
-        {capitalizedCollection}
-      </span>
+      <span className={styles.product__collection__bg}>{collection}</span>
       <AllLink
         text={title}
         href={`/collection-products?collection=${collection}&category=${currentCategory}`}
