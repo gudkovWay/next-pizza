@@ -20,7 +20,7 @@ const ProductPage = ({ productId, category }: IProductPageProps) => {
       productId,
       category,
     })
-  }, [])
+  }, [productId, category])
 
   if (product?.errorMessage) {
     notFound()

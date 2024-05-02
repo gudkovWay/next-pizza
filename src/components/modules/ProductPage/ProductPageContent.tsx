@@ -25,6 +25,7 @@ import {
   getWatchedProductFromLS,
 } from '@/shared/lib/utils/common'
 import styles from '@/app/styles/product/index.module.scss'
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
 
 const ProductPageContent = () => {
   const product = useUnit($currentProduct)
@@ -77,6 +78,22 @@ const ProductPageContent = () => {
 
   return (
     <>
+      <Breadcrumbs
+        crumbs={[
+          {
+            href: '/catalog',
+            children: 'Каталог',
+          },
+          {
+            href: `/catalog/${product.category}`,
+            children: `${product.category === 'drinks' ? 'Напитки' : 'Пиццы'}`,
+          },
+          {
+            href: `/catalog/${product.category}/${product.slug}`,
+            children: `${product.name}`,
+          },
+        ]}
+      />
       <div className={styles.product__top}>
         <ProductImages />
         <div className={styles.product__top__right}>
