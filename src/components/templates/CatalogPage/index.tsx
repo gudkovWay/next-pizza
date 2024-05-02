@@ -34,6 +34,7 @@ const CatalogPage = ({ searchParams, pageName }: IProductsPage) => {
       getCatalogOptionsByPage(pageName, handleApplyFiltersWithCategory)
     )
   }, [pageName, handleApplyFiltersWithCategory])
+
   return (
     <>
       {pageName === 'catalog' ? (

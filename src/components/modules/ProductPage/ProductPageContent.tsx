@@ -222,7 +222,7 @@ const ProductPageContent = () => {
                     key={key}
                     className={styles.product__top__description__text}
                   >
-                    {key}: {value}
+                    {key}: {`${value}, `}
                   </li>
                 ))}
               </ul>

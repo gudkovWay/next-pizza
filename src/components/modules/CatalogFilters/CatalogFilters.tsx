@@ -102,16 +102,17 @@ const CatalogFilters = ({
             className={` ${styles.catalog__filters__bottom__list}`}
             {...basePropsForMotion}
           >
-            {sizesOptions
-              .filter((item) => item.checked)
-              .map((item) => (
-                <SelectInfoItem
-                  key={item.id}
-                  id={item.id}
-                  text={item.size}
-                  handleRemoveItem={handleRemoveSizeOption}
-                />
-              ))}
+            {pageName !== 'catalog' &&
+              sizesOptions
+                .filter((item) => item.checked)
+                .map((item) => (
+                  <SelectInfoItem
+                    key={item.id}
+                    id={item.id}
+                    text={item.size}
+                    handleRemoveItem={handleRemoveSizeOption}
+                  />
+                ))}
           </motion.ul>
         </div>
       </div>
