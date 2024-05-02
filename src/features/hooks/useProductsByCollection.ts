@@ -9,8 +9,7 @@ export const useProductsByCollection = (collection: string) => {
   const spinner = useUnit(loadProductsByFilterFx.pending)
   const langText = 'Коллекция '
   const capitalizedCollection = capitalizeFirstLetter(collection)
-  const title =
-       `${langText} «${capitalizedCollection}»`
+  const title = `${langText} «${capitalizedCollection}»`
 
   return { title, capitalizedCollection, products, spinner }
 }

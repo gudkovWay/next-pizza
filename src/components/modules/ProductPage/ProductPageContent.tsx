@@ -137,7 +137,12 @@ const ProductPageContent = () => {
                 <span>
                   {product.category === 'pizza' ? 'Размер: ' : 'Объём: '}
                 </span>
-                {selectedSize} {product.category === 'pizza' ? ' см.' : ' л.'}
+                {selectedSize &&
+                  product.category === 'pizza' &&
+                  `${selectedSize} см.`}
+                {selectedSize &&
+                  product.category === 'drinks' &&
+                  `${selectedSize} л.`}
               </span>
               <ul className={`list-reset ${styles.product__top__sizes}`}>
                 {Object.entries(product.sizes).map(([key, value], i) => (

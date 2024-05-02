@@ -26,7 +26,7 @@ const SizesSelect = ({
       <SelectBtn
         open={open}
         toggle={toggle}
-        defaultText={`Размер`}
+        defaultText={`${pageName && pageName === 'pizza' ? 'Размер' : 'Объём'}`}
         dynamicText={sizes.join(', ')}
       />
       <AnimatePresence>

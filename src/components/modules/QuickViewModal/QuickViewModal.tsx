@@ -89,7 +89,7 @@ const QuickViewModal = () => {
             <div className={styles.modal__right__info__size}>
               <div className={styles.modal__right__info__size__inner}>
                 <span className={stylesForProduct.product__size_title}>
-                  Размер
+                  {product.category === 'pizza' ? 'Размер:' : 'Объём:'}
                 </span>
               </div>
               <ul className={styles.modal__right__info__sizes}>

@@ -13,10 +13,11 @@ import { useProductFilters } from '@/features/hooks/useProductFilters'
 
 import { IProductsPage } from '@/shared/types/catalog'
 import { basePropsForMotion } from '@/shared/constants/motion'
+import { getCatalogOptionsByPage } from '@/shared/constants/catalog'
 import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
 import styles from '@/app/styles/catalog/index.module.scss'
 
-const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
+const CatalogPage = ({ searchParams, pageName }: IProductsPage) => {
   const {
     products,
     productsSpinner,
@@ -29,85 +30,10 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
   } = useProductFilters(searchParams, pageName, pageName === 'catalog')
 
   useEffect(() => {
-    switch (pageName) {
-      case 'catalog':
-        setCatalogCategoryOptions({
-          rootCategoryOptions: [
-            {
-              id: 2,
-              title: 'Пиццы',
-              href: '/catalog/pizza',
-            },
-            {
-              id: 3,
-              title: 'Напитки',
-              href: '/catalog/drinks',
-            },
-          ],
-        })
-        break
-      case 'pizza':
-        setCatalogCategoryOptions({
-          drinksCategoryOptions: [
-            {
-              id: 1,
-              title: 'Мясные',
-              filterHandler: () => handleApplyFiltersWithCategory('meat'),
-            },
-            {
-              id: 2,
-              title: 'Вегетарианские',
-              filterHandler: () => handleApplyFiltersWithCategory('vegeterian'),
-            },
-            {
-              id: 3,
-              title: 'Сырные',
-              filterHandler: () => handleApplyFiltersWithCategory('cheese'),
-            },
-            {
-              id: 4,
-              title: 'Грибные',
-              filterHandler: () => handleApplyFiltersWithCategory('mushrooms'),
-            },
-            {
-              id: 5,
-              title: 'Пепперони',
-              filterHandler: () => handleApplyFiltersWithCategory('pepperoni'),
-            },
-          ],
-        })
-        break
-      case 'drinks':
-        setCatalogCategoryOptions({
-          pizzaCategoryOptions: [
-            {
-              id: 1,
-              title: 'Газировки',
-              filterHandler: () => handleApplyFiltersWithCategory('sodas'),
-            },
-            {
-              id: 2,
-              title: 'Милкшейки',
-              filterHandler: () => handleApplyFiltersWithCategory('milkshake'),
-            },
-            {
-              id: 3,
-              title: 'Вода',
-              filterHandler: () => handleApplyFiltersWithCategory('water'),
-            },
-            {
-              id: 4,
-              title: 'Соки',
-              filterHandler: () => handleApplyFiltersWithCategory('juice'),
-            },
-          ],
-        })
-        break
-      default:
-        break
-    }
-  }, [handleApplyFiltersWithCategory, pageName])
-
+    setCatalogCategoryOptions(
+      getCatalogOptionsByPage(pageName, handleApplyFiltersWithCategory)
+    )
+  }, [pageName, handleApplyFiltersWithCategory])
   return (
     <>
       {pageName === 'catalog' ? (
@@ -174,4 +100,4 @@ const ProductsPage = ({ searchParams, pageName }: IProductsPage) => {
   )
 }
 
-export default ProductsPage
+export default CatalogPage

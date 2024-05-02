@@ -10,9 +10,10 @@ import HeadingWithCount from '@/components/elements/HeadingWithCount/HeadingWith
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
 
 import { loginCheckFx } from '@/features/context/user'
-import {  getFavoriteItemsFx } from '@/features/context/favorites'
+import { getFavoriteItemsFx } from '@/features/context/favorites'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
-import {   $favorites,
+import {
+  $favorites,
   $favoritesFromLS,
   $shouldShowEmptyFavorites,
 } from '@/features/context/favorites/state'

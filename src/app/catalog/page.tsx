@@ -1,4 +1,4 @@
-import ProductsPage from '@/components/templates/ProductsPage'
+import CatalogPage from '@/components/templates/CatalogPage'
 import { SearchParams } from '@/shared/types/catalog'
 
 export default function Catalog({
@@ -6,5 +6,5 @@ export default function Catalog({
 }: {
   searchParams?: SearchParams
 }) {
-  return <ProductsPage searchParams={searchParams || {}} pageName='catalog' />
+  return <CatalogPage searchParams={searchParams || {}} pageName='catalog' />
 }

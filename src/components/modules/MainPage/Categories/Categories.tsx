@@ -13,7 +13,7 @@ const images = [
   {
     src: img2,
     id: 1,
-    title: 'Питцы',
+    title: 'Пиццы',
   },
   {
     src: img3,
