@@ -17,7 +17,7 @@ import { getCatalogOptionsByPage } from '@/shared/constants/catalog'
 import skeletonStyles from '@/app/styles/skeleton/index.module.scss'
 import styles from '@/app/styles/catalog/index.module.scss'
 
-const CatalogPage = ({ searchParams, pageName }: IProductsPage) => {
+const CatalogPage = ({ searchParams, pageName, crumbs }: IProductsPage) => {
   const {
     products,
     productsSpinner,
@@ -37,29 +37,7 @@ const CatalogPage = ({ searchParams, pageName }: IProductsPage) => {
 
   return (
     <>
-      {pageName === 'catalog' ? (
-        <Breadcrumbs
-          crumbs={[
-            {
-              href: '/catalog',
-              children: 'Каталог',
-            },
-          ]}
-        />
-      ) : (
-        <Breadcrumbs
-          crumbs={[
-            {
-              href: '/catalog',
-              children: 'Каталог',
-            },
-            {
-              href: `/catalog/${pageName}`,
-              children: `${pageName === 'pizza' ? 'Пиццы' : 'Напитки'}`,
-            },
-          ]}
-        />
-      )}
+      <Breadcrumbs crumbs={crumbs} />
       <CatalogFilters
         handleApplyFiltersWithPrice={handleApplyFiltersWithPrice}
         handleApplyFiltersWithSizes={handleApplyFiltersWithSizes}

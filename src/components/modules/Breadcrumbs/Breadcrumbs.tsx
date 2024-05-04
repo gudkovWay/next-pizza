@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ComponentProps } from 'react'
-
 import clsx from 'clsx'
 
 type Breadcrumb = ComponentProps<typeof Link>

@@ -1,8 +1,12 @@
+import Link from 'next/link'
+import { ComponentProps } from 'react'
+
 export type SearchParams = { [key: string]: string | string[] | undefined }
 
 export interface IProductsPage {
   searchParams: SearchParams
   pageName: string
+  crumbs: ComponentProps<typeof Link>[]
 }
 
 export interface ICatalogCategoryOptions {
