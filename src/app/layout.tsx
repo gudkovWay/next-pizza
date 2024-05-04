@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import PagesLayout from '@/components/layouts/PagesLayout'
+
 import './styles/globalStyles/normalize.css'
 import './styles/globalStyles/globals.scss'
 import './styles/globalStyles/header.css'
