@@ -1,3 +1,5 @@
+'use client'
+import '@/shared/lib/i18n'
 import styles from '@/app/styles/catalog/index.module.scss'
 
 const CatalogLayout = ({ children }: { children: React.ReactNode }) => (

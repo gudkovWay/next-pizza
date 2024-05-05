@@ -5,6 +5,7 @@ import { EarthoOneProvider } from '@eartho/one-client-react'
 import { Next13ProgressBar } from 'next13-progressbar'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import '@/shared/lib/i18n'
 
 import Layout from './Layout'
 import CookieAlert from '../modules/CookieAlert/CookieAlert'

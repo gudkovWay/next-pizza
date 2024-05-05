@@ -36,6 +36,10 @@
       flex-direction: column-reverse;
     }
 
+    &__right {
+      max-width: 480px;
+    }
+
     &__images {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -367,6 +371,8 @@
       }
 
       &__text {
+        width: 100%;
+        word-break: break-all;
         margin: 0;
         color: #a5a8ad;
         line-height: 24px;

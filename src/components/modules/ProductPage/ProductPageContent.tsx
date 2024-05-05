@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useUnit } from 'effector-react'
+import { useTranslation } from 'react-i18next'
 
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
 import ProductImages from './ProductImages'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
@@ -24,9 +26,9 @@ import {
   getWatchedProductFromLS,
 } from '@/shared/lib/utils/common'
 import styles from '@/app/styles/product/index.module.scss'
-import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
 
 const ProductPageContent = () => {
+  const { t } = useTranslation('characteristics')
   const product = useUnit($currentProduct)
   const {
     handleAddProductToFavorites,
@@ -143,7 +145,7 @@ const ProductPageContent = () => {
           </div>
           {!!product.characteristics.collection && (
             <span className={styles.product__top__collection}>
-              <span>Для:</span> {product.characteristics.collection}
+              <span>Коллекция:</span> {product.characteristics.collection}
             </span>
           )}
           {!!Object.keys(product.sizes).length && (
@@ -222,7 +224,7 @@ const ProductPageContent = () => {
                     key={key}
                     className={styles.product__top__description__text}
                   >
-                    {key}: {`${value}, `}
+                    {t(key)}: {`${value}, `}
                   </li>
                 ))}
               </ul>
