@@ -6,7 +6,7 @@ import ReactPaginate from 'react-paginate'
 
 import ProductsListItem from '@/components/modules/ProductsListItem/ProductsListItem'
 import CatalogFilters from '@/components/modules/CatalogFilters/CatalogFilters'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 
 import { setCatalogCategoryOptions } from '@/features/context/catalog'
 import { useProductFilters } from '@/features/hooks/useProductFilters'

@@ -5,7 +5,7 @@ import { useUnit } from 'effector-react'
 import { motion } from 'framer-motion'
 
 import FavoritesList from '@/components/modules/FavoritesPage/FavoritesList'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 import HeadingWithCount from '@/components/elements/HeadingWithCount/HeadingWithCount'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
 

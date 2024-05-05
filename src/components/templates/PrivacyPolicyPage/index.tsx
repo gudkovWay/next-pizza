@@ -1,5 +1,5 @@
 'use client'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 import styles from '@/app/styles/policy/index.module.scss'
 
 const PrivacyPolicyPage = () => (

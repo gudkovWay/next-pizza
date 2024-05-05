@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { useUnit } from 'effector-react'
 import { useTranslation } from 'react-i18next'
 
-import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
-import ProductImages from './ProductImages'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
+import Breadcrumbs from '../Breadcrumbs'
+import ProductImages from './ProductImages'
 import WatchedProducts from '../WatchedProducts'
 import ProductInfoAccordion from './ProductInfoAccordion'
 import ProductsByCollection from './ProductsByCollection'
@@ -19,6 +19,7 @@ import { setIsAddToFavorites } from '@/features/context/favorites'
 import { useWatchedProducts } from '@/features/hooks/useWatchedProducts'
 import { openShareModal } from '@/features/context/modals'
 import { $currentProduct } from '@/features/context/goods/state'
+
 import { ICartItem } from '@/shared/types/cart'
 import {
   addOverflowHiddenToBody,
@@ -28,7 +29,7 @@ import {
 import styles from '@/app/styles/product/index.module.scss'
 
 const ProductPageContent = () => {
-  const { t } = useTranslation('characteristics')
+  const { t } = useTranslation('translations')
   const product = useUnit($currentProduct)
   const {
     handleAddProductToFavorites,
@@ -87,7 +88,7 @@ const ProductPageContent = () => {
           },
           {
             href: `/catalog/${product.category}`,
-            children: `${product.category === 'drinks' ? 'Напитки' : 'Пиццы'}`,
+            children: `${product.category}`,
           },
           {
             href: `/catalog/${product.category}/${product.slug}`,

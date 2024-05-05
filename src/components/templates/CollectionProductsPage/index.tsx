@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 import ProductsListItem from '@/components/modules/ProductsListItem/ProductsListItem'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 import { loadProductsByFilter } from '@/features/context/goods'
 import { useProductsByCollection } from '@/features/hooks/useProductsByCollection'
 

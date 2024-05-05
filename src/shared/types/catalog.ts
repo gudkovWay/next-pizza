@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { ComponentProps } from 'react'
 
 export type SearchParams = { [key: string]: string | string[] | undefined }
+type StringLinkProps = ComponentProps<typeof Link> & { children: string }
 
 export interface IProductsPage {
   searchParams: SearchParams
   pageName: string
-  crumbs: ComponentProps<typeof Link>[]
+
+  crumbs: (ComponentProps<typeof Link> & StringLinkProps)[]
 }
 
 export interface ICatalogCategoryOptions {

@@ -1,4 +1,4 @@
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 
 const OrderPage = () => (
   <main>

@@ -9,7 +9,7 @@ import CartList from '@/components/modules/CartPage/CartList'
 import PromotionalCode from '@/components/modules/CartPage/PromotionalCode'
 import EmptyPageContent from '@/components/modules/EmptyPageContent/EmptyPageContent'
 import OrderInfoBlock from '@/components/modules/OrderInfoBlock/OrderInfoBlock'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 
 import { getCartItemsFx } from '@/shared/api/cart'
 import { useMediaQuery } from '@/features/hooks/useMediaQuery'

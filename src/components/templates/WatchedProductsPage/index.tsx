@@ -1,5 +1,5 @@
 'use client'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/modules/Breadcrumbs'
 import ProductsListItem from '@/components/modules/ProductsListItem/ProductsListItem'
 import { useWatchedProducts } from '@/features/hooks/useWatchedProducts'
 
