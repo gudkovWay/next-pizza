@@ -131,6 +131,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'сырная',
@@ -139,6 +144,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'маргарита',
@@ -147,6 +157,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'пепперони',
@@ -155,6 +170,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'вегетарианская',
@@ -163,6 +183,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'мясная',
@@ -171,6 +196,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'грибная',
@@ -179,6 +209,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'цыплёнок',
@@ -187,6 +222,11 @@ module.exports = {
             collection:
               collections[Math.floor(Math.random() * collections.length)],
             dough: getRandomArrayValue(dough),
+            weight: +faker.string.numeric(3),
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
         ]
         const name = pizzaNames[Math.floor(Math.random() * pizzaNames.length)]
@@ -220,11 +260,6 @@ module.exports = {
           images: images.filter((item) => item.includes(name)),
           vendorCode: vendorCode,
           slug: slug,
-          weight: +faker.string.numeric(3),
-          calories: +faker.string.numeric(3),
-          protein: +faker.string.numeric(2),
-          fat: +faker.string.numeric(2),
-          carbohydrates: +faker.string.numeric(2),
           popularity: +faker.string.numeric(3),
           inStock: inStock,
           isBestseller: isBestseller,

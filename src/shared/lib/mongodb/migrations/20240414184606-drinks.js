@@ -95,6 +95,10 @@ module.exports = {
             compositions: getRandomElements(compositions),
             collection:
               collections[Math.floor(Math.random() * collections.length)],
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'газировка',
@@ -102,6 +106,10 @@ module.exports = {
             compositions: getRandomElements(compositions),
             collection:
               collections[Math.floor(Math.random() * collections.length)],
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'сок',
@@ -109,6 +117,10 @@ module.exports = {
             compositions: getRandomElements(compositions),
             collection:
               collections[Math.floor(Math.random() * collections.length)],
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
           {
             name: 'молочный коктейль',
@@ -116,6 +128,10 @@ module.exports = {
             compositions: getRandomElements(compositions),
             collection:
               collections[Math.floor(Math.random() * collections.length)],
+            calories: +faker.string.numeric(3),
+            protein: +faker.string.numeric(2),
+            fat: +faker.string.numeric(2),
+            carbohydrates: +faker.string.numeric(2),
           },
         ]
         const name = drinksNames[Math.floor(Math.random() * drinksNames.length)]
@@ -148,7 +164,6 @@ module.exports = {
           images: images.filter((item) => item.includes(name)),
           vendorCode: vendorCode,
           slug: slug,
-          weight: +faker.string.numeric(3),
           popularity: +faker.string.numeric(3),
           inStock: inStock,
           isBestseller: isBestseller,

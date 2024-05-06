@@ -225,7 +225,12 @@ const ProductPageContent = () => {
                     key={key}
                     className={styles.product__top__description__text}
                   >
-                    {t(key)}: {`${value}, `}
+                    {t(key)}:{' '}
+                    {`${
+                      key === 'compositions'
+                        ? Array.from(value, (str: string) => t(str)).join(', ')
+                        : `${t(value)}`
+                    }`}
                   </li>
                 ))}
               </ul>
