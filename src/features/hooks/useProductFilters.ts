@@ -74,6 +74,10 @@ export const useProductFilters = (
 
     updateSearchParam('offset', selected, pathname)
     setCurrentPage(selected)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // добавим плавную прокрутку
+    })
   }
 
   const handleApplyFiltersWithCategory = (categoryType: string) => {
