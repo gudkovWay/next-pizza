@@ -11,7 +11,7 @@ import CartPopup from './CartPopup/CartPopup'
 import HeaderProfile from './HeaderProfile'
 
 import { $isAuth } from '@/features/context/auth/state'
-import { openMenu, openSearchModal } from '@/features/context/modals'
+import { openMenu } from '@/features/context/modals'
 import { useGoodsByAuth } from '@/features/hooks/useGoodsByAuth'
 import { loginCheckFx } from '@/features/context/user'
 import {
@@ -43,11 +43,6 @@ const Header = () => {
   const handleOpenMenu = () => {
     addOverflowHiddenToBody()
     openMenu()
-  }
-
-  const handleOpenSearchModal = () => {
-    openSearchModal()
-    addOverflowHiddenToBody()
   }
 
   useEffect(() => {
