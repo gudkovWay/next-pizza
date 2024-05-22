@@ -122,11 +122,17 @@ const Header = () => {
           <Logo />
         </div>
         <ul className='header__links '>
-          <li className='header__links__item'>
-            <button
-              className='header__links__item__btn header__links__item__btn--search'
-              onClick={handleOpenSearchModal}
-            />
+          <li className='header__links__item header__links__item--profile'>
+            {isAuth ? (
+              <HeaderProfile />
+            ) : loginCheckSpinner ? (
+              <FontAwesomeIcon icon={faSpinner} spin />
+            ) : (
+              <button
+                className='header__links__item__btn header__links__item__btn--profile'
+                onClick={handleOpenAuthPopup}
+              />
+            )}
           </li>
           <li className='header__links__item'>
             <Link
@@ -140,18 +146,6 @@ const Header = () => {
           </li>
           <li className='header__links__item'>
             <CartPopup />
-          </li>
-          <li className='header__links__item header__links__item--profile'>
-            {isAuth ? (
-              <HeaderProfile />
-            ) : loginCheckSpinner ? (
-              <FontAwesomeIcon icon={faSpinner} spin />
-            ) : (
-              <button
-                className='header__links__item__btn header__links__item__btn--profile'
-                onClick={handleOpenAuthPopup}
-              />
-            )}
           </li>
         </ul>
       </div>
